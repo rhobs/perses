@@ -42,7 +42,6 @@ dev/extra/tempo-data
 *.ignore.*
 
 /plugins
-/plugins-archive
 
 /prometheus
 
