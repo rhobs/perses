@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/dashboard"
-	"github.com/perses/perses/pkg/model/api/v1/variable"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/dashboard"
+	"github.com/rhobs/perses/pkg/model/api/v1/variable"
 	"github.com/stretchr/testify/assert"
 )
 

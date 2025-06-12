@@ -21,11 +21,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/perses/perses/pkg/client/perseshttp"
-	"github.com/perses/perses/pkg/client/transport"
-	"github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	"github.com/rhobs/perses/pkg/client/transport"
+	"github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/secret"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 )

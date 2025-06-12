@@ -20,10 +20,10 @@ import (
 	"github.com/brunoga/deep"
 	"github.com/labstack/echo/v4"
 	"github.com/perses/common/async"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/rbac"
-	"github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/v1/role"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/rbac"
+	"github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/tidwall/gjson"
 )
 

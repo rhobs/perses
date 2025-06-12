@@ -1,4 +1,4 @@
-module github.com/perses/perses
+module github.com/rhobs/perses
 
 go 1.23.0
 

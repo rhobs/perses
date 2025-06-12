@@ -21,12 +21,12 @@ import (
 	"golang.org/x/oauth2"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/crypto"
-	rbacv1 "github.com/perses/perses/internal/api/rbac"
+	"github.com/rhobs/perses/internal/api/crypto"
+	rbacv1 "github.com/rhobs/perses/internal/api/rbac"
 
-	"github.com/perses/perses/internal/api/interface/v1/user"
-	"github.com/perses/perses/internal/api/route"
-	"github.com/perses/perses/internal/api/utils"
+	"github.com/rhobs/perses/internal/api/interface/v1/user"
+	"github.com/rhobs/perses/internal/api/route"
+	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/sirupsen/logrus"
 )
 

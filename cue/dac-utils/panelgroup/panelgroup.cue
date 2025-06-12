@@ -22,8 +22,8 @@ package panelgroup
 
 import (
 	"math"
-	"github.com/perses/perses/cue/model/api/v1"
-	v1Dashboard "github.com/perses/perses/cue/model/api/v1/dashboard"
+	"github.com/rhobs/perses/cue/model/api/v1"
+	v1Dashboard "github.com/rhobs/perses/cue/model/api/v1/dashboard"
 )
 
 // expected user inputs

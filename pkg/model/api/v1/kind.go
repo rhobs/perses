@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 
 type Kind string

@@ -21,7 +21,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/pkg/model/api/config"
 )
 
 const (

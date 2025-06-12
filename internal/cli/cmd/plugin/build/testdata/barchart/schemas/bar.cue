@@ -14,7 +14,7 @@
 package model
 
 import (
-	"github.com/perses/perses/cue/common"
+	"github.com/rhobs/perses/cue/common"
 )
 
 kind: "BarChart"

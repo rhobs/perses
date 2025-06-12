@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 )
 

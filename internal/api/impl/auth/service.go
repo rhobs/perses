@@ -17,10 +17,10 @@ import (
 	"errors"
 	"fmt"
 
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	"github.com/perses/perses/internal/api/interface/v1/user"
-	"github.com/perses/perses/internal/api/rbac"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	"github.com/rhobs/perses/internal/api/interface/v1/user"
+	"github.com/rhobs/perses/internal/api/rbac"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

@@ -14,13 +14,13 @@
 package rbac
 
 import (
-	"github.com/perses/perses/internal/api/interface/v1/globalrole"
-	"github.com/perses/perses/internal/api/interface/v1/globalrolebinding"
-	"github.com/perses/perses/internal/api/interface/v1/role"
-	"github.com/perses/perses/internal/api/interface/v1/rolebinding"
-	"github.com/perses/perses/internal/api/interface/v1/user"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalrole"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalrolebinding"
+	"github.com/rhobs/perses/internal/api/interface/v1/role"
+	"github.com/rhobs/perses/internal/api/interface/v1/rolebinding"
+	"github.com/rhobs/perses/internal/api/interface/v1/user"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/sirupsen/logrus"
 )
 

@@ -17,8 +17,8 @@ import (
 	"encoding/json"
 	"io"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type Query interface {
