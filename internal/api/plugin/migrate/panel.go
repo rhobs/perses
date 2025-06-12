@@ -17,8 +17,8 @@ import (
 	"fmt"
 
 	"cuelang.org/go/cue/build"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/sirupsen/logrus"
 )
 

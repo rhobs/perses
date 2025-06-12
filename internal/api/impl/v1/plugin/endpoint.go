@@ -17,10 +17,10 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	apiinterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/plugin"
-	"github.com/perses/perses/internal/api/route"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/plugin"
+	"github.com/rhobs/perses/internal/api/route"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

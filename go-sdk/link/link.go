@@ -13,7 +13,7 @@
 
 package link
 
-import v1 "github.com/perses/perses/pkg/model/api/v1"
+import v1 "github.com/rhobs/perses/pkg/model/api/v1"
 
 type Option func(link *Builder) error
 

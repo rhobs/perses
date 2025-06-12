@@ -89,7 +89,7 @@ A panel migration file looks like the following:
 package migrate
 
 import (
-	commonMigrate "github.com/perses/perses/cue/schemas/common/migrate"
+	commonMigrate "github.com/rhobs/perses/cue/schemas/common/migrate"
 )
 
 #grafanaType: "bargauge"

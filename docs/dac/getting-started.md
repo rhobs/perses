@@ -123,9 +123,9 @@ package main
 import (
 	"flag"
 
-	"github.com/perses/perses/go-sdk/dashboard"
-	"github.com/perses/perses/go-sdk/panel"
-	listVar "github.com/perses/perses/go-sdk/variable/list-variable"
+	"github.com/rhobs/perses/go-sdk/dashboard"
+	"github.com/rhobs/perses/go-sdk/panel"
+	listVar "github.com/rhobs/perses/go-sdk/variable/list-variable"
 	promDs "github.com/perses/plugins/prometheus/sdk/go/datasource"
 	"github.com/perses/plugins/prometheus/sdk/go/query"
 	labelValuesVar "github.com/perses/plugins/prometheus/sdk/go/variable/label-values"

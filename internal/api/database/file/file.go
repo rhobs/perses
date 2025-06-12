@@ -22,10 +22,10 @@ import (
 	"reflect"
 	"strings"
 
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/config"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"gopkg.in/yaml.v3"
 )
 

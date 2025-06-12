@@ -18,8 +18,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/perses/perses/internal/api/plugin/migrate"
-	testUtils "github.com/perses/perses/internal/test"
+	"github.com/rhobs/perses/internal/api/plugin/migrate"
+	testUtils "github.com/rhobs/perses/internal/test"
 	"github.com/stretchr/testify/assert"
 )
 

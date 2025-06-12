@@ -18,12 +18,12 @@ import (
 	"fmt"
 
 	"github.com/brunoga/deep"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/role"
-	"github.com/perses/perses/internal/api/plugin/schema"
-	"github.com/perses/perses/internal/api/rbac"
-	"github.com/perses/perses/pkg/model/api"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/role"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	"github.com/rhobs/perses/internal/api/rbac"
+	"github.com/rhobs/perses/pkg/model/api"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

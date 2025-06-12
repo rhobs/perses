@@ -4,7 +4,7 @@
 
 package v1
 
-import "github.com/perses/perses/cue/model/api/v1/secret"
+import "github.com/rhobs/perses/cue/model/api/v1/secret"
 
 #PublicNativeProvider: {
 	password?: secret.#Hidden @go(Password)

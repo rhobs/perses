@@ -16,8 +16,8 @@ package datasource
 import (
 	"net/url"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/datasource/http"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
 )
 
 // Prometheus is only used for testing purpose.

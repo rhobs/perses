@@ -26,7 +26,7 @@ import (
 	"cuelang.org/go/cue/cuecontext"
 	"cuelang.org/go/cue/format"
 	"cuelang.org/go/cue/load"
-	"github.com/perses/perses/internal/cli/file"
+	"github.com/rhobs/perses/internal/cli/file"
 	"github.com/sirupsen/logrus"
 )
 

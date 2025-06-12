@@ -17,13 +17,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/perses/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api"
 
 	"github.com/brunoga/deep"
-	"github.com/perses/perses/internal/api/crypto"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/globalsecret"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/internal/api/crypto"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalsecret"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 
