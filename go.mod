@@ -1,8 +1,6 @@
 module github.com/perses/perses
 
-go 1.24.0
-
-toolchain go1.24.4
+go 1.23.0
 
 require (
 	cuelang.org/go v0.13.0
@@ -44,10 +42,10 @@ require (
 	golang.org/x/mod v0.24.0
 	golang.org/x/oauth2 v0.30.0
 	gopkg.in/yaml.v3 v3.0.1
-	k8s.io/api v0.33.1
-	k8s.io/apimachinery v0.33.1
-	k8s.io/apiserver v0.33.1
-	k8s.io/client-go v0.33.1
+	k8s.io/api v0.32.5
+	k8s.io/apimachinery v0.32.5
+	k8s.io/apiserver v0.32.5
+	k8s.io/client-go v0.32.5
 )
 
 require (
@@ -67,6 +65,7 @@ require (
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.1.2-0.20250424173009-453214e765f3 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
+	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/bahlo/generic-list-go v0.2.0 // indirect
@@ -121,6 +120,7 @@ require (
 	github.com/google/gnostic-models v0.6.9 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/google/pprof v0.0.0-20241101162523-b92577c0c142 // indirect
 	github.com/goreleaser/chglog v0.6.2 // indirect
 	github.com/goreleaser/fileglob v1.3.0 // indirect
@@ -239,9 +239,9 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	k8s.io/component-base v0.33.1 // indirect
+	k8s.io/component-base v0.32.5 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
-	k8s.io/kms v0.33.1 // indirect
+	k8s.io/kms v0.32.5 // indirect
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff // indirect
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738 // indirect
 	moul.io/http2curl/v2 v2.3.0 // indirect
