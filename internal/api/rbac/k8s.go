@@ -23,6 +23,7 @@ import (
 
 	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	k8suser "k8s.io/apiserver/pkg/authentication/user"
 
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 
@@ -98,7 +99,7 @@ func (r K8sImpl) GetUserProjects(ctx echo.Context, _ string, requestAction v1Rol
 	}
 	scope := getK8sScope(requestScope)
 	action := getK8sAction(requestAction)
-	namespaces := r.getNamespaceList()
+	namespaces := r.getNamespaceList(ctx)
 	permittedNamespaces := []string{}
 
 	for _, namespace := range namespaces {
@@ -131,8 +132,14 @@ func (r K8sImpl) HasPermission(ctx echo.Context, _ string, requestAction v1Role.
 
 	scope := getK8sScope(requestScope)
 	if scope == "" {
-		// The permission isn't k8s related, default to using guest permissions
+		// The permission isn't checking k8s related, default to using guest permissions
 		return permissionListHasPermission(r.guestPermissions, requestAction, requestScope)
+	}
+
+	// if we are requesting information about access to a project then we only need to check if the
+	// user can see the namespace
+	if scope == K8sProjectScope {
+		return r.checkNamespacePermission(ctx, requestProject, user)
 	}
 
 	action := getK8sAction(requestAction)
@@ -165,7 +172,7 @@ func (r K8sImpl) GetPermissions(ctx echo.Context, _ string) map[string][]*v1Role
 	userPermissions := make(map[string][]*v1Role.Permission)
 	userPermissions[GlobalProject] = r.guestPermissions
 
-	namespaces := r.getNamespaceList()
+	namespaces := r.getNamespaceList(ctx)
 
 scope:
 	for _, k8sScope := range K8sScopesToCheck {
@@ -273,20 +280,45 @@ func (r K8sImpl) Refresh() error {
 	return nil
 }
 
-func (r K8sImpl) getNamespaceList() []string {
+func (r K8sImpl) getNamespaceList(ctx echo.Context) []string {
+	user, err := r.Security.GetK8sUser(ctx)
+	if err != nil {
+		return []string{}
+	}
 	k8sNamespaces, err := r.kubeClient.CoreV1().Namespaces().
 		List(context.Background(), metav1.ListOptions{})
 	if err != nil {
 		return []string{}
 	}
 
-	namespaces := []string{GlobalProject}
+	authorizedNamespaces := []string{}
 
-	for _, namespace := range k8sNamespaces.Items {
-		namespaces = append(namespaces, namespace.Name)
+	for _, k8sNamespace := range k8sNamespaces.Items {
+		if r.checkNamespacePermission(ctx, k8sNamespace.Name, user) {
+			authorizedNamespaces = append(authorizedNamespaces, k8sNamespace.Name)
+		}
 	}
 
-	return namespaces
+	return authorizedNamespaces
+}
+
+func (r K8sImpl) checkNamespacePermission(ctx echo.Context, namespace string, user k8suser.Info) bool {
+	attributes := authorizer.AttributesRecord{
+		User:            user,
+		Verb:            string(K8sReadAction),
+		Namespace:       namespace,
+		APIGroup:        "perses.dev",
+		APIVersion:      "v1",
+		Resource:        string(K8sProjectScope),
+		Subresource:     "",
+		Name:            "",
+		ResourceRequest: false,
+	}
+
+	// don't need to check bool or error since if the authorized isn't allow then all other instances
+	// mean failure
+	authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
+	return authorized == authorizer.DecisionAllow
 }
 
 func getK8sAction(action v1Role.Action) K8sAction {
