@@ -93,35 +93,7 @@ func (r K8sImpl) IsEnabled() bool {
 }
 
 func (r K8sImpl) GetUserProjects(ctx echo.Context, _ string, requestAction v1Role.Action, requestScope v1Role.Scope) []string {
-	user, err := r.Security.GetK8sUser(ctx)
-	if err != nil {
-		return []string{}
-	}
-	scope := getK8sScope(requestScope)
-	action := getK8sAction(requestAction)
-	namespaces := r.getNamespaceList(ctx)
-	permittedNamespaces := []string{}
-
-	for _, namespace := range namespaces {
-		attributes := authorizer.AttributesRecord{
-			User:            user,
-			Verb:            string(action),
-			Namespace:       namespace,
-			APIGroup:        "perses.dev",
-			APIVersion:      "v1alpha1",
-			Resource:        string(scope),
-			Subresource:     "",
-			Name:            "",
-			ResourceRequest: false,
-		}
-
-		authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
-		if authorized == authorizer.DecisionAllow {
-			permittedNamespaces = append(permittedNamespaces, namespace)
-		}
-	}
-
-	return permittedNamespaces
+	return r.getNamespaceList(ctx)
 }
 
 func (r K8sImpl) HasPermission(ctx echo.Context, _ string, requestAction v1Role.Action, requestProject string, requestScope v1Role.Scope) bool {
@@ -158,9 +130,9 @@ func (r K8sImpl) HasPermission(ctx echo.Context, _ string, requestAction v1Role.
 		ResourceRequest: false,
 	}
 
-	authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
+	authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
 
-	return authorized == authorizer.DecisionAllow
+	return authorized != authorizer.DecisionDeny && err == nil
 }
 
 func (r K8sImpl) GetPermissions(ctx echo.Context, _ string) map[string][]*v1Role.Permission {
@@ -303,22 +275,27 @@ func (r K8sImpl) getNamespaceList(ctx echo.Context) []string {
 }
 
 func (r K8sImpl) checkNamespacePermission(ctx echo.Context, namespace string, user k8suser.Info) bool {
-	attributes := authorizer.AttributesRecord{
-		User:            user,
-		Verb:            string(K8sReadAction),
-		Namespace:       namespace,
-		APIGroup:        "perses.dev",
-		APIVersion:      "v1",
-		Resource:        string(K8sProjectScope),
-		Subresource:     "",
-		Name:            "",
-		ResourceRequest: false,
-	}
+	for _, k8sScope := range K8sScopesToCheck {
+		attributes := authorizer.AttributesRecord{
+			User:            user,
+			Verb:            string(K8sReadAction),
+			Namespace:       namespace,
+			APIGroup:        "perses.dev",
+			APIVersion:      "v1alpha1",
+			Resource:        string(getPersesScope(k8sScope)),
+			Subresource:     "",
+			Name:            "",
+			ResourceRequest: false,
+		}
 
-	// don't need to check bool or error since if the authorized isn't allow then all other instances
-	// mean failure
-	authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
-	return authorized == authorizer.DecisionAllow
+		// don't need to check bool or error since if the authorized isn't allow then all other instances
+		// mean failure
+		authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
+		if authorized != authorizer.DecisionDeny && err == nil {
+			return true
+		}
+	}
+	return false
 }
 
 func getK8sAction(action v1Role.Action) K8sAction {
