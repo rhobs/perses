@@ -1,38 +1,65 @@
-FROM node:20 AS node-builder
-WORKDIR /app
-COPY ui ui
-COPY Makefile Makefile
-COPY VERSION VERSION
-RUN make build-ui
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.23 as builder
+USER root
 
-FROM golang:1.23 AS go-builder
-WORKDIR /go/src/github.com/perses/perses
+
+RUN dnf install -y --setopt=tsflags=nodocs mailcap && \
+    dnf clean all && \
+    rm -rf /var/cache/dnf
+
+# RUN subscription-manager register \
+#     --activationkey="rh-konflux-coo"\
+#     --org="YOUR_ORG_HERE" && \
+#     dnf install -y --setopt=tsflags=nodocs mailcap && \
+#     dnf clean all && \
+#     subscription-manager unregister && \
+#     subscription-manager clean && \
+#     rm -rf /var/cache/dnf
+
+WORKDIR /app
+
+COPY go.mod go.mod
+COPY go.sum go.sum
+
+RUN go mod download
+
 COPY . .
-COPY --from=node-builder /app/ui/app/dist ui/app/dist
-RUN mkdir /perses
+
+ENV GOFLAGS="-mod=readonly"
+
 RUN mkdir /plugins
+
 RUN make build-api
 RUN make build-cli
 
-FROM gcr.io/distroless/static-debian12
+FROM registry.redhat.io/rhel9-4-els/rhel:9.4
 
-LABEL maintainer="The Perses Authors <perses-team@googlegroups.com>"
+LABEL maintainer="Observability UI team <team-observability-ui@redhat.com>"
 
-USER nobody
 
-COPY --from=go-builder --chown=nobody:nobody  /go/src/github.com/perses/perses/bin/perses        /bin/perses
-COPY --from=go-builder --chown=nobody:nobody  /go/src/github.com/perses/perses/bin/percli        /bin/percli
-COPY --chown=nobody:nobody                    LICENSE            /LICENSE
-COPY --chown=nobody:nobody                    plugins-archive/   /etc/perses/plugins-archive/
-COPY --chown=nobody:nobody                    docs/examples/config.docker.yaml     /etc/perses/config.yaml
-COPY --from=go-builder --chown=nobody:nobody  /perses            /perses
-COPY --from=go-builder --chown=nobody:nobody  /plugins           /etc/perses/plugins
-COPY --from=go-builder --chown=nobody:nobody  /etc/mime.types    /etc/mime.types
+COPY --from=builder /app/bin/perses                         /bin/perses
+COPY --from=builder /app/bin/percli                         /bin/percli
+COPY --from=builder /app/docs/examples/config.docker.yaml   /etc/perses/config.yaml
+COPY --from=builder /app/plugins-archive/                   /etc/perses/plugins-archive/
+COPY --from=builder /app/LICENSE                            /LICENSE
+COPY --from=builder /plugins                                /etc/perses/plugins
+COPY --from=builder /etc/mime.types                         /etc/mime.types
+
+RUN chgrp -R 0 /etc/perses && \
+    chmod -R g=u /etc/perses
 
 WORKDIR /perses
 
 EXPOSE     8080
 VOLUME     ["/perses"]
 ENTRYPOINT [ "/bin/perses" ]
-CMD        ["--config=/etc/perses/config.yaml", \
-            "--log.level=error"]
+CMD        ["--config=/etc/perses/config.yaml", "--log.level=error"]
+
+LABEL com.redhat.component="coo-perses" \
+    name="perses/perses" \
+    version="v0.51.0" \
+    summary="Perses for Cluster Observability Operator" \
+    io.openshift.tags="openshift,observability-ui,perses" \
+    io.k8s.display-name="Perses for Cluster Observability Operator" \
+    io.k8s.description="Perses for Cluster Observability Operator" \
+    maintainer="Observability UI Team <team-observability-ui@redhat.com>" \
+    description="Perses for Cluster Observability Operator"
