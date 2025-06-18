@@ -38,6 +38,7 @@ import (
 
 type K8sSecurity struct {
 	jwt           JWT
+	inCluster     bool
 	Authenticator authenticator.Request
 	Authorizer    authorizer.Authorizer
 	Kubeconfig    *rest.Config
@@ -47,7 +48,7 @@ type K8sSecurity struct {
 func (auth *K8sSecurity) GetUser(ctx echo.Context) string {
 	req := ctx.Request().Clone(ctx.Request().Context())
 
-	req.Header.Set("Authorization", GetAuthnHeaderFromClient(ctx, auth.Kubeconfig))
+	req.Header.Set("Authorization", getAuthnHeaderFromClient(ctx, auth.Kubeconfig, auth.inCluster))
 	res, ok, err := auth.Authenticator.AuthenticateRequest(req)
 	if err != nil || !ok {
 		return ""
@@ -64,7 +65,7 @@ func (auth *K8sSecurity) GetJWT() JWT {
 func (auth *K8sSecurity) GetK8sUser(ctx echo.Context) (k8suser.Info, error) {
 	req := ctx.Request().Clone(ctx.Request().Context())
 
-	req.Header.Set("Authorization", GetAuthnHeaderFromClient(ctx, auth.Kubeconfig))
+	req.Header.Set("Authorization", getAuthnHeaderFromClient(ctx, auth.Kubeconfig, auth.inCluster))
 	res, ok, err := auth.Authenticator.AuthenticateRequest(req)
 	if err != nil {
 		return nil, err
@@ -80,7 +81,7 @@ func GetKubernetesSecurity(security config.Security, jwt JwtImpl) *K8sSecurity {
 	if !security.Authentication.Providers.KubernetesProvider.Enabled {
 		return nil
 	}
-	kubeconfig, err := InitKubeConfig(security.Authentication.Providers.KubernetesProvider.Kubeconfig)
+	kubeconfig, inCluster, err := InitKubeConfig(security.Authentication.Providers.KubernetesProvider.Kubeconfig)
 	if err != nil {
 		return nil
 	}
@@ -113,26 +114,27 @@ func GetKubernetesSecurity(security config.Security, jwt JwtImpl) *K8sSecurity {
 		Authorizer:    authorizer,
 		Kubeconfig:    kubeconfig,
 		jwt:           jwt.GetJWT(),
+		inCluster:     inCluster,
 	}
 }
 
 // Returns initialized config, allows local usage (outside cluster) based on provided kubeconfig or in-cluster
-// service account usage
-func InitKubeConfig(kcLocation string) (*rest.Config, error) {
+// service account usage. Also returns if running inside a cluster
+func InitKubeConfig(kcLocation string) (*rest.Config, bool, error) {
 	if kcLocation != "" {
 		kubeConfig, err := clientcmd.BuildConfigFromFlags("", kcLocation)
 		if err != nil {
-			return nil, fmt.Errorf("unable to build rest config based on provided path to kubeconfig file: %w", err)
+			return nil, false, fmt.Errorf("unable to build rest config based on provided path to kubeconfig file: %w", err)
 		}
-		return kubeConfig, nil
+		return kubeConfig, false, nil
 	}
 
 	kubeConfig, err := rest.InClusterConfig()
 	if err != nil {
-		return nil, fmt.Errorf("cannot find Service Account in pod to build in-cluster rest config: %w", err)
+		return nil, true, fmt.Errorf("cannot find Service Account in pod to build in-cluster rest config: %w", err)
 	}
 
-	return kubeConfig, nil
+	return kubeConfig, true, nil
 }
 
 /*
@@ -144,15 +146,15 @@ func GetAuthnHeaderFromLocation(ctx echo.Context, kcLocation string) string {
 	if len(kcLocation) == 0 {
 		return ctx.Request().Header.Get("Authorization")
 	}
-	kubeconfig, err := InitKubeConfig(kcLocation)
+	kubeconfig, _, err := InitKubeConfig(kcLocation)
 	if err != nil {
 		return ""
 	}
 	return fmt.Sprintf("bearer %s", kubeconfig.BearerToken)
 }
 
-func GetAuthnHeaderFromClient(ctx echo.Context, kubeconfig *rest.Config) string {
-	if kubeconfig == nil {
+func getAuthnHeaderFromClient(ctx echo.Context, kubeconfig *rest.Config, inCluster bool) string {
+	if inCluster {
 		return ctx.Request().Header.Get("Authorization")
 	}
 	return fmt.Sprintf("bearer %s", kubeconfig.BearerToken)

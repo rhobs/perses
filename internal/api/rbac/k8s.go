@@ -130,9 +130,9 @@ func (r K8sImpl) HasPermission(ctx echo.Context, _ string, requestAction v1Role.
 		ResourceRequest: true,
 	}
 
-	authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
+	authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
 
-	return authorized != authorizer.DecisionDeny && err == nil
+	return authorized == authorizer.DecisionAllow
 }
 
 func (r K8sImpl) GetPermissions(ctx echo.Context, _ string) map[string][]*v1Role.Permission {
@@ -212,7 +212,7 @@ scope:
 					}
 				}
 
-				if k8sAction == K8sReadAction && authorized == authorizer.DecisionDeny {
+				if k8sAction == K8sReadAction && authorized != authorizer.DecisionAllow {
 					// User can't even read the resource, no need to check the rest
 					break scope
 				}
@@ -290,8 +290,8 @@ func (r K8sImpl) checkNamespacePermission(ctx echo.Context, namespace string, us
 
 		// don't need to check bool or error since if the authorized isn't allow then all other instances
 		// mean failure
-		authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
-		if authorized != authorizer.DecisionDeny && err == nil {
+		authorized, _, _ := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
+		if authorized == authorizer.DecisionAllow {
 			return true
 		}
 	}
