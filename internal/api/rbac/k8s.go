@@ -127,7 +127,7 @@ func (r K8sImpl) HasPermission(ctx echo.Context, _ string, requestAction v1Role.
 		Resource:        string(scope),
 		Subresource:     "",
 		Name:            "",
-		ResourceRequest: false,
+		ResourceRequest: true,
 	}
 
 	authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
@@ -187,7 +187,7 @@ scope:
 					Resource:        string(k8sScope),
 					Subresource:     "",
 					Name:            "",
-					ResourceRequest: false,
+					ResourceRequest: true,
 				}
 
 				authorized, _, err := r.Security.Authorizer.Authorize(ctx.Request().Context(), attributes)
@@ -285,7 +285,7 @@ func (r K8sImpl) checkNamespacePermission(ctx echo.Context, namespace string, us
 			Resource:        string(k8sScope),
 			Subresource:     "",
 			Name:            "",
-			ResourceRequest: false,
+			ResourceRequest: true,
 		}
 
 		// don't need to check bool or error since if the authorized isn't allow then all other instances
