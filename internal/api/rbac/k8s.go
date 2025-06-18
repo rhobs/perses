@@ -59,9 +59,9 @@ type K8sScope string
 
 const (
 	K8sWildcardScope   K8sScope = "*"
-	K8sDashboardScope  K8sScope = "PersesDashboard"
-	K8sDatasourceScope K8sScope = "PersesDatasource"
-	K8sProjectScope    K8sScope = "Namespace"
+	K8sDashboardScope  K8sScope = "persesdashboards"
+	K8sDatasourceScope K8sScope = "persesdatasources"
+	K8sProjectScope    K8sScope = "namespaces"
 )
 
 var K8sScopesToCheck = [2]K8sScope{
@@ -184,7 +184,7 @@ scope:
 					Namespace:       k8sProject,
 					APIGroup:        "perses.dev",
 					APIVersion:      "v1alpha1",
-					Resource:        string(getPersesScope(k8sScope)),
+					Resource:        string(k8sScope),
 					Subresource:     "",
 					Name:            "",
 					ResourceRequest: false,
@@ -282,7 +282,7 @@ func (r K8sImpl) checkNamespacePermission(ctx echo.Context, namespace string, us
 			Namespace:       namespace,
 			APIGroup:        "perses.dev",
 			APIVersion:      "v1alpha1",
-			Resource:        string(getPersesScope(k8sScope)),
+			Resource:        string(k8sScope),
 			Subresource:     "",
 			Name:            "",
 			ResourceRequest: false,
