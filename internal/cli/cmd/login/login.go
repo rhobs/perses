@@ -343,7 +343,7 @@ func (o *option) validateKubernetes(providers backendConfig.AuthProviders) error
 		}
 	}
 
-	kubeconfig, err := crypto.InitKubeConfig(o.kubeconfig)
+	kubeconfig, _, err := crypto.InitKubeConfig(o.kubeconfig)
 	if err != nil {
 		return err
 	}
