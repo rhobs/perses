@@ -37,7 +37,7 @@ type Explorer struct {
 
 type TimeRange struct {
 	DisableCustomTimeRange bool              `json:"disable_custom" yaml:"disable_custom"`
-	DisableZoomTimeRange   bool              `json:"disable_zoom" yaml:"disable_zoom"`
+	DisableZoomTimeRange   bool              `json:"disable_zoom,omitempty" yaml:"disable_zoom,omitempty"`
 	Options                []common.Duration `json:"options,omitempty" yaml:"options,omitempty"`
 }
 
