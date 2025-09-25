@@ -105,11 +105,7 @@ func New(dao user.DAO, jwt crypto.JWT, authz authorization.Authorization, provid
 
 	// Register the k8s authentication if enabled
 	if providers.KubernetesProvider.Enable {
-		kubernetesEp, err := newKubernetesEndpoint(authz)
-		if err != nil {
-			return nil, err
-		}
-		ep.endpoints = append(ep.endpoints, kubernetesEp)
+		ep.endpoints = append(ep.endpoints, newKubernetesEndpoint(authz))
 	}
 
 	// Register the OIDC providers if any

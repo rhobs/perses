@@ -31,11 +31,11 @@ type kubernetesEndpoint struct {
 	authz authorization.Authorization
 }
 
-func newKubernetesEndpoint(authz authorization.Authorization) (route.Endpoint, error) {
+func newKubernetesEndpoint(authz authorization.Authorization) route.Endpoint {
 
 	return &kubernetesEndpoint{
 		authz: authz,
-	}, nil
+	}
 
 }
 
@@ -73,12 +73,12 @@ func (e *kubernetesEndpoint) whoami(ctx echo.Context) error {
 		return err
 	}
 
-	return ctx.JSON(http.StatusOK, &externalUserInfoProfile{
+	return ctx.JSON(http.StatusOK, &ExternalUserInfoProfile{
 		Name: username,
 	})
 }
 
 // logWithError is a little logrus helper to log with given error
-func (e *kubernetesEndpoint) logWithError(err error) *logrus.Entry {
-	return logrus.WithError(err).WithField("provider", "kubernetes")
+func (e *kubernetesEndpoint) logWithError(err error) {
+	logrus.WithError(err).WithField("provider", "kubernetes")
 }

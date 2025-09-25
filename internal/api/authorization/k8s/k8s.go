@@ -27,6 +27,7 @@ import (
 	"github.com/perses/perses/pkg/model/api/config"
 	v1 "github.com/perses/perses/pkg/model/api/v1"
 	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/perses/perses/pkg/model/api/v1/secret"
 	"github.com/sirupsen/logrus"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apiserver/pkg/apis/apiserver"
@@ -40,14 +41,13 @@ import (
 	authenticationclient "k8s.io/client-go/kubernetes/typed/authentication/v1"
 	authorizationclient "k8s.io/client-go/kubernetes/typed/authorization/v1"
 	"k8s.io/client-go/rest"
-	"k8s.io/client-go/tools/clientcmd"
 )
 
 func New(conf config.Config) (*k8sImpl, error) {
 	if !conf.Security.Authorization.Provider.Kubernetes.Enable {
 		return nil, fmt.Errorf("kubernetes authorization is not enabled")
 	}
-	kubeconfig, err := initKubeConfig(conf.Security.Authorization.Provider.Kubernetes.Kubeconfig)
+	kubeconfig, err := secret.InitKubeConfig(conf.Security.Authorization.Provider.Kubernetes.Kubeconfig)
 	if err != nil {
 		return nil, err
 	}
@@ -440,25 +440,6 @@ func (k *k8sImpl) getNamespaceList() []string {
 	}
 
 	return namespaces
-}
-
-// Returns initialized config, allows local usage (outside cluster) based on provided kubeconfig or in-cluster
-// service account usage
-func initKubeConfig(kcLocation string) (*rest.Config, error) {
-	if kcLocation != "" {
-		kubeConfig, err := clientcmd.BuildConfigFromFlags("", kcLocation)
-		if err != nil {
-			return nil, fmt.Errorf("unable to build rest config based on provided path to kubeconfig file: %w", err)
-		}
-		return kubeConfig, nil
-	}
-
-	kubeConfig, err := rest.InClusterConfig()
-	if err != nil {
-		return nil, fmt.Errorf("cannot find service account in pod to build in-cluster rest config: %w", err)
-	}
-
-	return kubeConfig, nil
 }
 
 // getK8sAPIVersion is used to determine which API version the authorization request should use, v1
