@@ -14,12 +14,12 @@
 package plugin
 
 import (
-	"github.com/perses/perses/internal/cli/cmd/plugin/build"
-	"github.com/perses/perses/internal/cli/cmd/plugin/generate"
-	"github.com/perses/perses/internal/cli/cmd/plugin/lint"
-	"github.com/perses/perses/internal/cli/cmd/plugin/list"
-	"github.com/perses/perses/internal/cli/cmd/plugin/start"
-	"github.com/perses/perses/internal/cli/cmd/plugin/testschemas"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/build"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/generate"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/lint"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/list"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/start"
+	"github.com/rhobs/perses/internal/cli/cmd/plugin/testschemas"
 	"github.com/spf13/cobra"
 )
 

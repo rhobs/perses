@@ -15,7 +15,7 @@ package middleware
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/interface"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
 )
 
 func HandleError() echo.MiddlewareFunc {

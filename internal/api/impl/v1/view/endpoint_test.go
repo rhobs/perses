@@ -22,16 +22,16 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/perses/perses/internal/api/authorization"
-	"github.com/perses/perses/pkg/model/api"
+	"github.com/rhobs/perses/internal/api/authorization"
+	"github.com/rhobs/perses/pkg/model/api"
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/dashboard"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/role"
 	promclient "github.com/prometheus/client_model/go"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/dashboard"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

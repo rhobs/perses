@@ -16,11 +16,11 @@ package main
 import (
 	"flag"
 
-	"github.com/perses/perses/internal/api/core"
-	"github.com/perses/perses/internal/api/impl/v1/view"
-	"github.com/perses/perses/pkg/model/api/config"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
+	"github.com/rhobs/perses/internal/api/core"
+	"github.com/rhobs/perses/internal/api/impl/v1/view"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/sirupsen/logrus"
 )
 

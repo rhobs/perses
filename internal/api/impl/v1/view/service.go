@@ -14,10 +14,10 @@
 package view
 
 import (
-	"github.com/perses/perses/internal/api/interface/v1/view"
-	"github.com/perses/perses/internal/api/utils"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/rhobs/perses/internal/api/interface/v1/view"
+	"github.com/rhobs/perses/internal/api/utils"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 var labelNames = []string{"project", "dashboard"}

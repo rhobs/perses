@@ -16,14 +16,14 @@ package authorization
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/perses/perses/internal/api/authorization/native"
-	"github.com/perses/perses/internal/api/interface/v1/globalrole"
-	"github.com/perses/perses/internal/api/interface/v1/globalrolebinding"
-	"github.com/perses/perses/internal/api/interface/v1/role"
-	"github.com/perses/perses/internal/api/interface/v1/rolebinding"
-	"github.com/perses/perses/internal/api/interface/v1/user"
-	"github.com/perses/perses/pkg/model/api/config"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/internal/api/authorization/native"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalrole"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalrolebinding"
+	"github.com/rhobs/perses/internal/api/interface/v1/role"
+	"github.com/rhobs/perses/internal/api/interface/v1/rolebinding"
+	"github.com/rhobs/perses/internal/api/interface/v1/user"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 )
 
 type Authorization interface {

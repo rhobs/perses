@@ -20,9 +20,9 @@ import (
 	"reflect"
 
 	"github.com/huandu/go-sqlbuilder"
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 
@@ -200,7 +200,7 @@ func (d *DAO) Create(entity modelAPI.Entity) error {
 	// Flatten the metadata in case the config is activated.
 	// We are modifying the metadata to be sure the user will acknowledge this config.
 	// Also, it will avoid an issue with the permission when activated.
-	// See https://github.com/perses/perses/issues/1721 for more details.
+	// See https://github.com/rhobs/perses/issues/1721 for more details.
 	entity.GetMetadata().Flatten(d.CaseSensitive)
 	id, isExist, err := d.exists(modelV1.Kind(entity.GetKind()), entity.GetMetadata())
 	if err != nil {

@@ -17,9 +17,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/datasource/http"
-	"github.com/perses/perses/pkg/model/api/v1/datasource/sql"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource/sql"
 	"github.com/stretchr/testify/assert"
 )
 

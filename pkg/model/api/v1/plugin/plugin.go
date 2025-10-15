@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 )
 
 type Kind string
