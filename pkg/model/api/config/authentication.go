@@ -123,7 +123,8 @@ func (p *OAuthProvider) Verify() error {
 }
 
 type AuthProviders struct {
-	EnableNative       bool             `json:"enable_native" yaml:"enable_native"`
+	EnableNative bool `json:"enable_native" yaml:"enable_native"`
+	// +optional
 	KubernetesProvider K8sAuthnProvider `json:"kubernetes,omitzero" yaml:"kubernetes,omitempty"`
 	OAuth              []OAuthProvider  `json:"oauth,omitempty" yaml:"oauth,omitempty"`
 	OIDC               []OIDCProvider   `json:"oidc,omitempty" yaml:"oidc,omitempty"`
