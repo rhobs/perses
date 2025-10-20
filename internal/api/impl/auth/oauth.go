@@ -86,8 +86,8 @@ func newOAuthConfig(provider config.OAuthProvider, override *config.OAuthOverrid
 }
 
 type oauthUserInfo struct {
-	externalUserInfoProfile
-	RawProperties map[string]any
+	ExternalUserInfoProfile
+	RawProperties map[string]interface{}
 	loginKeys     []string
 	authURL       url.URL
 }
@@ -111,8 +111,8 @@ func (u *oauthUserInfo) GetLogin() string {
 }
 
 // GetProfile implements [externalUserInfo]
-func (u *oauthUserInfo) GetProfile() externalUserInfoProfile {
-	return u.externalUserInfoProfile
+func (u *oauthUserInfo) GetProfile() ExternalUserInfoProfile {
+	return u.ExternalUserInfoProfile
 }
 
 // GetProviderContext implements [externalUserInfo]

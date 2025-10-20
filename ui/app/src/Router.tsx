@@ -22,17 +22,20 @@ import { PersesLoader } from './components/PersesLoader';
 import { AuthorizationProvider } from './context/Authorization';
 import {
   ConfigContextProvider,
+  useExternalProvider,
   useIsAuthEnabled,
   useIsEphemeralDashboardEnabled,
   useIsExplorerEnabled,
+  useIsNativeAuth,
 } from './context/Config';
 import { DarkModeContextProvider } from './context/DarkMode';
 import { NavHistoryProvider } from './context/DashboardNavHistory';
-import { buildRedirectQueryString, useIsAccessTokenExist } from './model/auth-client';
+import { buildRedirectQueryString, useExternalUsername, useIsAccessTokenExist } from './model/auth-client';
 import {
   AdminRoute,
   ConfigRoute,
   ExploreRoute,
+  ExternalSignInRoute,
   getBasePathName,
   ImportRoute,
   ProfileRoute,
@@ -173,6 +176,18 @@ function Router(): ReactElement {
   );
 }
 
+function RequireAuth(): ReactElement | null {
+  const isAuthEnabled = useIsAuthEnabled();
+  const isNativeAuth = useIsNativeAuth();
+  if (!isAuthEnabled) {
+    return <Outlet />;
+  }
+  if (isNativeAuth) {
+    return <RequireNativeAuth />;
+  }
+  return <RequireExternalAuth />;
+}
+
 /**
  * This component aims to redirect the user to the SignIn page if not logged in.
  * Otherwise, it just loads the underlying component(s) defined as children.
@@ -182,14 +197,32 @@ function Router(): ReactElement {
  * @param children
  * @constructor
  */
-function RequireAuth(): ReactElement | null {
+function RequireNativeAuth(): ReactElement | null {
   const isAuthEnabled = useIsAuthEnabled();
   const isAccessTokenExist = useIsAccessTokenExist();
   const location = useLocation();
   if (!isAuthEnabled || isAccessTokenExist) {
     return <Outlet />;
   }
+
   let to = SignInRoute;
+  if (location.pathname !== '' && location.pathname !== '/') {
+    to += `?${buildRedirectQueryString(location.pathname + location.search)}`;
+  }
+  return <Navigate to={to} />;
+}
+
+function RequireExternalAuth(): ReactElement | null {
+  const externalProvider = useExternalProvider();
+  // default to kubernetes as the default external auth provider
+  const externalUsername = useExternalUsername(externalProvider);
+  const location = useLocation();
+
+  if (externalUsername) {
+    return <Outlet />;
+  }
+
+  let to = ExternalSignInRoute;
   if (location.pathname !== '' && location.pathname !== '/') {
     to += `?${buildRedirectQueryString(location.pathname + location.search)}`;
   }

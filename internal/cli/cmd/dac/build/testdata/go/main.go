@@ -17,7 +17,6 @@ import (
 	"flag"
 	"time"
 
-	panelgroup "github.com/perses/perses/go-sdk/panel-group"
 	promDs "github.com/perses/plugins/prometheus/sdk/go/datasource"
 	"github.com/perses/plugins/prometheus/sdk/go/query"
 	labelNamesVar "github.com/perses/plugins/prometheus/sdk/go/variable/label-names"
@@ -28,6 +27,7 @@ import (
 	"github.com/rhobs/perses/go-sdk/dashboard"
 	"github.com/rhobs/perses/go-sdk/panel"
 	"github.com/rhobs/perses/go-sdk/panel-group"
+	panelgroup "github.com/rhobs/perses/go-sdk/panel-group"
 	listVar "github.com/rhobs/perses/go-sdk/variable/list-variable"
 	txtVar "github.com/rhobs/perses/go-sdk/variable/text-variable"
 )
