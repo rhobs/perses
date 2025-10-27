@@ -25,7 +25,7 @@ COPY --chown=nobody:nobody                    LICENSE            /LICENSE
 COPY --chown=nobody:nobody                    plugins-archive/   /etc/perses/plugins-archive/
 COPY --chown=nobody:nobody                    docs/examples/config.docker.yaml     /etc/perses/config.yaml
 COPY --from=go-builder --chown=nobody:nobody  /perses            /perses
-COPY --from=go-builder --chown=nobody:nobody  /plugins           /etc/perses/plugins
+COPY --from=go-builder --chown=root:root      /plugins           /etc/perses/plugins
 COPY --from=go-builder --chown=nobody:nobody  /etc/mime.types    /etc/mime.types
 
 WORKDIR /perses

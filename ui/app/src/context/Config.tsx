@@ -105,7 +105,7 @@ export function useIsAuthEnabled(): boolean {
 
 export function useIsNativeAuth(): boolean {
   const { config } = useConfigContext();
-  return !!config.security.authorization.provider.native?.enable;
+  return !!config.security.authorization.provider?.native?.enable;
 }
 
 export function useIsExternalAuth(): boolean {
