@@ -18,7 +18,7 @@ import (
 	"slices"
 	"time"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 )
 
 var defaultTimeRangeOptions = []common.Duration{

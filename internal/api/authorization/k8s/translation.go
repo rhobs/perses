@@ -14,7 +14,7 @@
 package k8s
 
 import (
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 )
 
 type k8sAction string

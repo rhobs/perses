@@ -17,8 +17,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/plugin"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 )
 
 const PluginModuleKind = "PluginModule"

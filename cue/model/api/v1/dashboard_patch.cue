@@ -22,8 +22,8 @@
 package v1
 
 import (
-	"github.com/perses/perses/cue/model/api/v1/common"
-	"github.com/perses/perses/cue/model/api/v1/dashboard"
+	"github.com/rhobs/perses/cue/model/api/v1/common"
+	"github.com/rhobs/perses/cue/model/api/v1/dashboard"
 )
 
 #Panel: {

@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/perses/common/config"
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/sirupsen/logrus"
 )
 
@@ -51,11 +51,11 @@ type Config struct {
 	// Warning: This parameter does not work anymore since the version v0.51.0. The functionality has been broken when changing the plugin system and it will be fixed in a future version.
 	// Until then, please avoid using it and avoid using a reverse proxy with a path prefix to serve Perses.
 	// Issues raised about this:
-	// - https://github.com/perses/perses/issues/3166
-	// - https://github.com/perses/perses/issues/2579
-	// - https://github.com/perses/perses/issues/2589
-	// - https://github.com/perses/perses/issues/3384
-	// - https://github.com/perses/perses/issues/3396
+	// - https://github.com/rhobs/perses/issues/3166
+	// - https://github.com/rhobs/perses/issues/2579
+	// - https://github.com/rhobs/perses/issues/2589
+	// - https://github.com/rhobs/perses/issues/3384
+	// - https://github.com/rhobs/perses/issues/3396
 	APIPrefix string `json:"api_prefix,omitempty" yaml:"api_prefix,omitempty"`
 	// Security contains any configuration that changes the API behavior like the endpoints exposed or if the permissions are activated.
 	Security Security `json:"security,omitempty" yaml:"security,omitempty"`

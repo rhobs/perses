@@ -18,13 +18,13 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/dashboard"
-	"github.com/perses/perses/internal/api/plugin/schema"
-	"github.com/perses/perses/internal/api/route"
-	"github.com/perses/perses/internal/api/utils"
-	"github.com/perses/perses/internal/api/validate"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/dashboard"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	"github.com/rhobs/perses/internal/api/route"
+	"github.com/rhobs/perses/internal/api/utils"
+	"github.com/rhobs/perses/internal/api/validate"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type endpoint struct {

@@ -18,10 +18,10 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/plugin/migrate"
-	"github.com/perses/perses/internal/api/route"
-	"github.com/perses/perses/pkg/model/api"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/plugin/migrate"
+	"github.com/rhobs/perses/internal/api/route"
+	"github.com/rhobs/perses/pkg/model/api"
 )
 
 // Endpoint is the struct that defines all endpoint delivered by the path /migrate

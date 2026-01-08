@@ -14,9 +14,9 @@
 package health
 
 import (
-	"github.com/perses/perses/internal/api/interface/v1/health"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/prometheus/common/version"
+	"github.com/rhobs/perses/internal/api/interface/v1/health"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type serviceImpl struct {

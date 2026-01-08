@@ -38,15 +38,15 @@ We are providing an online demo available at **https://demo.perses.dev**, where 
 ## Status
 
 1. Perses as an application can now **be used**.
-   * The data model reached a stable point, and we are providing multiple panel types that should cover most of the monitoring & tracing use cases.
-   * Authentication and authorization are available.
+   - The data model reached a stable point, and we are providing multiple panel types that should cover most of the monitoring & tracing use cases.
+   - Authentication and authorization are available.
 2. On the GitOps aspect:
-   * We provide a CLI that helps interacting with the API. A short doc is available [here](./docs/cli.md)
-   * Two SDKs (in Golang and in Cuelang) are available for coding dashboards. See [Dashboard-as-Code](./docs/dac/getting-started.md) guide.
+   - We provide a CLI that helps interacting with the API. A short doc is available [here](./docs/cli.md)
+   - Two SDKs (in Golang and in Cuelang) are available for coding dashboards. See [Dashboard-as-Code](./docs/dac/getting-started.md) guide.
      These SDKs will likely evolve based on the feedback we receive. However, changes are expected to focus on adding utility functions rather than introducing breaking changes.
 3. A plugin architecture:
-   * Enables the externalization of both plugin loading and implementation.
-   * The core plugins are maintained in [perses/plugins](https://github.com/perses/plugins) repository.
+   - Enables the externalization of both plugin loading and implementation.
+   - The core plugins are maintained in [perses/plugins](https://github.com/perses/plugins) repository.
 
 ## What's next
 

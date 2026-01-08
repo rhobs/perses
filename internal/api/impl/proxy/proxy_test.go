@@ -17,7 +17,7 @@ import (
 	"crypto/tls"
 	"testing"
 
-	datasourceSQL "github.com/perses/perses/pkg/model/api/v1/datasource/sql"
+	datasourceSQL "github.com/rhobs/perses/pkg/model/api/v1/datasource/sql"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
