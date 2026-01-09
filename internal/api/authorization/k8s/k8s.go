@@ -242,7 +242,7 @@ func (k *k8sImpl) HasPermission(ctx echo.Context, requestAction v1Role.Action, r
 	scope := getK8sScope(requestScope)
 	if scope == "" {
 		// The permission isn't k8s related, default to false for now
-		return false
+		return true
 	}
 
 	authorized, _ := k.checkSpecificPermision(ctx, requestProject, kubernetesUser, requestScope, requestAction)
@@ -432,7 +432,7 @@ func getK8sAPIVersion(scope k8sScope) string {
 	case k8sProjectScope:
 		return "v1"
 	default:
-		return "v1alpha1"
+		return "v1alpha2"
 	}
 }
 
