@@ -6,6 +6,8 @@ RUN make build-ui
 
 FROM golang:1.25 AS go-builder
 WORKDIR /go/src/github.com/rhobs/perses
+COPY go.mod go.sum .
+RUN go mod download
 COPY . .
 COPY --from=node-builder /app/ui/app/dist ui/app/dist
 RUN mkdir /perses \
