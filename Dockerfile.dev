@@ -16,16 +16,17 @@ RUN mkdir /perses \
 FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL maintainer="The Perses Authors <perses-team@googlegroups.com>"
+USER 0
 
 COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/perses        /bin/perses
 COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/percli        /bin/percli
 COPY                                            LICENSE            /LICENSE
-COPY --from=go-builder --chown=nonroot:nonroot  /go/src/github.com/rhobs/perses/plugins-archive/   /etc/perses/plugins-archive/
+COPY --from=go-builder --chown=0:0  /go/src/github.com/rhobs/perses/plugins-archive/   /etc/perses/plugins-archive/
 COPY                                            docs/examples/config.docker.yaml     /etc/perses/config.yaml
-COPY --from=go-builder --chown=nonroot:nonroot  /perses            /perses
-COPY --from=go-builder --chown=nonroot:nonroot  /plugins           /etc/perses/plugins
-RUN chmod -R 777 /etc/perses/plugins
+COPY --from=go-builder --chown=0:0  /perses            /perses
+COPY --from=go-builder                          /plugins           /etc/perses/plugins
 COPY --from=go-builder                          /etc/mime.types    /etc/mime.types
+RUN chmod -R 0777 /etc/perses/plugins
 
 WORKDIR /perses
 
