@@ -1,0 +1,1 @@
+{"version":3,"file":"logsql-editor.d.ts","sourceRoot":"","sources":["../../../src/components/logsql-editor.tsx"],"names":[],"mappings":"AAaA,OAAO,EAAE,YAAY,EAAW,MAAM,OAAO,CAAC;AAE9C,OAAmB,EAAc,oBAAoB,EAAE,MAAM,uBAAuB,CAAC;AAGrF,MAAM,MAAM,iBAAiB,GAAG,IAAI,CAAC,oBAAoB,EAAE,OAAO,GAAG,YAAY,CAAC,CAAC;AAEnF,wBAAgB,YAAY,CAAC,KAAK,EAAE,iBAAiB,GAAG,YAAY,CAyCnE"}

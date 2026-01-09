@@ -1,0 +1,391 @@
+{
+  "id": "GaugeChart",
+  "name": "GaugeChart",
+  "metaData": {
+    "name": "GaugeChart",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.12.0-rc.0",
+      "buildName": "@perses-dev/gauge-chart-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/GaugeChart.d11ad836.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "GaugeChart",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/GaugeChart/\"; }"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "shareScope": "default",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "eager": false,
+      "id": "GaugeChart:@emotion/react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/274.07ee62ee.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "shareScope": "default",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "eager": false,
+      "id": "GaugeChart:@emotion/styled",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/235.675ef806.js",
+            "__mf/js/async/616.1b1bb2ba.js",
+            "__mf/js/async/854.0822db86.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "shareScope": "default",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "eager": false,
+      "id": "GaugeChart:@hookform/resolvers",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/587.e32d2906.js",
+            "__mf/js/async/968.be22fbda.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "GaugeChart:@perses-dev/components",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/555.4b9e6f5a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./GaugeChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "GaugeChart:@perses-dev/plugin-system",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/252.1ce83eb5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./GaugeChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "shareScope": "default",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "eager": false,
+      "id": "GaugeChart:date-fns",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/192.8bf7cec4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "shareScope": "default",
+      "name": "echarts",
+      "version": "5.5.0",
+      "eager": false,
+      "id": "GaugeChart:echarts",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.dca7db8d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^10.1.1",
+      "shareScope": "default",
+      "name": "immer",
+      "version": "10.1.1",
+      "eager": false,
+      "id": "GaugeChart:immer",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/963.c04e5fd0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./GaugeChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "shareScope": "default",
+      "name": "lodash",
+      "version": "4.17.21",
+      "eager": false,
+      "id": "GaugeChart:lodash",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.f9d6a7ae.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.4.0",
+      "shareScope": "default",
+      "name": "mdi-material-ui",
+      "version": "7.9.3",
+      "eager": false,
+      "id": "GaugeChart:mdi-material-ui",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/496.63537c05.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "GaugeChart:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/470.9855b786.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "GaugeChart:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/121.0385c285.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./GaugeChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "9.1.0",
+      "shareScope": "default",
+      "name": "use-resize-observer",
+      "version": "9.1.0",
+      "eager": false,
+      "id": "GaugeChart:use-resize-observer",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/458.2a1e1dfe.js",
+            "__mf/js/async/77.429aab8d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "shareScope": "default",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "eager": false,
+      "id": "GaugeChart:date-fns-tz",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/978.26163709.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./GaugeChart",
+      "id": "GaugeChart:GaugeChart",
+      "name": "GaugeChart",
+      "requires": [
+        "react",
+        "immer",
+        "@perses-dev/components",
+        "@perses-dev/plugin-system"
+      ],
+      "file": "src/GaugeChart.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/403.4dee4df3.js",
+            "__mf/js/async/204.368d6115.js",
+            "__mf/js/async/181.c020220f.js",
+            "__mf/js/async/756.ae22d123.js",
+            "__mf/js/async/__federation_expose_GaugeChart.10711c41.js"
+          ],
+          "async": [
+            "__mf/js/async/588.7dda8aa9.js",
+            "__mf/js/async/71.773ab397.js",
+            "__mf/js/async/356.a480b281.js",
+            "__mf/js/async/410.839d386d.js",
+            "__mf/js/async/127.5ef482f0.js",
+            "__mf/js/async/lib-router.c318fd9d.js",
+            "__mf/js/async/177.4d5022bb.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/61.d3010b86.css",
+            "__mf/css/async/823.d3010b86.css"
+          ]
+        }
+      }
+    }
+  ]
+}

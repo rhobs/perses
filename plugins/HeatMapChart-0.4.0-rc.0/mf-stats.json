@@ -1,0 +1,201 @@
+{
+  "id": "HeatMapChart",
+  "name": "HeatMapChart",
+  "metaData": {
+    "name": "HeatMapChart",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.4.0-rc.0",
+      "buildName": "@perses-dev/heatmap-chart-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/HeatMapChart.64173994.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "HeatMapChart",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/HeatMapChart/\"; }"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "HeatMapChart:@perses-dev/components",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/277.34ae0ac5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./HeatMapChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-beta.4",
+      "shareScope": "default",
+      "name": "@perses-dev/core",
+      "version": "0.53.0-beta.4",
+      "eager": false,
+      "id": "HeatMapChart:@perses-dev/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/12.4a0642db.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./HeatMapChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^10.1.1",
+      "shareScope": "default",
+      "name": "immer",
+      "version": "10.1.1",
+      "eager": false,
+      "id": "HeatMapChart:immer",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/963.6eed3d33.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./HeatMapChart"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "shareScope": "default",
+      "name": "lodash",
+      "version": "4.17.21",
+      "eager": false,
+      "id": "HeatMapChart:lodash",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.de783cd4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "HeatMapChart:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/470.6889fffa.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "HeatMapChart:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/121.8ac14a6e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./HeatMapChart"
+      ]
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./HeatMapChart",
+      "id": "HeatMapChart:HeatMapChart",
+      "name": "HeatMapChart",
+      "requires": [
+        "react",
+        "immer",
+        "@perses-dev/components",
+        "@perses-dev/core"
+      ],
+      "file": "src/HeatMapChart.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/700.a5530423.js",
+            "__mf/js/async/__federation_expose_HeatMapChart.5ef80ecb.js"
+          ],
+          "async": [
+            "__mf/js/async/888.944e0384.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/61.d3010b86.css"
+          ]
+        }
+      }
+    }
+  ]
+}

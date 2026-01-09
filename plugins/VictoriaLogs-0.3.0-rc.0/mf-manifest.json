@@ -1,0 +1,556 @@
+{
+  "id": "VictoriaLogs",
+  "name": "VictoriaLogs",
+  "metaData": {
+    "name": "VictoriaLogs",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.3.0-rc.0",
+      "buildName": "@perses-dev/victorialogs-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/VictoriaLogs.c55e9da9.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "VictoriaLogs",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/VictoriaLogs/\"; }"
+  },
+  "shared": [
+    {
+      "id": "VictoriaLogs:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.f6456c87.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.44d9fc39.js",
+            "__mf/js/async/6854.efd1a0a6.js",
+            "__mf/js/async/9235.543bd352.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.dfbc3ebc.js",
+            "__mf/js/async/7968.5fed5183.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/3849.88dc1f18.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.b3b5c86f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@perses-dev/explore",
+      "name": "@perses-dev/explore",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1728.aa75fb41.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5501.4133576e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:@tanstack/react-query",
+      "name": "@tanstack/react-query",
+      "version": "4.39.1",
+      "singleton": true,
+      "requiredVersion": "^4.39.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6283.5edb374e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.cb6ffe0e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.f5cf5a02.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.2a915032.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.32cf23b6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:react-hook-form",
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "singleton": true,
+      "requiredVersion": "^7.54.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8356.2b39af38.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:react-router-dom",
+      "name": "react-router-dom",
+      "version": "6.30.0",
+      "singleton": true,
+      "requiredVersion": "^6.30.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5440.f8ca94c1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.db798067.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "VictoriaLogs:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.c5b22459.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "VictoriaLogs:VictoriaLogsDatasource",
+      "name": "VictoriaLogsDatasource",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/__federation_expose_VictoriaLogsDatasource.adbfa9d6.js"
+          ],
+          "async": [
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldNamesVariable.811acc9e.js",
+            "__mf/js/async/9944.34a79f7c.js",
+            "__mf/js/async/1170.1ace5903.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldValuesVariable.fe63dd85.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsTimeSeriesQuery.932d2333.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsLogQuery.c95dc731.js",
+            "__mf/js/async/713.249fa307.js",
+            "__mf/js/async/9836.bbf150b2.js",
+            "__mf/js/async/3664.6288aa89.js",
+            "__mf/js/async/7793.06fe240f.js",
+            "__mf/js/async/3059.bd425bfb.js",
+            "__mf/js/async/8035.d5aedc00.js",
+            "__mf/js/async/9588.b67d84aa.js",
+            "__mf/js/async/5071.b48bd1f7.js",
+            "__mf/js/async/2043.a03fc64f.js",
+            "__mf/js/async/7177.0fe1dff0.js",
+            "__mf/js/async/1969.4f0fc9ef.js",
+            "__mf/js/async/8482.6c4d64de.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./VictoriaLogsDatasource"
+    },
+    {
+      "id": "VictoriaLogs:VictoriaLogsTimeSeriesQuery",
+      "name": "VictoriaLogsTimeSeriesQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsTimeSeriesQuery.932d2333.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.b67d84aa.js",
+            "__mf/js/async/5071.b48bd1f7.js",
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldNamesVariable.811acc9e.js",
+            "__mf/js/async/9944.34a79f7c.js",
+            "__mf/js/async/1170.1ace5903.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldValuesVariable.fe63dd85.js",
+            "__mf/js/async/713.249fa307.js",
+            "__mf/js/async/9836.bbf150b2.js",
+            "__mf/js/async/3664.6288aa89.js",
+            "__mf/js/async/7793.06fe240f.js",
+            "__mf/js/async/3059.bd425bfb.js",
+            "__mf/js/async/8035.d5aedc00.js",
+            "__mf/js/async/2043.a03fc64f.js",
+            "__mf/js/async/7177.0fe1dff0.js",
+            "__mf/js/async/1969.4f0fc9ef.js",
+            "__mf/js/async/8482.6c4d64de.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./VictoriaLogsTimeSeriesQuery"
+    },
+    {
+      "id": "VictoriaLogs:VictoriaLogsLogQuery",
+      "name": "VictoriaLogsLogQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsLogQuery.c95dc731.js"
+          ],
+          "async": [
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldNamesVariable.811acc9e.js",
+            "__mf/js/async/9944.34a79f7c.js",
+            "__mf/js/async/1170.1ace5903.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldValuesVariable.fe63dd85.js",
+            "__mf/js/async/713.249fa307.js",
+            "__mf/js/async/9836.bbf150b2.js",
+            "__mf/js/async/3664.6288aa89.js",
+            "__mf/js/async/7793.06fe240f.js",
+            "__mf/js/async/3059.bd425bfb.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsTimeSeriesQuery.932d2333.js",
+            "__mf/js/async/8035.d5aedc00.js",
+            "__mf/js/async/9588.b67d84aa.js",
+            "__mf/js/async/5071.b48bd1f7.js",
+            "__mf/js/async/2043.a03fc64f.js",
+            "__mf/js/async/7177.0fe1dff0.js",
+            "__mf/js/async/1969.4f0fc9ef.js",
+            "__mf/js/async/8482.6c4d64de.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./VictoriaLogsLogQuery"
+    },
+    {
+      "id": "VictoriaLogs:VictoriaLogsFieldNamesVariable",
+      "name": "VictoriaLogsFieldNamesVariable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldNamesVariable.811acc9e.js"
+          ],
+          "async": [
+            "__mf/js/async/9944.34a79f7c.js",
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/1170.1ace5903.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldValuesVariable.fe63dd85.js",
+            "__mf/js/async/713.249fa307.js",
+            "__mf/js/async/9836.bbf150b2.js",
+            "__mf/js/async/3664.6288aa89.js",
+            "__mf/js/async/7793.06fe240f.js",
+            "__mf/js/async/3059.bd425bfb.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsTimeSeriesQuery.932d2333.js",
+            "__mf/js/async/8035.d5aedc00.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsLogQuery.c95dc731.js",
+            "__mf/js/async/9588.b67d84aa.js",
+            "__mf/js/async/5071.b48bd1f7.js",
+            "__mf/js/async/2043.a03fc64f.js",
+            "__mf/js/async/7177.0fe1dff0.js",
+            "__mf/js/async/1969.4f0fc9ef.js",
+            "__mf/js/async/8482.6c4d64de.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./VictoriaLogsFieldNamesVariable"
+    },
+    {
+      "id": "VictoriaLogs:VictoriaLogsFieldValuesVariable",
+      "name": "VictoriaLogsFieldValuesVariable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/4248.ce5ffe03.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/9944.34a79f7c.js",
+            "__mf/js/async/1430.bac7994c.js",
+            "__mf/js/async/1170.1ace5903.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsFieldValuesVariable.fe63dd85.js"
+          ],
+          "async": [
+            "__mf/js/async/713.249fa307.js",
+            "__mf/js/async/9836.bbf150b2.js",
+            "__mf/js/async/3664.6288aa89.js",
+            "__mf/js/async/7793.06fe240f.js",
+            "__mf/js/async/3059.bd425bfb.js",
+            "__mf/js/async/4225.43367877.js",
+            "__mf/js/async/5706.a7fb5c1b.js",
+            "__mf/js/async/2749.edab3f5e.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsTimeSeriesQuery.932d2333.js",
+            "__mf/js/async/8035.d5aedc00.js",
+            "__mf/js/async/__federation_expose_VictoriaLogsLogQuery.c95dc731.js",
+            "__mf/js/async/9588.b67d84aa.js",
+            "__mf/js/async/5071.b48bd1f7.js",
+            "__mf/js/async/2043.a03fc64f.js",
+            "__mf/js/async/7177.0fe1dff0.js",
+            "__mf/js/async/1969.4f0fc9ef.js",
+            "__mf/js/async/8482.6c4d64de.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./VictoriaLogsFieldValuesVariable"
+    }
+  ]
+}

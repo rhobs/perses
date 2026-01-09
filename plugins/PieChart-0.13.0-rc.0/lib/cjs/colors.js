@@ -1,0 +1,207 @@
+// Copyright 2025 The Perses Authors
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+function _export(target, all) {
+    for(var name in all)Object.defineProperty(target, name, {
+        enumerable: true,
+        get: Object.getOwnPropertyDescriptor(all, name).get
+    });
+}
+_export(exports, {
+    get generateGradientColor () {
+        return generateGradientColor;
+    },
+    get getAutoPaletteColor () {
+        return getAutoPaletteColor;
+    },
+    get getColor () {
+        return getColor;
+    },
+    get getConsistentColor () {
+        return getConsistentColor;
+    },
+    get getConsistentSeriesNameColor () {
+        return getConsistentSeriesNameColor;
+    },
+    get getDefaultSeriesColor () {
+        return getDefaultSeriesColor;
+    },
+    get getSeriesColor () {
+        return getSeriesColor;
+    }
+});
+const _colorhash = /*#__PURE__*/ _interop_require_default(require("color-hash"));
+function _interop_require_default(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+// Valid hue values are 0 to 360 and can be adjusted to control the generated colors.
+// More info: https://github.com/zenozeng/color-hash#custom-hue
+// Picked min of 20 and max of 360 to exclude common threshold colors (red).
+// Items with "error" in them will always be generated as red.
+const ERROR_HUE_CUTOFF = 20;
+const colorGenerator = new _colorhash.default({
+    hue: {
+        min: ERROR_HUE_CUTOFF,
+        max: 360
+    }
+});
+const redColorGenerator = new _colorhash.default({
+    hue: {
+        min: 0,
+        max: ERROR_HUE_CUTOFF
+    }
+});
+// Color utility functions
+/**
+ * Converts a number to a 2-digit hex string
+ */ function toHex(n) {
+    const hex = n.toString(16);
+    return hex.length === 1 ? '0' + hex : hex;
+}
+/**
+ * Converts a hex color string to RGB values
+ */ function hexToRgb(hex) {
+    const cleanHex = hex.replace('#', '');
+    return {
+        r: parseInt(cleanHex.substring(0, 2), 16),
+        g: parseInt(cleanHex.substring(2, 4), 16),
+        b: parseInt(cleanHex.substring(4, 6), 16)
+    };
+}
+/**
+ * Returns a deterministic number between 0 and 1 for a given string
+ */ function stringToSeed(str) {
+    let hash = 0;
+    for(let i = 0; i < str.length; i++){
+        const char = str.charCodeAt(i);
+        hash = (hash << 5) - hash + char;
+        hash = hash & hash; // Convert to 32-bit integer
+    }
+    // Convert to positive number and normalize to 0-1 range
+    return Math.abs(hash) / 2147483647;
+}
+function generateGradientColor(baseColor, factor) {
+    // Convert hex color to RGB
+    const { r, g, b } = hexToRgb(baseColor);
+    const newR = Math.round(r * factor);
+    const newG = Math.round(g * factor);
+    const newB = Math.round(b * factor);
+    return `#${toHex(newR)}${toHex(newG)}${toHex(newB)}`;
+}
+function getSeriesColor(seriesNames, colorPalette) {
+    const totalSeries = seriesNames.length;
+    if (totalSeries <= 0) {
+        return [];
+    }
+    const colors = [];
+    // undefined palette - default
+    if (colorPalette === undefined) {
+        for(let nameIndex = 0; nameIndex < seriesNames.length; nameIndex++){
+            const seriesColor = getDefaultSeriesColor({
+                categoricalPalette: [
+                    '#ff0000'
+                ],
+                muiPrimaryColor: '#ff0000',
+                seriesName: seriesNames[nameIndex] || ''
+            });
+            colors.push(seriesColor);
+        }
+        return colors;
+    }
+    // single color palette - generate gradients from that color
+    if (colorPalette.length === 1) {
+        const baseColor = colorPalette[0] ?? '#ff0000';
+        for(let i = 0; i < totalSeries; i++){
+            if (i === 0) {
+                colors.push(baseColor);
+            } else {
+                const gradientFactor = 1 * ((totalSeries - i) / totalSeries);
+                colors.push(generateGradientColor(baseColor, gradientFactor));
+            }
+        }
+        return colors.sort((a, b)=>{
+            const seedA = stringToSeed(seriesNames[colors.indexOf(a)] || 'fallback');
+            const seedB = stringToSeed(seriesNames[colors.indexOf(b)] || 'fallback');
+            return seedA - seedB;
+        });
+    }
+    // multi color palette - loops through colors and adds gradient when palette is exhausted
+    for(let i = 0; i < totalSeries; i++){
+        const color = getColor(colorPalette, i);
+        colors.push(color);
+    }
+    if (totalSeries > colorPalette.length) {
+        return colors.sort((a, b)=>{
+            const seedA = stringToSeed(seriesNames[colors.indexOf(a)] || 'fallback');
+            const seedB = stringToSeed(seriesNames[colors.indexOf(b)] || 'fallback');
+            return seedA - seedB;
+        });
+    }
+    return colors;
+}
+function getColor(palette, seriesIndex) {
+    // Handle undefined or empty palette
+    if (!palette || palette.length === 0) {
+        return '#ff0000';
+    }
+    const paletteTotalColors = palette.length;
+    const paletteIndex = seriesIndex % paletteTotalColors;
+    const baseColor = palette[paletteIndex] ?? '#ff0000';
+    // If we haven't exhausted the palette yet, use the original color
+    if (seriesIndex < paletteTotalColors) {
+        return baseColor;
+    }
+    // Calculate which "cycle" we're in (0 = first repeat, 1 = second repeat, etc.)
+    const cycleNumber = Math.floor(seriesIndex / paletteTotalColors);
+    // Apply gradient based on cycle number to create visual distinction
+    const gradientFactor = Math.min(1 - cycleNumber * 0.2, 1);
+    return generateGradientColor(baseColor, gradientFactor);
+}
+function computeConsistentColor(name, error) {
+    const [hue, saturation, lightness] = error ? redColorGenerator.hsl(name) : colorGenerator.hsl(name);
+    const saturationPercent = `${(saturation * 100).toFixed(0)}%`;
+    const lightnessPercent = `${(lightness * 100).toFixed(0)}%`;
+    return `hsla(${hue.toFixed(2)},${saturationPercent},${lightnessPercent},0.9)`;
+}
+// To check whether a color has already been generated for a given string.
+// TODO: Predefined color aliases will be defined here
+const colorLookup = {};
+function getConsistentColor(name, error) {
+    const key = `${name}_____${error}`;
+    let value = colorLookup[key];
+    if (!value) {
+        value = computeConsistentColor(name, error);
+        colorLookup[key] = value;
+    }
+    return value;
+}
+function getConsistentSeriesNameColor(inputString) {
+    return getConsistentColor(inputString, inputString.toLowerCase().includes('error'));
+}
+function getDefaultSeriesColor(props) {
+    const { categoricalPalette, muiPrimaryColor, seriesName } = props;
+    // Fallback is unlikely to set unless echarts theme palette in charts theme provider is undefined.
+    const fallbackColor = Array.isArray(categoricalPalette) && categoricalPalette[0] ? categoricalPalette[0] // Needed since echarts color property isn't always an array.
+     : muiPrimaryColor;
+    return getAutoPaletteColor(seriesName, fallbackColor);
+}
+function getAutoPaletteColor(name, fallbackColor) {
+    // corresponds to 'Auto' in palette.kind for generative color palette
+    const generatedColor = getConsistentSeriesNameColor(name);
+    return generatedColor ?? fallbackColor;
+}

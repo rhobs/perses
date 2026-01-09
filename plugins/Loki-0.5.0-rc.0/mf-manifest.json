@@ -1,0 +1,470 @@
+{
+  "id": "Loki",
+  "name": "Loki",
+  "metaData": {
+    "name": "Loki",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.5.0-rc.0",
+      "buildName": "@perses-dev/loki-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/Loki.21b585d6.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "Loki",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/Loki/\"; }"
+  },
+  "shared": [
+    {
+      "id": "Loki:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.293b47c4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.60c9a082.js",
+            "__mf/js/async/9235.f2e0e95c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.55dbc663.js",
+            "__mf/js/async/7968.ec040694.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/3849.89f86737.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.5aa6cbcc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@perses-dev/explore",
+      "name": "@perses-dev/explore",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1728.516fcaaf.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5501.929e6257.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:@tanstack/react-query",
+      "name": "@tanstack/react-query",
+      "version": "4.39.1",
+      "singleton": true,
+      "requiredVersion": "^4.39.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6283.78af4bc8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.4dea1fd0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.02aa55af.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.c0f9d49a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.c67049a2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:react-hook-form",
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "singleton": true,
+      "requiredVersion": "^7.54.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8356.5635696c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:react-router-dom",
+      "name": "react-router-dom",
+      "version": "6.30.0",
+      "singleton": true,
+      "requiredVersion": "^6.30.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5440.3fedd5ea.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.328a1e93.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Loki:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.38078276.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "Loki:LokiDatasource",
+      "name": "LokiDatasource",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/__federation_expose_LokiDatasource.44ac1fa6.js"
+          ],
+          "async": [
+            "__mf/js/async/1825.5005b3af.js",
+            "__mf/js/async/9754.5d7b21c2.js",
+            "__mf/js/async/8988.1c565f12.js",
+            "__mf/js/async/9389.a8ea42a0.js",
+            "__mf/js/async/1501.f1011a16.js",
+            "__mf/js/async/__federation_expose_LokiTimeSeriesQuery.4909566f.js",
+            "__mf/js/async/4466.21ddc88c.js",
+            "__mf/js/async/6100.e2898f9c.js",
+            "__mf/js/async/__federation_expose_LokiLogQuery.22f7c517.js",
+            "__mf/js/async/1238.71fd7843.js",
+            "__mf/js/async/9836.de786d07.js",
+            "__mf/js/async/6498.903f2a94.js",
+            "__mf/js/async/1811.a291a38b.js",
+            "__mf/js/async/3059.cb101ca2.js",
+            "__mf/js/async/8035.8dab4893.js",
+            "__mf/js/async/9588.2d82f477.js",
+            "__mf/js/async/5071.a03a64fd.js",
+            "__mf/js/async/2043.eb7e1c61.js",
+            "__mf/js/async/7177.b50a1c64.js",
+            "__mf/js/async/1969.53d223ca.js",
+            "__mf/js/async/8482.07caae1a.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/5442.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./LokiDatasource"
+    },
+    {
+      "id": "Loki:LokiTimeSeriesQuery",
+      "name": "LokiTimeSeriesQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/1825.5005b3af.js",
+            "__mf/js/async/9754.5d7b21c2.js",
+            "__mf/js/async/8988.1c565f12.js",
+            "__mf/js/async/9389.a8ea42a0.js",
+            "__mf/js/async/1501.f1011a16.js",
+            "__mf/js/async/__federation_expose_LokiTimeSeriesQuery.4909566f.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.2d82f477.js",
+            "__mf/js/async/5071.a03a64fd.js",
+            "__mf/js/async/1238.71fd7843.js",
+            "__mf/js/async/9836.de786d07.js",
+            "__mf/js/async/6498.903f2a94.js",
+            "__mf/js/async/1811.a291a38b.js",
+            "__mf/js/async/4466.21ddc88c.js",
+            "__mf/js/async/1825.5005b3af.js",
+            "__mf/js/async/9754.5d7b21c2.js",
+            "__mf/js/async/6100.e2898f9c.js",
+            "__mf/js/async/8988.1c565f12.js",
+            "__mf/js/async/9389.a8ea42a0.js",
+            "__mf/js/async/1501.f1011a16.js",
+            "__mf/js/async/__federation_expose_LokiLogQuery.22f7c517.js",
+            "__mf/js/async/3059.cb101ca2.js",
+            "__mf/js/async/8035.8dab4893.js",
+            "__mf/js/async/2043.eb7e1c61.js",
+            "__mf/js/async/7177.b50a1c64.js",
+            "__mf/js/async/1969.53d223ca.js",
+            "__mf/js/async/8482.07caae1a.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/5442.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./LokiTimeSeriesQuery"
+    },
+    {
+      "id": "Loki:LokiLogQuery",
+      "name": "LokiLogQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/1825.5005b3af.js",
+            "__mf/js/async/9754.5d7b21c2.js",
+            "__mf/js/async/4466.21ddc88c.js",
+            "__mf/js/async/6100.e2898f9c.js",
+            "__mf/js/async/8988.1c565f12.js",
+            "__mf/js/async/9389.a8ea42a0.js",
+            "__mf/js/async/1501.f1011a16.js",
+            "__mf/js/async/__federation_expose_LokiLogQuery.22f7c517.js"
+          ],
+          "async": [
+            "__mf/js/async/1238.71fd7843.js",
+            "__mf/js/async/9836.de786d07.js",
+            "__mf/js/async/6498.903f2a94.js",
+            "__mf/js/async/1811.a291a38b.js",
+            "__mf/js/async/3059.cb101ca2.js",
+            "__mf/js/async/1825.5005b3af.js",
+            "__mf/js/async/9754.5d7b21c2.js",
+            "__mf/js/async/8988.1c565f12.js",
+            "__mf/js/async/9389.a8ea42a0.js",
+            "__mf/js/async/1501.f1011a16.js",
+            "__mf/js/async/__federation_expose_LokiTimeSeriesQuery.4909566f.js",
+            "__mf/js/async/8035.8dab4893.js",
+            "__mf/js/async/9588.2d82f477.js",
+            "__mf/js/async/5071.a03a64fd.js",
+            "__mf/js/async/2043.eb7e1c61.js",
+            "__mf/js/async/7177.b50a1c64.js",
+            "__mf/js/async/1969.53d223ca.js",
+            "__mf/js/async/8482.07caae1a.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/5442.d3010b86.css",
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./LokiLogQuery"
+    }
+  ]
+}

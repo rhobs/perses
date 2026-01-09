@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/queries/victorialogs-log-query/index.ts"],"sourcesContent":["export * from './query';\nexport * from './VictoriaLogsLogQuery';\nexport * from './VictoriaLogsLogQueryEditor';\nexport * from './types';\n"],"names":[],"mappings":"AAAA,cAAc,UAAU;AACxB,cAAc,yBAAyB;AACvC,cAAc,+BAA+B;AAC7C,cAAc,UAAU"}

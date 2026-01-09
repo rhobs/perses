@@ -1,0 +1,391 @@
+{
+  "id": "TimeSeriesTable",
+  "name": "TimeSeriesTable",
+  "metaData": {
+    "name": "TimeSeriesTable",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.11.0-rc.0",
+      "buildName": "@perses-dev/timeseries-table-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/TimeSeriesTable.d066d98e.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "TimeSeriesTable",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/TimeSeriesTable/\"; }"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "shareScope": "default",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "eager": false,
+      "id": "TimeSeriesTable:@emotion/react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.a2bf6069.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "shareScope": "default",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "eager": false,
+      "id": "TimeSeriesTable:@emotion/styled",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.9128b0ad.js",
+            "__mf/js/async/9235.84d86874.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "shareScope": "default",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "eager": false,
+      "id": "TimeSeriesTable:@hookform/resolvers",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.3a411f0e.js",
+            "__mf/js/async/7968.6af57fc4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "TimeSeriesTable:@perses-dev/components",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/2555.915eedb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./TimeSeriesTable"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-beta.4",
+      "shareScope": "default",
+      "name": "@perses-dev/core",
+      "version": "0.53.0-beta.4",
+      "eager": false,
+      "id": "TimeSeriesTable:@perses-dev/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1117.8c12a843.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "TimeSeriesTable:@perses-dev/dashboards",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.465aff4e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./TimeSeriesTable"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "shareScope": "default",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "eager": false,
+      "id": "TimeSeriesTable:@perses-dev/plugin-system",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8252.b07d9619.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "shareScope": "default",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "eager": false,
+      "id": "TimeSeriesTable:date-fns",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.a68f2ae7.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "shareScope": "default",
+      "name": "echarts",
+      "version": "5.5.0",
+      "eager": false,
+      "id": "TimeSeriesTable:echarts",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.5013ed12.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "shareScope": "default",
+      "name": "lodash",
+      "version": "4.17.21",
+      "eager": false,
+      "id": "TimeSeriesTable:lodash",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.cf8653c1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "TimeSeriesTable:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.05175ff7.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "TimeSeriesTable:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.dba206d9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./TimeSeriesTable"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^9.1.0",
+      "shareScope": "default",
+      "name": "use-resize-observer",
+      "version": "9.1.0",
+      "eager": false,
+      "id": "TimeSeriesTable:use-resize-observer",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4077.f3b86639.js",
+            "__mf/js/async/6458.15500279.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./TimeSeriesTable"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "shareScope": "default",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "eager": false,
+      "id": "TimeSeriesTable:date-fns-tz",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.91d4d06a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./TimeSeriesTable",
+      "id": "TimeSeriesTable:TimeSeriesTable",
+      "name": "TimeSeriesTable",
+      "requires": [
+        "react",
+        "@perses-dev/components",
+        "use-resize-observer",
+        "@perses-dev/dashboards"
+      ],
+      "file": "src/TimeSeriesTable.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/6517.c68cf337.js",
+            "__mf/js/async/383.737ba616.js",
+            "__mf/js/async/__federation_expose_TimeSeriesTable.b3c12bc0.js"
+          ],
+          "async": [
+            "__mf/js/async/lib-router.4afa3869.js",
+            "__mf/js/async/8356.ab75baaf.js",
+            "__mf/js/async/2710.135d1c9a.js",
+            "__mf/js/async/2757.0345b149.js",
+            "__mf/js/async/7452.1003e5e8.js",
+            "__mf/js/async/9588.b67a10d7.js",
+            "__mf/js/async/5071.c6ed8044.js",
+            "__mf/js/async/7417.abe3c9e4.js",
+            "__mf/js/async/2043.3167c89b.js",
+            "__mf/js/async/9558.1a195bd1.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/7823.d3010b86.css",
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      }
+    }
+  ]
+}

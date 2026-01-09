@@ -1,0 +1,141 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// Copyright 2025 The Perses Authors
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+import { Box, Button, FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
+import { useId } from '@perses-dev/components';
+import { DatasourceSelect, useDatasourceClient, useDatasourceSelectValueToSelector } from '@perses-dev/plugin-system';
+import { produce } from 'immer';
+import { useCallback, useState } from 'react';
+import { DEFAULT_TEMPO, isDefaultTempoSelector, isTempoDatasourceSelector, TEMPO_DATASOURCE_KIND } from '../../model';
+import { AttributeFilters } from '../../components/AttributeFilters';
+import { TraceQLEditor, filterToTraceQL, traceQLToFilter } from '../../components';
+import { useQueryState } from './query-editor-model';
+export function TempoTraceQueryEditor(props) {
+    const { onChange, value, value: { datasource, limit } } = props;
+    const datasourceSelectValue = datasource ?? DEFAULT_TEMPO;
+    const selectedDatasource = useDatasourceSelectValueToSelector(datasourceSelectValue, TEMPO_DATASOURCE_KIND);
+    const datasourceSelectLabelID = useId('tempo-datasource-label'); // for panels with multiple queries, this component is rendered multiple times on the same page
+    const { data: client } = useDatasourceClient(selectedDatasource);
+    const { query, handleQueryChange, handleQueryBlur } = useQueryState(props);
+    const [showAttributeFilters, setShowAttributeFilters] = useState(()=>isSimpleTraceQLQuery(query));
+    const handleDatasourceChange = (next)=>{
+        if (isTempoDatasourceSelector(next)) {
+            onChange(produce(value, (draft)=>{
+                // If they're using the default, just omit the datasource prop (i.e. set to undefined)
+                const nextDatasource = isDefaultTempoSelector(next) ? undefined : next;
+                draft.datasource = nextDatasource;
+            }));
+            return;
+        }
+        throw new Error('Got unexpected non-Tempo datasource selector');
+    };
+    const runQuery = (newQuery)=>{
+        onChange(produce(value, (draft)=>{
+            draft.query = newQuery;
+        }));
+    };
+    const handleTraceQueryChange = useCallback((e)=>{
+        handleQueryChange(e);
+    }, [
+        handleQueryChange
+    ]);
+    return /*#__PURE__*/ _jsxs(Stack, {
+        spacing: 2,
+        children: [
+            /*#__PURE__*/ _jsx(FormControl, {
+                margin: "dense",
+                fullWidth: false,
+                children: /*#__PURE__*/ _jsx(DatasourceSelect, {
+                    datasourcePluginKind: TEMPO_DATASOURCE_KIND,
+                    value: datasourceSelectValue,
+                    onChange: handleDatasourceChange,
+                    labelId: datasourceSelectLabelID,
+                    label: "Tempo Datasource",
+                    notched: true
+                })
+            }),
+            /*#__PURE__*/ _jsxs(Stack, {
+                direction: "row",
+                spacing: 2,
+                sx: {
+                    alignItems: 'flex-start'
+                },
+                children: [
+                    showAttributeFilters ? /*#__PURE__*/ _jsx(AttributeFilters, {
+                        client: client,
+                        query: query,
+                        setQuery: runQuery
+                    }) : /*#__PURE__*/ _jsx(TraceQLEditor, {
+                        client: client,
+                        value: query,
+                        onChange: handleTraceQueryChange,
+                        onBlur: handleQueryBlur
+                    }),
+                    /*#__PURE__*/ _jsx(Button, {
+                        onClick: ()=>setShowAttributeFilters(!showAttributeFilters),
+                        children: showAttributeFilters ? 'Show query' : 'Hide query'
+                    }),
+                    /*#__PURE__*/ _jsx(LimitSelect, {
+                        value: limit ?? 20,
+                        setValue: (newLimit)=>onChange(produce(value, (draft)=>{
+                                draft.limit = newLimit;
+                            }))
+                    })
+                ]
+            })
+        ]
+    });
+}
+function isSimpleTraceQLQuery(query) {
+    // if a query can be transformed to a filter and back to the original query, we can show the attribute filter toolbar
+    return query == '' || filterToTraceQL(traceQLToFilter(query)) === query;
+}
+const limitOptions = [
+    20,
+    50,
+    100,
+    500,
+    1000,
+    5000
+];
+export function LimitSelect(props) {
+    const { value, setValue } = props;
+    // the outer <Box> is required, because <FormControl> has display: inline-flex, which doesn't work with the parent <Stack> of the query editor
+    return /*#__PURE__*/ _jsx(Box, {
+        children: /*#__PURE__*/ _jsxs(FormControl, {
+            size: "small",
+            children: [
+                /*#__PURE__*/ _jsx(InputLabel, {
+                    id: "max-traces-label",
+                    children: "Max Traces"
+                }),
+                /*#__PURE__*/ _jsx(Select, {
+                    labelId: "max-traces-label",
+                    id: "max-traces-select",
+                    value: value,
+                    label: "Max Traces",
+                    onChange: (e)=>setValue(typeof e.target.value === 'number' ? e.target.value : parseInt(e.target.value)),
+                    sx: {
+                        width: 110
+                    },
+                    children: limitOptions.map((option)=>/*#__PURE__*/ _jsx(MenuItem, {
+                            value: option,
+                            children: option
+                        }, option))
+                })
+            ]
+        })
+    });
+}
+
+//# sourceMappingURL=TempoTraceQueryEditor.js.map

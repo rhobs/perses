@@ -1,0 +1,1 @@
+{"version":3,"file":"LokiLogQuery.d.ts","sourceRoot":"","sources":["../../../../src/queries/loki-log-query/LokiLogQuery.tsx"],"names":[],"mappings":"AAGA,OAAO,EAAE,gBAAgB,EAAE,MAAM,wBAAwB,CAAC;AAC1D,OAAO,EAAE,cAAc,EAAE,MAAM,8BAA8B,CAAC;AAE9D,eAAO,MAAM,YAAY,EAAE,cAAc,CAAC,gBAAgB,CAWzD,CAAC"}

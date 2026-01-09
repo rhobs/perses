@@ -1,0 +1,1 @@
+"use strict";(self.chunk_LogsTable=self.chunk_LogsTable||[]).push([["5019"],{68102:function(n,r,s){s.d(r,{A:()=>e});function e(){return(e=Object.assign?Object.assign.bind():function(n){for(var r=1;r<arguments.length;r++){var s=arguments[r];for(var e in s)({}).hasOwnProperty.call(s,e)&&(n[e]=s[e])}return n}).apply(null,arguments)}}}]);

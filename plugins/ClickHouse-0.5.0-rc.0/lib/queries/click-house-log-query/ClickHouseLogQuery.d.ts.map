@@ -1,0 +1,1 @@
+{"version":3,"file":"ClickHouseLogQuery.d.ts","sourceRoot":"","sources":["../../../../src/queries/click-house-log-query/ClickHouseLogQuery.tsx"],"names":[],"mappings":"AAgBA,OAAO,EAAE,sBAAsB,EAAE,MAAM,+BAA+B,CAAC;AACvE,OAAO,EAAE,cAAc,EAAE,MAAM,8BAA8B,CAAC;AAE9D,eAAO,MAAM,kBAAkB,EAAE,cAAc,CAAC,sBAAsB,CAWrE,CAAC"}

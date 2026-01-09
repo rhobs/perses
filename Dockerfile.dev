@@ -13,7 +13,7 @@ RUN mkdir /perses \
   && make build-api \
   && make build-cli
 
-FROM gcr.io/distroless/static-debian12:nonroot
+FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL maintainer="The Perses Authors <perses-team@googlegroups.com>"
 
@@ -24,6 +24,7 @@ COPY --from=go-builder --chown=nonroot:nonroot  /go/src/github.com/rhobs/perses/
 COPY                                            docs/examples/config.docker.yaml     /etc/perses/config.yaml
 COPY --from=go-builder --chown=nonroot:nonroot  /perses            /perses
 COPY --from=go-builder --chown=nonroot:nonroot  /plugins           /etc/perses/plugins
+RUN chmod -R 777 /etc/perses/plugins
 COPY --from=go-builder                          /etc/mime.types    /etc/mime.types
 
 WORKDIR /perses

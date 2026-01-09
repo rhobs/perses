@@ -1,0 +1,336 @@
+{
+  "id": "LogsTable",
+  "name": "LogsTable",
+  "metaData": {
+    "name": "LogsTable",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.2.0-rc.0",
+      "buildName": "@perses-dev/logs-table-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/LogsTable.82e133e3.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "LogsTable",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/LogsTable/\"; }"
+  },
+  "shared": [
+    {
+      "id": "LogsTable:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.145959f1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.832c6e3d.js",
+            "__mf/js/async/9235.3d5006e1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.180213b1.js",
+            "__mf/js/async/7968.2c2a16b3.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6916.4748e95c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@perses-dev/core",
+      "name": "@perses-dev/core",
+      "version": "0.53.0-beta.4",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-beta.4",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1117.921746cb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6600.22019bbc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8252.189e25a8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.269aa1db.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.6dbef0bc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.ffb0729b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.6f543f7d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.6fa52018.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:use-resize-observer",
+      "name": "use-resize-observer",
+      "version": "9.1.0",
+      "singleton": true,
+      "requiredVersion": "^9.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4077.4c4e9533.js",
+            "__mf/js/async/6458.4d73f1df.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "LogsTable:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.8fed4f5a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "LogsTable:LogsTable",
+      "name": "LogsTable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/5997.f6b3408c.js",
+            "__mf/js/async/580.9e16464c.js",
+            "__mf/js/async/9890.b97f395d.js",
+            "__mf/js/async/__federation_expose_LogsTable.b4ca50d6.js"
+          ],
+          "async": [
+            "__mf/js/async/8356.9ea56838.js",
+            "__mf/js/async/7417.39d13c6a.js",
+            "__mf/js/async/8535.20f8a453.js",
+            "__mf/js/async/9588.1ab96620.js",
+            "__mf/js/async/5071.a0b2c6c3.js",
+            "__mf/js/async/8294.dac3426d.js",
+            "__mf/js/async/2043.3343388c.js",
+            "__mf/js/async/lib-router.318cb64e.js",
+            "__mf/js/async/7452.60dd8e7a.js",
+            "__mf/js/async/7177.848ebbb2.js",
+            "__mf/js/async/1939.46722505.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css",
+            "__mf/css/async/7823.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./LogsTable"
+    }
+  ]
+}

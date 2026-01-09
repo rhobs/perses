@@ -1,0 +1,445 @@
+{
+  "id": "ClickHouse",
+  "name": "ClickHouse",
+  "metaData": {
+    "name": "ClickHouse",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.5.0-rc.0",
+      "buildName": "@perses-dev/clickhouse-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/ClickHouse.c3caee41.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "ClickHouse",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/ClickHouse/\"; }"
+  },
+  "shared": [
+    {
+      "id": "ClickHouse:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.0299ceca.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.d273c2a4.js",
+            "__mf/js/async/9235.239f5888.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.caa53d74.js",
+            "__mf/js/async/7968.d7870d30.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8643.ce0d7405.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.c5e58d41.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@perses-dev/explore",
+      "name": "@perses-dev/explore",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1728.a3a4d260.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5501.f03b9ff3.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:@tanstack/react-query",
+      "name": "@tanstack/react-query",
+      "version": "4.39.1",
+      "singleton": true,
+      "requiredVersion": "^4.39.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6283.18a07ff0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.738bb7d0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.0b522a3c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.f8d81681.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.12101f38.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:react-hook-form",
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "singleton": true,
+      "requiredVersion": "^7.54.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8356.1990f800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:react-router-dom",
+      "name": "react-router-dom",
+      "version": "6.30.0",
+      "singleton": true,
+      "requiredVersion": "^6.30.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5440.0e8e1dab.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.437b34db.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ClickHouse:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.a9ba54ff.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "ClickHouse:ClickHouseDatasource",
+      "name": "ClickHouseDatasource",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/__federation_expose_ClickHouseDatasource.8291e0b0.js"
+          ],
+          "async": [
+            "__mf/js/async/1825.3b06cbc6.js",
+            "__mf/js/async/9754.9efd83f1.js",
+            "__mf/js/async/6045.424732f1.js",
+            "__mf/js/async/__federation_expose_ClickHouseTimeSeriesQuery.72a6549b.js",
+            "__mf/js/async/__federation_expose_ClickHouseLogQuery.ceed53aa.js",
+            "__mf/js/async/1238.c73d9688.js",
+            "__mf/js/async/9836.4cd749fe.js",
+            "__mf/js/async/3664.16a2c8f0.js",
+            "__mf/js/async/1811.e34f9555.js",
+            "__mf/js/async/3059.33197202.js",
+            "__mf/js/async/8035.9a47693a.js",
+            "__mf/js/async/9588.643512c3.js",
+            "__mf/js/async/5071.c665fc3d.js",
+            "__mf/js/async/2043.827fc525.js",
+            "__mf/js/async/7177.661c72fd.js",
+            "__mf/js/async/1969.41d665ea.js",
+            "__mf/js/async/8482.f99a0f22.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./ClickHouseDatasource"
+    },
+    {
+      "id": "ClickHouse:ClickHouseTimeSeriesQuery",
+      "name": "ClickHouseTimeSeriesQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/1825.3b06cbc6.js",
+            "__mf/js/async/9754.9efd83f1.js",
+            "__mf/js/async/6045.424732f1.js",
+            "__mf/js/async/__federation_expose_ClickHouseTimeSeriesQuery.72a6549b.js"
+          ],
+          "async": [
+            "__mf/js/async/1238.c73d9688.js",
+            "__mf/js/async/9836.4cd749fe.js",
+            "__mf/js/async/3664.16a2c8f0.js",
+            "__mf/js/async/1811.e34f9555.js",
+            "__mf/js/async/3059.33197202.js",
+            "__mf/js/async/8035.9a47693a.js",
+            "__mf/js/async/9588.643512c3.js",
+            "__mf/js/async/5071.c665fc3d.js",
+            "__mf/js/async/2043.827fc525.js",
+            "__mf/js/async/7177.661c72fd.js",
+            "__mf/js/async/1969.41d665ea.js",
+            "__mf/js/async/8482.f99a0f22.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./ClickHouseTimeSeriesQuery"
+    },
+    {
+      "id": "ClickHouse:ClickHouseLogQuery",
+      "name": "ClickHouseLogQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/1825.3b06cbc6.js",
+            "__mf/js/async/9754.9efd83f1.js",
+            "__mf/js/async/6045.424732f1.js",
+            "__mf/js/async/__federation_expose_ClickHouseLogQuery.ceed53aa.js"
+          ],
+          "async": [
+            "__mf/js/async/1238.c73d9688.js",
+            "__mf/js/async/9836.4cd749fe.js",
+            "__mf/js/async/3664.16a2c8f0.js",
+            "__mf/js/async/1811.e34f9555.js",
+            "__mf/js/async/3059.33197202.js",
+            "__mf/js/async/8035.9a47693a.js",
+            "__mf/js/async/9588.643512c3.js",
+            "__mf/js/async/5071.c665fc3d.js",
+            "__mf/js/async/2043.827fc525.js",
+            "__mf/js/async/7177.661c72fd.js",
+            "__mf/js/async/1969.41d665ea.js",
+            "__mf/js/async/8482.f99a0f22.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/3061.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./ClickHouseLogQuery"
+    }
+  ]
+}

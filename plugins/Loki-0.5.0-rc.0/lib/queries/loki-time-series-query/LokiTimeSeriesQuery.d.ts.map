@@ -1,0 +1,1 @@
+{"version":3,"file":"LokiTimeSeriesQuery.d.ts","sourceRoot":"","sources":["../../../../src/queries/loki-time-series-query/LokiTimeSeriesQuery.tsx"],"names":[],"mappings":"AAaA,OAAO,EAAE,qBAAqB,EAAkB,MAAM,2BAA2B,CAAC;AAGlF,OAAO,EAAE,uBAAuB,EAAE,MAAM,gCAAgC,CAAC;AAEzE,eAAO,MAAM,mBAAmB,EAAE,qBAAqB,CAAC,uBAAuB,CAW9E,CAAC"}

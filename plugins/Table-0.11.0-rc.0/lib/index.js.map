@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/index.ts"],"sourcesContent":["export { getPluginModule } from './getPluginModule';\nexport * from './Table';\nexport * from './components';\nexport * from './models';\n"],"names":["getPluginModule"],"mappings":"AAAA,SAASA,eAAe,QAAQ,oBAAoB;AACpD,cAAc,UAAU;AACxB,cAAc,eAAe;AAC7B,cAAc,WAAW"}

@@ -1,0 +1,685 @@
+{
+  "id": "Prometheus",
+  "name": "Prometheus",
+  "metaData": {
+    "name": "Prometheus",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.57.0-rc.0",
+      "buildName": "@perses-dev/prometheus-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/Prometheus.4ba71581.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "Prometheus",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/Prometheus/\"; }"
+  },
+  "shared": [
+    {
+      "id": "Prometheus:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.478a68f8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.7587ce79.js",
+            "__mf/js/async/9235.36c3cd8c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.4d72fc35.js",
+            "__mf/js/async/7968.6ac0ce96.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6149.fd82480f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.e32f954e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@perses-dev/explore",
+      "name": "@perses-dev/explore",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1728.b655f63f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5501.1e881f60.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:@tanstack/react-query",
+      "name": "@tanstack/react-query",
+      "version": "4.39.1",
+      "singleton": true,
+      "requiredVersion": "^4.39.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6283.181cb622.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.d835931b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.448eab23.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.7cda691a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.9b14a625.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:react-hook-form",
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "singleton": true,
+      "requiredVersion": "^7.54.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8356.789e1dfb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:react-router-dom",
+      "name": "react-router-dom",
+      "version": "6.30.0",
+      "singleton": true,
+      "requiredVersion": "^6.30.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5440.c13c3533.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.828d661d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Prometheus:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.9532d5b8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "Prometheus:PrometheusDatasource",
+      "name": "PrometheusDatasource",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/__federation_expose_PrometheusDatasource.92fd9495.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelValuesVariable.069d6355.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelNamesVariable.6ec8815a.js",
+            "__mf/js/async/__federation_expose_PrometheusPromQLVariable.93ef2453.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/1969.372d36b8.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusDatasource"
+    },
+    {
+      "id": "Prometheus:PrometheusTimeSeriesQuery",
+      "name": "PrometheusTimeSeriesQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelValuesVariable.069d6355.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelNamesVariable.6ec8815a.js",
+            "__mf/js/async/__federation_expose_PrometheusPromQLVariable.93ef2453.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/1969.372d36b8.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/1233.0ab88b51.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusTimeSeriesQuery"
+    },
+    {
+      "id": "Prometheus:PrometheusLabelValuesVariable",
+      "name": "PrometheusLabelValuesVariable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelValuesVariable.069d6355.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/1969.372d36b8.js",
+            "__mf/js/async/1233.0ab88b51.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusLabelValuesVariable"
+    },
+    {
+      "id": "Prometheus:PrometheusLabelNamesVariable",
+      "name": "PrometheusLabelNamesVariable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelNamesVariable.6ec8815a.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/1969.372d36b8.js",
+            "__mf/js/async/1233.0ab88b51.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusLabelNamesVariable"
+    },
+    {
+      "id": "Prometheus:PrometheusPromQLVariable",
+      "name": "PrometheusPromQLVariable",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusPromQLVariable.93ef2453.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/1969.372d36b8.js",
+            "__mf/js/async/1233.0ab88b51.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusPromQLVariable"
+    },
+    {
+      "id": "Prometheus:PrometheusExplorer",
+      "name": "PrometheusExplorer",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/5922.d1619ac1.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/9836.00da6086.js",
+            "__mf/js/async/2186.e58838a5.js",
+            "__mf/js/async/3184.6b4ad42e.js",
+            "__mf/js/async/9605.a92ec9c1.js",
+            "__mf/js/async/__federation_expose_PrometheusExplorer.8c11a420.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.9081c7de.js",
+            "__mf/js/async/5071.e1c33fa7.js",
+            "__mf/js/async/9184.43a8d927.js",
+            "__mf/js/async/7177.205c9aaf.js",
+            "__mf/js/async/3963.5fef6ffb.js",
+            "__mf/js/async/529.2303b01b.js",
+            "__mf/js/async/2506.1e336b3b.js",
+            "__mf/js/async/1605.dc180cb8.js",
+            "__mf/js/async/1432.0c3e4ed0.js",
+            "__mf/js/async/4626.173e602a.js",
+            "__mf/js/async/3996.69a9c1dc.js",
+            "__mf/js/async/9020.152063b0.js",
+            "__mf/js/async/__federation_expose_PrometheusTimeSeriesQuery.f65cba4a.js",
+            "__mf/js/async/7894.9c5245d7.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelValuesVariable.069d6355.js",
+            "__mf/js/async/__federation_expose_PrometheusLabelNamesVariable.6ec8815a.js",
+            "__mf/js/async/__federation_expose_PrometheusPromQLVariable.93ef2453.js",
+            "__mf/js/async/2984.7182c2f5.js",
+            "__mf/js/async/3664.ba8b26b6.js",
+            "__mf/js/async/6969.b959b6f8.js",
+            "__mf/js/async/2043.d0fbb886.js",
+            "__mf/js/async/2999.1d8347df.js",
+            "__mf/js/async/9518.38e38a33.js",
+            "__mf/js/async/1969.372d36b8.js",
+            "__mf/js/async/8888.59eb50a2.js",
+            "__mf/js/async/1233.0ab88b51.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/9518.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./PrometheusExplorer"
+    }
+  ]
+}

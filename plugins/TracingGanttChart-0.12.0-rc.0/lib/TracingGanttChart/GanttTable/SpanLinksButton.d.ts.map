@@ -1,0 +1,1 @@
+{"version":3,"file":"SpanLinksButton.d.ts","sourceRoot":"","sources":["../../../../src/TracingGanttChart/GanttTable/SpanLinksButton.tsx"],"names":[],"mappings":"AAkBA,OAAO,EAAE,IAAI,EAAE,MAAM,UAAU,CAAC;AAChC,OAAO,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAC;AAEtD,MAAM,WAAW,oBAAoB;IACnC,WAAW,EAAE,WAAW,CAAC;IACzB,IAAI,EAAE,IAAI,CAAC;CACZ;AAED,wBAAgB,eAAe,CAAC,KAAK,EAAE,oBAAoB,kDA6E1D"}

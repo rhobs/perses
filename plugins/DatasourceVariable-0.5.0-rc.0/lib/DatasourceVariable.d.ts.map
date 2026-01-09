@@ -1,0 +1,1 @@
+{"version":3,"file":"DatasourceVariable.d.ts","sourceRoot":"","sources":["../../src/DatasourceVariable.tsx"],"names":[],"mappings":"AAaA,OAAO,EAAE,kBAAkB,EAAyB,cAAc,EAAE,MAAM,2BAA2B,CAAC;AAItG,KAAK,yBAAyB,GAAG;IAC/B,oBAAoB,EAAE,MAAM,CAAC;CAC9B,CAAC;AAIF,eAAO,MAAM,8BAA8B,GAAI,OAAO,kBAAkB,CAAC,yBAAyB,CAAC,4CAgDlG,CAAC;AAEF,eAAO,MAAM,kBAAkB,EAAE,cAAc,CAAC,yBAAyB,CAgBxE,CAAC"}

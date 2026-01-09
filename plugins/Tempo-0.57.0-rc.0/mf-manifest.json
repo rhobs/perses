@@ -1,0 +1,446 @@
+{
+  "id": "Tempo",
+  "name": "Tempo",
+  "metaData": {
+    "name": "Tempo",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.57.0-rc.0",
+      "buildName": "@perses-dev/tempo-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/Tempo.de1361a1.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "Tempo",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/Tempo/\"; }"
+  },
+  "shared": [
+    {
+      "id": "Tempo:@emotion/react",
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.11.3",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6274.eff58da4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "11.14.0",
+      "singleton": true,
+      "requiredVersion": "^11.14.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1616.46a1ec79.js",
+            "__mf/js/async/9235.e08df974.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@hookform/resolvers",
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "singleton": true,
+      "requiredVersion": "^3.10.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/5587.eadcaae7.js",
+            "__mf/js/async/7968.99f881c1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/3849.c84e426b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@perses-dev/dashboards",
+      "name": "@perses-dev/dashboards",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1490.17ca429f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@perses-dev/explore",
+      "name": "@perses-dev/explore",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/1728.767eb1ea.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@perses-dev/plugin-system",
+      "name": "@perses-dev/plugin-system",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4746.929ccd42.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:@tanstack/react-query",
+      "name": "@tanstack/react-query",
+      "version": "4.39.1",
+      "singleton": true,
+      "requiredVersion": "^4.39.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/6283.3c7349ec.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:date-fns",
+      "name": "date-fns",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7192.3f00df4c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:echarts",
+      "name": "echarts",
+      "version": "5.5.0",
+      "singleton": true,
+      "requiredVersion": "^undefined",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/873.e471eddb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.fd3eade4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8470.84ab0006.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:react-hook-form",
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "singleton": true,
+      "requiredVersion": "^7.54.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/8356.4c9d459d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/4121.fae8ac21.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "Tempo:date-fns-tz",
+      "name": "date-fns-tz",
+      "version": "3.2.0",
+      "singleton": true,
+      "requiredVersion": "^3.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/7978.68e24de8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "Tempo:TempoDatasource",
+      "name": "TempoDatasource",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/__federation_expose_TempoDatasource.4e1d3b9f.js"
+          ],
+          "async": [
+            "__mf/js/async/lib-router.4c755752.js",
+            "__mf/js/async/501.3a82cccb.js",
+            "__mf/js/async/8580.fc8466c9.js",
+            "__mf/js/async/3617.32db58a8.js",
+            "__mf/js/async/8988.c5f79a01.js",
+            "__mf/js/async/2545.d42b194b.js",
+            "__mf/js/async/__federation_expose_TempoTraceQuery.5750c6f7.js",
+            "__mf/js/async/7583.bfd2f519.js",
+            "__mf/js/async/9836.be31231c.js",
+            "__mf/js/async/4793.4fc513d0.js",
+            "__mf/js/async/__federation_expose_TempoExplorer.d22895ae.js",
+            "__mf/js/async/5214.d2077bec.js",
+            "__mf/js/async/9184.a0c2523b.js",
+            "__mf/js/async/8035.ce79a5fb.js",
+            "__mf/js/async/9588.aa754dda.js",
+            "__mf/js/async/5071.f9a877b0.js",
+            "__mf/js/async/2043.5826341c.js",
+            "__mf/js/async/6110.f6b3b766.js",
+            "__mf/js/async/7177.31d891f2.js",
+            "__mf/js/async/1969.91de01f7.js",
+            "__mf/js/async/2012.543b6dce.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/6110.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./TempoDatasource"
+    },
+    {
+      "id": "Tempo:TempoTraceQuery",
+      "name": "TempoTraceQuery",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/501.3a82cccb.js",
+            "__mf/js/async/8580.fc8466c9.js",
+            "__mf/js/async/3617.32db58a8.js",
+            "__mf/js/async/8988.c5f79a01.js",
+            "__mf/js/async/2545.d42b194b.js",
+            "__mf/js/async/__federation_expose_TempoTraceQuery.5750c6f7.js"
+          ],
+          "async": [
+            "__mf/js/async/9588.aa754dda.js",
+            "__mf/js/async/5071.f9a877b0.js",
+            "__mf/js/async/lib-router.4c755752.js",
+            "__mf/js/async/7583.bfd2f519.js",
+            "__mf/js/async/9836.be31231c.js",
+            "__mf/js/async/5214.d2077bec.js",
+            "__mf/js/async/9184.a0c2523b.js",
+            "__mf/js/async/3617.32db58a8.js",
+            "__mf/js/async/4793.4fc513d0.js",
+            "__mf/js/async/__federation_expose_TempoExplorer.d22895ae.js",
+            "__mf/js/async/8035.ce79a5fb.js",
+            "__mf/js/async/2043.5826341c.js",
+            "__mf/js/async/6110.f6b3b766.js",
+            "__mf/js/async/7177.31d891f2.js",
+            "__mf/js/async/1969.91de01f7.js",
+            "__mf/js/async/2012.543b6dce.js",
+            "__mf/js/async/1233.6db7be6b.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/6110.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./TempoTraceQuery"
+    },
+    {
+      "id": "Tempo:TempoExplorer",
+      "name": "TempoExplorer",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/3617.32db58a8.js",
+            "__mf/js/async/4793.4fc513d0.js",
+            "__mf/js/async/__federation_expose_TempoExplorer.d22895ae.js"
+          ],
+          "async": [
+            "__mf/js/async/8580.fc8466c9.js",
+            "__mf/js/async/501.3a82cccb.js",
+            "__mf/js/async/3617.32db58a8.js",
+            "__mf/js/async/8988.c5f79a01.js",
+            "__mf/js/async/2545.d42b194b.js",
+            "__mf/js/async/__federation_expose_TempoTraceQuery.5750c6f7.js",
+            "__mf/js/async/9836.be31231c.js",
+            "__mf/js/async/9184.a0c2523b.js",
+            "__mf/js/async/7177.31d891f2.js",
+            "__mf/js/async/lib-router.4c755752.js",
+            "__mf/js/async/7583.bfd2f519.js",
+            "__mf/js/async/5214.d2077bec.js",
+            "__mf/js/async/9588.aa754dda.js",
+            "__mf/js/async/5071.f9a877b0.js",
+            "__mf/js/async/2043.5826341c.js",
+            "__mf/js/async/8035.ce79a5fb.js",
+            "__mf/js/async/6110.f6b3b766.js",
+            "__mf/js/async/2012.543b6dce.js",
+            "__mf/js/async/1969.91de01f7.js",
+            "__mf/js/async/1233.6db7be6b.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/6110.d3010b86.css",
+            "__mf/css/async/1233.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./TempoExplorer"
+    }
+  ]
+}

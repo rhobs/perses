@@ -1,0 +1,1 @@
+{"version":3,"file":"click-house-data-types.d.ts","sourceRoot":"","sources":["../../../src/model/click-house-data-types.ts"],"names":[],"mappings":"AAaA,OAAO,EAAY,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAErE,MAAM,WAAW,wBAAyB,SAAQ,cAAc;IAC9D,IAAI,CAAC,EAAE,OAAO,CAAC;CAChB;AAED,MAAM,WAAW,eAAe;IAC9B,IAAI,EAAE,MAAM,CAAC;IACb,SAAS,EAAE,MAAM,GAAG,MAAM,CAAC;CAC5B"}

@@ -1,0 +1,166 @@
+{
+  "id": "HistogramChart",
+  "name": "HistogramChart",
+  "metaData": {
+    "name": "HistogramChart",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.11.0-rc.0",
+      "buildName": "@perses-dev/histogram-chart-plugin"
+    },
+    "remoteEntry": {
+      "name": "__mf/js/HistogramChart.518c27cf.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "HistogramChart",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "getPublicPath": "function() { const prefix = window.PERSES_PLUGIN_ASSETS_PATH || window.PERSES_APP_CONFIG?.api_prefix || \"\"; return prefix + \"/plugins/HistogramChart/\"; }"
+  },
+  "shared": [
+    {
+      "id": "HistogramChart:@perses-dev/components",
+      "name": "@perses-dev/components",
+      "version": "0.53.0-rc.1",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-rc.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/735.3ceff67a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "HistogramChart:@perses-dev/core",
+      "name": "@perses-dev/core",
+      "version": "0.53.0-beta.4",
+      "singleton": true,
+      "requiredVersion": "^0.53.0-beta.4",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/12.41482399.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "HistogramChart:immer",
+      "name": "immer",
+      "version": "10.1.1",
+      "singleton": true,
+      "requiredVersion": "^10.1.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/963.b60f0498.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "HistogramChart:lodash",
+      "name": "lodash",
+      "version": "4.17.21",
+      "singleton": true,
+      "requiredVersion": "^4.17.21",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/392.3fc5b732.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "HistogramChart:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/470.5b01bb4c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "HistogramChart:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "18.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "__mf/js/async/121.965a8d1f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "HistogramChart:HistogramChart",
+      "name": "HistogramChart",
+      "assets": {
+        "js": {
+          "sync": [
+            "__mf/js/async/953.aa8a7194.js",
+            "__mf/js/async/__federation_expose_HistogramChart.7baca8a2.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "__mf/css/async/61.d3010b86.css"
+          ]
+        }
+      },
+      "path": "./HistogramChart"
+    }
+  ]
+}

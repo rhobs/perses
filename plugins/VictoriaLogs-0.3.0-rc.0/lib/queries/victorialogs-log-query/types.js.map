@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/queries/victorialogs-log-query/types.ts"],"sourcesContent":["import { DatasourceSelector } from '@perses-dev/core';\n\nexport interface VictoriaLogsLogQuerySpec {\n  query: string;\n  datasource?: DatasourceSelector;\n}\n"],"names":[],"mappings":"AAEA,WAGC"}
