@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/perses/internal/test"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/internal/test"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

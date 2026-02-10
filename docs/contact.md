@@ -16,7 +16,7 @@ discussion on GitHub. In case you are using it for this purpose, your email will
 ## GitHub Discussions
 
 For any topics (excepting security issues) you have, you can open a discussion on
-GitHub: [Perses Discussions](https://github.com/perses/perses/discussions)
+GitHub: [Perses Discussions](https://github.com/rhobs/perses/discussions)
 
 ## LinkedIn
 

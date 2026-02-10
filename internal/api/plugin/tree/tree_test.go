@@ -16,7 +16,7 @@ package tree
 import (
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/v1/plugin"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/stretchr/testify/assert"
 )
 

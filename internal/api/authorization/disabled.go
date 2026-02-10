@@ -16,8 +16,8 @@ package authorization
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/perses/perses/internal/api/crypto"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/internal/api/crypto"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 )
 
 type disabledImpl struct {

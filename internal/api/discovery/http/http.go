@@ -20,12 +20,12 @@ import (
 
 	"github.com/perses/common/async"
 	"github.com/perses/common/async/taskhelper"
-	"github.com/perses/perses/internal/api/discovery/service"
-	clientConfig "github.com/perses/perses/pkg/client/config"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	"github.com/perses/perses/pkg/model/api/config"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/internal/api/discovery/service"
+	clientConfig "github.com/rhobs/perses/pkg/client/config"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/sirupsen/logrus"
 )
 

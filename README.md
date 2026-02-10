@@ -4,12 +4,12 @@
     <a href="https://github.com/perses" target="_blank"><img alt="Perses" src="/docs/images/perses_logo_cropped.svg"></a><br>Perses
 </h1>
 
-[![build](https://github.com/perses/perses/workflows/ci/badge.svg)](https://github.com/perses/perses/actions?query=workflow%3Aci+branch%3Amain)
-[![go](https://github.com/perses/perses/workflows/go/badge.svg)](https://github.com/perses/perses/actions?query=workflow%3Ago+branch%3Amain)
-[![react](https://github.com/perses/perses/workflows/react/badge.svg)](https://github.com/perses/perses/actions?query=workflow%3AReact+branch%3Amain)
-[![Go Report Card](https://goreportcard.com/badge/github.com/perses/perses)](https://goreportcard.com/report/github.com/perses/perses)
+[![build](https://github.com/rhobs/perses/workflows/ci/badge.svg)](https://github.com/rhobs/perses/actions?query=workflow%3Aci+branch%3Amain)
+[![go](https://github.com/rhobs/perses/workflows/go/badge.svg)](https://github.com/rhobs/perses/actions?query=workflow%3Ago+branch%3Amain)
+[![react](https://github.com/rhobs/perses/workflows/react/badge.svg)](https://github.com/rhobs/perses/actions?query=workflow%3AReact+branch%3Amain)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rhobs/perses)](https://goreportcard.com/report/github.com/rhobs/perses)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9410/badge)](https://www.bestpractices.dev/projects/9410)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/perses/perses/badge)](https://securityscorecards.dev/viewer/?uri=github.com/perses/perses)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/rhobs/perses/badge)](https://securityscorecards.dev/viewer/?uri=github.com/rhobs/perses)
 
 </div>
 
@@ -27,7 +27,7 @@ Beyond its core usage, Perses aims to achieve several broader goals:
 - **Integrability**. Perses provides various npm packages that allow developers to embed panels and dashboards into their own UIs, benefiting from the work done in Perses. For instance, these packages could be used in the future to enhance data visualization in the Prometheus UI.
 - **Extensibility**. Perses supports multiple kinds of plugins, enabling users to extend the tool’s native capabilities to suit specific needs.
 - **GitOps-friendly**. SDKs, CI/CD libraries, static validation, native CLI.. Perses provides everything you need for a great Dashboard-as-Code experience.
-- **Kubernetes-native mode**. Dashboard definitions will be deployable into and readable from individual application namespaces using Custom Resource Definitions (CRDs). For more information on that topic you can take a look at the [Perses Operator](https://github.com/perses/perses-operator).
+- **Kubernetes-native mode**. Dashboard definitions will be deployable into and readable from individual application namespaces using Custom Resource Definitions (CRDs). For more information on that topic you can take a look at the [Perses Operator](https://github.com/rhobs/perses-operator).
 
 Want to learn more? Check the [documentation website](https://perses.dev).
 
@@ -59,7 +59,7 @@ There are various ways of installing Perses.
 ### Precompiled binaries
 
 Precompiled binaries for released versions are available in
-the [GitHub release](https://github.com/perses/perses/releases). Using the latest release binary is the recommended way
+the [GitHub release](https://github.com/rhobs/perses/releases). Using the latest release binary is the recommended way
 of installing Perses.
 
 ### Docker images
@@ -90,7 +90,7 @@ To build Perses from source code, You need:
 Start by cloning the repository:
 
 ```bash
-git clone https://github.com/perses/perses.git
+git clone https://github.com/rhobs/perses.git
 cd perses
 ```
 

@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"regexp"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/v1/variable"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/v1/variable"
 	"gopkg.in/yaml.v3"
 )
 

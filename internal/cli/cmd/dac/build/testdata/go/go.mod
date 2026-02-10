@@ -2,12 +2,12 @@ module dac
 
 go 1.25.5
 
-replace github.com/perses/perses => ../../../../../../../ // Use current version
+replace github.com/rhobs/perses => ../../../../../../../ // Use current version
 
 require (
-	github.com/perses/perses v0.53.0-rc.0
 	github.com/perses/plugins/prometheus v0.56.0
 	github.com/perses/plugins/timeserieschart v0.11.2
+	github.com/rhobs/perses v0.53.0-rc.0
 )
 
 require (
@@ -20,6 +20,7 @@ require (
 	github.com/muhlemmer/gu v0.3.1 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
+	github.com/perses/perses v0.53.0-beta.2 // indirect
 	github.com/prometheus/client_golang v1.23.2 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.67.5 // indirect

@@ -21,7 +21,7 @@
 
 package variable
 
-import "github.com/perses/perses/cue/model/api/v1/common"
+import "github.com/rhobs/perses/cue/model/api/v1/common"
 
 #DefaultValue: {
 	singleValue: string @go(SingleValue)

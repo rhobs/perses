@@ -19,7 +19,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/perses/perses/internal/cli/file"
+	"github.com/rhobs/perses/internal/cli/file"
 )
 
 func (o *option) executeNPMSteps() error {

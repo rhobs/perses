@@ -5,7 +5,7 @@ COPY Makefile Makefile
 RUN make build-ui
 
 FROM golang:1.25 AS go-builder
-WORKDIR /go/src/github.com/perses/perses
+WORKDIR /go/src/github.com/rhobs/perses
 COPY . .
 COPY --from=node-builder /app/ui/app/dist ui/app/dist
 RUN mkdir /perses \
@@ -17,10 +17,10 @@ FROM gcr.io/distroless/static-debian12:nonroot
 
 LABEL maintainer="The Perses Authors <perses-team@googlegroups.com>"
 
-COPY --from=go-builder                          /go/src/github.com/perses/perses/bin/perses        /bin/perses
-COPY --from=go-builder                          /go/src/github.com/perses/perses/bin/percli        /bin/percli
+COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/perses        /bin/perses
+COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/percli        /bin/percli
 COPY                                            LICENSE            /LICENSE
-COPY --from=go-builder --chown=nonroot:nonroot  /go/src/github.com/perses/perses/plugins-archive/   /etc/perses/plugins-archive/
+COPY --from=go-builder --chown=nonroot:nonroot  /go/src/github.com/rhobs/perses/plugins-archive/   /etc/perses/plugins-archive/
 COPY                                            docs/examples/config.docker.yaml     /etc/perses/config.yaml
 COPY --from=go-builder --chown=nonroot:nonroot  /perses            /perses
 COPY --from=go-builder --chown=nonroot:nonroot  /plugins           /etc/perses/plugins

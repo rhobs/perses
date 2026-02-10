@@ -22,11 +22,11 @@ import (
 	"testing"
 
 	"github.com/gavv/httpexpect/v2"
-	"github.com/perses/perses/internal/api/dependency"
-	e2eframework "github.com/perses/perses/internal/api/e2e/framework"
-	"github.com/perses/perses/internal/api/utils"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	apiConfig "github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/internal/api/dependency"
+	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
+	"github.com/rhobs/perses/internal/api/utils"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 )
 
 func sendPreflightRequest(expect *httpexpect.Expect, origin string) *httpexpect.Response {

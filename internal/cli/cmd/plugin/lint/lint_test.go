@@ -17,8 +17,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	cmdTest "github.com/perses/perses/internal/cli/test"
-	testutil "github.com/perses/perses/internal/test"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
+	testutil "github.com/rhobs/perses/internal/test"
 )
 
 func TestPluginLintCMD(t *testing.T) {

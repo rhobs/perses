@@ -16,7 +16,7 @@ A plugin and dashboard marketplace is planned to facilitate community sharing of
 - Dashboards
 - Dashboard-as-Code libraries
 
-Development hasn't started yet. Join the discussion: https://github.com/perses/perses/discussions/2439
+Development hasn't started yet. Join the discussion: https://github.com/rhobs/perses/discussions/2439
 
 ## Alert View
 

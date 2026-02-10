@@ -14,8 +14,8 @@
 package listvariable
 
 import (
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/variable"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/variable"
 )
 
 func DefaultValue(value string) Option {

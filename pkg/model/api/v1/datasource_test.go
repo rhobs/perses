@@ -17,9 +17,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/datasource"
-	datasourceHTTP "github.com/perses/perses/pkg/model/api/v1/datasource/http"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
+	datasourceHTTP "github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
 )

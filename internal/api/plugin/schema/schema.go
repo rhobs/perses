@@ -23,12 +23,12 @@ import (
 	"sync"
 
 	"cuelang.org/go/cue/build"
-	"github.com/perses/perses/internal/api/plugin/tree"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/dashboard"
-	"github.com/perses/perses/pkg/model/api/v1/plugin"
-	"github.com/perses/perses/pkg/model/api/v1/variable"
+	"github.com/rhobs/perses/internal/api/plugin/tree"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/dashboard"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
+	"github.com/rhobs/perses/pkg/model/api/v1/variable"
 	"github.com/sirupsen/logrus"
 )
 

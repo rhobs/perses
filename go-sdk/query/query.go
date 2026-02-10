@@ -16,9 +16,9 @@ package query
 import (
 	"fmt"
 
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/plugin"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 )
 
 type Option struct {

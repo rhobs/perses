@@ -16,8 +16,9 @@ package query
 import (
 	"time"
 
-	"github.com/perses/perses/pkg/model/api/v1/common"
 	promDatasource "github.com/perses/plugins/prometheus/sdk/go/datasource"
+	"github.com/rhobs/perses/go-sdk/datasource"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 )
 
 func Expr(expr string) Option {
@@ -29,7 +30,10 @@ func Expr(expr string) Option {
 
 func Datasource(datasourceName string) Option {
 	return func(builder *Builder) error {
-		builder.Datasource = promDatasource.Selector(datasourceName)
+		builder.Datasource = &datasource.Selector{
+			Kind: promDatasource.PluginKind,
+			Name: datasourceName,
+		}
 		return nil
 	}
 }

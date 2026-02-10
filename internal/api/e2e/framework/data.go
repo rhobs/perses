@@ -22,16 +22,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/perses/internal/api/dependency"
-	"github.com/perses/perses/internal/test"
-	"github.com/perses/perses/pkg/model/api"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/common"
-	"github.com/perses/perses/pkg/model/api/v1/datasource"
-	datasourceHTTP "github.com/perses/perses/pkg/model/api/v1/datasource/http"
-	"github.com/perses/perses/pkg/model/api/v1/role"
-	"github.com/perses/perses/pkg/model/api/v1/secret"
-	"github.com/perses/perses/pkg/model/api/v1/variable"
+	"github.com/rhobs/perses/internal/api/dependency"
+	"github.com/rhobs/perses/internal/test"
+	"github.com/rhobs/perses/pkg/model/api"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
+	datasourceHTTP "github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses/pkg/model/api/v1/variable"
 )
 
 type GetFunc func() (api.Entity, error)

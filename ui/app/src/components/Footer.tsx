@@ -53,8 +53,8 @@ function VersionInfo({
   }
 
   const href = data.version.startsWith('main')
-    ? `https://github.com/perses/perses/tree/${data.commit}`
-    : `https://github.com/perses/perses/releases/tag/v${data.version}`;
+    ? `https://github.com/rhobs/perses/tree/${data.commit}`
+    : `https://github.com/rhobs/perses/releases/tag/v${data.version}`;
 
   return (
     <Link color="inherit" underline="hover" target="_blank" rel="noreferrer" href={href}>
@@ -80,7 +80,7 @@ export default function Footer(): ReactElement {
       >
         <li>&copy; The Perses Authors {new Date().getFullYear()}</li>
         <li>
-          <a href="https://github.com/perses/perses" target="_blank" rel="noreferrer">
+          <a href="https://github.com/rhobs/perses" target="_blank" rel="noreferrer">
             <Github sx={{ verticalAlign: 'bottom' }} />
           </a>
         </li>
