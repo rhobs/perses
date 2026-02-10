@@ -1,0 +1,1 @@
+{"version":3,"file":"PyroscopeProfileQueryEditor.d.ts","sourceRoot":"","sources":["../../../../src/plugins/pyroscope-profile-query/PyroscopeProfileQueryEditor.tsx"],"names":[],"mappings":"AAiBA,OAAO,EAAE,YAAY,EAAE,MAAM,OAAO,CAAC;AAQrC,OAAO,EACL,uBAAuB,EAKxB,MAAM,sBAAsB,CAAC;AAE9B,wBAAgB,2BAA2B,CAAC,KAAK,EAAE,uBAAuB,GAAG,YAAY,CAqExF"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"LokiDatasource.d.ts","sourceRoot":"","sources":["../../../../src/datasources/loki-datasource/LokiDatasource.tsx"],"names":[],"mappings":"AAaA,OAAO,EAAE,gBAAgB,EAAE,MAAM,2BAA2B,CAAC;AAC7D,OAAO,EACL,UAAU,EASX,MAAM,yBAAyB,CAAC;AACjC,OAAO,EAAE,kBAAkB,EAAE,MAAM,yBAAyB,CAAC;AAgC7D,eAAO,MAAM,cAAc,EAAE,gBAAgB,CAAC,kBAAkB,EAAE,UAAU,CAI3E,CAAC"}

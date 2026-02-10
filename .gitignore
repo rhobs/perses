@@ -46,9 +46,6 @@ dev/kubernetes/local
 
 *.ignore.*
 
-/plugins
-/plugins-archive
-
 /prometheus
 
 !.gitkeep

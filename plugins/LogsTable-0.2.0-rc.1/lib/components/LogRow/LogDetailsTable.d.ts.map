@@ -1,0 +1,1 @@
+{"version":3,"file":"LogDetailsTable.d.ts","sourceRoot":"","sources":["../../../../src/components/LogRow/LogDetailsTable.tsx"],"names":[],"mappings":"AAaA,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,OAAO,EAAE,MAAM,EAAE,MAAM,kBAAkB,CAAC;AAE1C,UAAU,oBAAoB;IAC5B,GAAG,EAAE,MAAM,CAAC;CACb;AAED,eAAO,MAAM,eAAe,EAAE,KAAK,CAAC,EAAE,CAAC,oBAAoB,CAgD1D,CAAC"}

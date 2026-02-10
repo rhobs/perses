@@ -1,0 +1,1 @@
+{"version":3,"file":"pyroscope-datasource.d.ts","sourceRoot":"","sources":["../../../src/plugins/pyroscope-datasource.tsx"],"names":[],"mappings":"AAaA,OAAO,EAAE,gBAAgB,EAAE,MAAM,2BAA2B,CAAC;AAC7D,OAAO,EACL,eAAe,EAMhB,MAAM,2BAA2B,CAAC;AACnC,OAAO,EAAE,uBAAuB,EAAE,MAAM,8BAA8B,CAAC;AAiCvE,eAAO,MAAM,mBAAmB,EAAE,gBAAgB,CAAC,uBAAuB,EAAE,eAAe,CAI1F,CAAC"}

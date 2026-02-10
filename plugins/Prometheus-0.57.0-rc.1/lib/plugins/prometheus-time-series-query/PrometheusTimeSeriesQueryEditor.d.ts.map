@@ -1,0 +1,1 @@
+{"version":3,"file":"PrometheusTimeSeriesQueryEditor.d.ts","sourceRoot":"","sources":["../../../../src/plugins/prometheus-time-series-query/PrometheusTimeSeriesQueryEditor.tsx"],"names":[],"mappings":"AA2BA,OAAO,EAAE,YAAY,EAAuB,MAAM,OAAO,CAAC;AAgB1D,OAAO,EACL,oCAAoC,EAIrC,MAAM,sBAAsB,CAAC;AAC9B;;GAEG;AACH,wBAAgB,+BAA+B,CAAC,KAAK,EAAE,oCAAoC,GAAG,YAAY,CAmIzG"}
