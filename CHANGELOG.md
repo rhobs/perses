@@ -1,17 +1,21 @@
 # Changelog
 
-## 0.53.0-rc.1 / 2026-02-09
+## 0.53.0-rc.1 / 2026-02-10
 
 ### Core & UI
 
 - [FEATURE] Add MariaDB proxy support (#3813)
-- [FEATURE] Support native Kubernetes authentication and authorization (#3184) (#3545) (#3065) (#3822) (#3826) (#3842)
-- [FEATURE] Core: add extractn column frilds transformation (#3791)
+- [FEATURE] Support native Kubernetes authentication and authorization (#3184) (#3545) (#3065) (#3822) (#3826) (#3842) (#3863)
+- [FEATURE] Core: add extract column fields transformation (#3791)
 - [FEATURE] Enable role, rolebinding and user only when native authz is used (#3117)
+- [ENHANCEMENT] allow to configure the server with tls min/max versions and ciphers (#3861)
+- [ENHANCEMENT] New home view layout (#3670)
+- [ENHANCEMENT] Better positioning of the filtering and column properties (#3850)
 - [ENHANCEMENT] Adds `--enable-pkce` to `percli` (#3841)
 - [ENHANCEMENT] Add new ESLINT rule to avoid nested ternary operators and fix (#3589)
 - [ENHANCEMENT] trace data model: add version, attributes to InstrumentationScope and kvlistValue and bytesValue to AnyValue (#3781)
-- [BUGFIX] fix user projects response to avoid global resources duplication (#3848)
+- [BUGFIX] Kube discovery: fix issue with inline references in CUE (#3860)
+- [BUGFIX] Fix user projects response to avoid global resources duplication (#3848)
 - [BUGFIX] Store refreshed refresh token (#3839)
 - [BUGFIX] percli respects api_prefix in base URL (#3837)
 - [BUGFIX] i18n locales files must be prefixed by api_prefix (#3831)
@@ -33,7 +37,7 @@
 [ENHANCEMENT] TracingGanttChart: show error message if panel query is a search query instead of a single trace (perses/plugins#537)
 [BUGFIX] table go-sdk - add flag for filtering (perses/plugins#544)
 [BUGFIX] Table: restore data transform memoization (perses/plugins#541)
-[BUGFIX] Logstable: all quries results must be included (perses/plugins#533)
+[BUGFIX] Logstable: all queries results must be included (perses/plugins#533)
 [BUGFIX] Logstable: consistent No Data style for plugins (perses/plugins#528)
 [BUGFIX] DatasourceVariable: Queries referencing DatasourceVariable couldn't be saved for multiple datasources (perses/plugins#540)
 [BUGFIX] Add lint command in ClickHouse and fix linter errors (perses/plugins#547)
@@ -119,7 +123,7 @@
 - [FEATURE] StatChart: Add Color Mode (perses/plugins#433)
 - [ENHANCEMENT] ScatterChart: remove time label, reduce chart padding, reduce amount of y axis labels (perses/plugins#476)
 - [ENHANCEMENT] ScatterChart: sync xAxis with time range provider (perses/plugins#477)
-- [BUGFIX] For all plugins : allow __mf/js/async assets to use proxy (perses/plugins#419 & perses/plugins#467)
+- [BUGFIX] For all plugins : allow \_\_mf/js/async assets to use proxy (perses/plugins#419 & perses/plugins#467)
 - [BUGFIX] HistoryChart: Show no data when query result is empty (perses/plugins#465 & perses/plugins#468)
 - [BUGFIX] TimeSeriesTable: Show No data accordingly (perses/plugins#466)
 - [BUGFIX] StatChart: Add showLegend option with auto/on/off modes (perses/plugins#471)
@@ -955,10 +959,10 @@ It only contains a fix in the CI to release Perses.
 
 - [FEATURE] Add metadata validation for project, dashboard, datasource and variable on the UI (#1416)
 - [FEATURE] Display name is optional for variables (#1414)
-- [FEATURE] Add builtin variables ($__interval, $interval_ms and $__rate_interval) (#1379)
-- [FEATURE] Add $__range(_ms/_s) builtin variables + add support for curly bracket variables + fix prefixed variables by other variable name (#1376)
+- [FEATURE] Add builtin variables ($**interval, $interval_ms and $**rate_interval) (#1379)
+- [FEATURE] Add $\_\_range(\_ms/\_s) builtin variables + add support for curly bracket variables + fix prefixed variables by other variable name (#1376)
 - [FEATURE] Support secret CRUD on the API side (#1373)
-- [FEATURE] Add builtin variables ($__dashboard, $__project, $__from, $__to) (#1344)
+- [FEATURE] Add builtin variables ($**dashboard, $**project, $**from, $**to) (#1344)
 - [FEATURE] Add templating to issues (#1358)
 - [FEATURE] Global Datasource CRUD + DRY refactoring (#1339)
 - [FEATURE] Global Variables CRUD (#1328)

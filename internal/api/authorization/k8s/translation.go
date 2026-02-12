@@ -35,27 +35,8 @@ const (
 	k8sGlobalDatasourceScope k8sScope = "persesglobaldatasources"
 	k8sDatasourceScope       k8sScope = "persesdatasources"
 	k8sProjectScope          k8sScope = "namespaces"
+	k8sSecretScope           k8sScope = "secrets"
 )
-
-// globalScopesToCheck contains all scopes that should be checked at the wildcard (all-namespace)
-// level when computing permissions. This includes both global-only scopes and project-scoped
-// resources that benefit from an initial wildcard check to avoid redundant per-namespace checks.
-var globalScopesToCheck = []v1Role.Scope{
-	v1Role.GlobalDatasourceScope,
-	v1Role.GlobalVariableScope,
-	v1Role.GlobalSecretScope,
-	v1Role.GlobalRoleScope,
-	v1Role.GlobalRoleBindingScope,
-	v1Role.UserScope,
-	v1Role.DashboardScope,
-	v1Role.DatasourceScope,
-	v1Role.VariableScope,
-	v1Role.SecretScope,
-	v1Role.RoleScope,
-	v1Role.RoleBindingScope,
-	v1Role.EphemeralDashboardScope,
-	v1Role.FolderScope,
-}
 
 // projectScopesToCheck contains all project-scoped resources that should be checked per-namespace
 // when computing permissions.
@@ -64,11 +45,17 @@ var projectScopesToCheck = []v1Role.Scope{
 	v1Role.DatasourceScope,
 	v1Role.VariableScope,
 	v1Role.SecretScope,
-	v1Role.RoleScope,
-	v1Role.RoleBindingScope,
 	v1Role.EphemeralDashboardScope,
 	v1Role.FolderScope,
 }
+
+// globalScopesToCheck contains all scopes that should be checked at the wildcard (all-namespace)
+// level when computing permissions. This includes both global-only scopes and project-scoped
+// resources that benefit from an initial wildcard check to avoid redundant per-namespace checks.
+var globalScopesToCheck = append(projectScopesToCheck, v1Role.GlobalDatasourceScope,
+	v1Role.GlobalVariableScope,
+	v1Role.GlobalSecretScope,
+)
 
 // globalScopes contains all resources which are global-scoped (not namespaced).
 // When checking permissions for these scopes, the namespace is forced to WildcardProject.
@@ -76,9 +63,6 @@ var globalScopes = []v1Role.Scope{
 	v1Role.GlobalDatasourceScope,
 	v1Role.GlobalVariableScope,
 	v1Role.GlobalSecretScope,
-	v1Role.GlobalRoleScope,
-	v1Role.GlobalRoleBindingScope,
-	v1Role.UserScope,
 }
 
 func getK8sAction(action v1Role.Action) k8sAction {
@@ -113,6 +97,12 @@ func getK8sScope(scope v1Role.Scope) k8sScope {
 		return k8sProjectScope
 	case v1Role.WildcardScope:
 		return k8sWildcardScope
+	case v1Role.SecretScope, v1Role.GlobalSecretScope:
+		// Map Perses secrets to native K8s secrets so that accessing Perses secrets
+		// requires the user to have K8s secret permissions in the relevant namespace.
+		// This is a naive check (not per-secret) but prevents privilege escalation
+		// where namespace access alone would grant secret access.
+		return k8sSecretScope
 	default:
 		return "" // Scope doesn't have a k8s equivalent; callers should fall back to project scope
 	}
