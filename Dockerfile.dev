@@ -1,13 +1,26 @@
 FROM node:25 AS node-builder
+WORKDIR /app/ui
+
+# Cache npm install
+COPY ui/package.json ui/package-lock.json ./
+COPY ui/app/package.json app/
+COPY ui/core/package.json core/
+COPY ui/e2e/package.json e2e/
+COPY ui/internal-utils/package.json internal-utils/
+RUN npm install
+
+# Copy source and build
 WORKDIR /app
 COPY ui ui
-COPY Makefile Makefile
-RUN make build-ui
+RUN cd ui && npm run build
 
 FROM golang:1.25 AS go-builder
 WORKDIR /go/src/github.com/rhobs/perses
-COPY go.mod go.sum .
+
+# Cache go mod download
+COPY go.mod go.sum ./
 RUN go mod download
+
 COPY . .
 COPY --from=node-builder /app/ui/app/dist ui/app/dist
 RUN mkdir /perses \
@@ -18,22 +31,25 @@ RUN mkdir /perses \
 FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL maintainer="The Perses Authors <perses-team@googlegroups.com>"
-USER 0
 
-COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/perses        /bin/perses
-COPY --from=go-builder                          /go/src/github.com/rhobs/perses/bin/percli        /bin/percli
-COPY                                            LICENSE            /LICENSE
-COPY --from=go-builder --chown=0:0  /go/src/github.com/rhobs/perses/plugins-archive/   /etc/perses/plugins-archive/
-COPY                                            docs/examples/config.docker.yaml     /etc/perses/config.yaml
-COPY --from=go-builder --chown=0:0  /perses            /perses
-COPY --from=go-builder                          /plugins           /etc/perses/plugins
-COPY --from=go-builder                          /etc/mime.types    /etc/mime.types
-RUN chmod -R 0777 /etc/perses/plugins
+# Create non-root user
+RUN echo "perses:x:1001:0::/perses:/sbin/nologin" >> /etc/passwd && \
+    mkdir -p /perses /etc/perses/plugins /etc/perses/plugins-archive
+
+COPY --from=go-builder /go/src/github.com/rhobs/perses/bin/perses /bin/perses
+COPY --from=go-builder /go/src/github.com/rhobs/perses/bin/percli /bin/percli
+COPY --from=go-builder /etc/mime.types /etc/mime.types
+COPY LICENSE /LICENSE
+COPY docs/examples/config.docker.yaml /etc/perses/config.yaml
+COPY --chown=1001:0 plugins-archive/ /etc/perses/plugins-archive/
+COPY --from=go-builder --chown=1001:0 /plugins /etc/perses/plugins
+
+RUN chown -R 1001:0 /etc/perses /perses && chmod -R g=u /etc/perses /perses
 
 WORKDIR /perses
+USER 1001
 
-EXPOSE     8080
-VOLUME     ["/perses"]
-ENTRYPOINT [ "/bin/perses" ]
-CMD        ["--config=/etc/perses/config.yaml", \
-            "--log.level=error"]
+EXPOSE 8080
+VOLUME ["/perses"]
+ENTRYPOINT ["/bin/perses"]
+CMD ["--config=/etc/perses/config.yaml", "--log.level=error"]

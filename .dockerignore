@@ -1,0 +1,38 @@
+# Version control
+.git
+.gitignore
+
+# Dependencies (will be installed inside containers)
+ui/node_modules
+ui/.turbo
+
+# Build artifacts
+bin/
+ui/app/dist
+
+# Dev / CI files
+dev/
+docs/
+!docs/examples/config.docker.yaml
+examples/
+*.md
+!README.md
+.github/
+
+# Go test / coverage
+*.test
+*.out
+*.prof
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+Dockerfile
+Dockerfile.dev
+distroless-debug.Dockerfile
+docker-compose*.yaml
