@@ -283,6 +283,8 @@ logout:
   # Setting this to true will redirect the user to the provider's logout endpoint after the logout process.
   # If false, the user will be logged out from Perses only.
   enabled: <boolean> | default = false # Optional
+  # A config option to use a different query parameter for the redirect uri on logout. Some providers (e.g. Cognito) require this.
+  logout_redirect_param_name: <string> | default = post_logout_redirect_uri # Optional
 ```
 
 ##### OAuth provider
@@ -823,7 +825,13 @@ path: <path> | default = ("plugins" | "/etc/perses/plugins") # Optional
 
 # The path to the folder containing the plugins archive. 
 # When Perses is starting, it will extract the content of the archive in the folder specified in the `folder` attribute.
+# DEPRECATED: use `archive_paths` instead to specify multiple folders for the archived plugins.
 archive_path: <path> | default = ("plugins-archive" | "/etc/perses/plugins-archive") # Optional
+
+# The list of paths to the directories containing the archived plugins. It allows to specify multiple directories for the archived plugins.
+# When Perses is starting, it will extract any archive found in the folders specified in this attribute in the folder specified in the `path` attribute.
+archive_paths: 
+    - <path> | default = ("plugins-archive" | "/etc/perses/plugins-archive") # Optional
 
 # Allow use of plugins in dev mode.
 enable_dev: <bool> | default = false # Optional

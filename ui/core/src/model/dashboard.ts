@@ -13,7 +13,7 @@
 
 import { DatasourceSpec } from './datasource';
 import { LayoutDefinition } from './layout';
-import { PanelDefinition } from './panels';
+import { Link, PanelDefinition } from './panels';
 import { ProjectMetadata } from './resource';
 import { DurationString } from './time';
 import { VariableDefinition } from './variables';
@@ -33,9 +33,11 @@ export interface DashboardSpec {
   variables: VariableDefinition[];
   layouts: LayoutDefinition[];
   panels: Record<string, PanelDefinition>;
+  links?: Link[];
 }
 
 export interface DashboardSelector {
   project: string;
   dashboard: string;
+  tags?: string[];
 }

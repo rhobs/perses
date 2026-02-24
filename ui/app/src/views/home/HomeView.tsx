@@ -18,7 +18,7 @@ import { DashboardSelector, ProjectResource } from '@perses-dev/core';
 import { CreateProjectDialog, CreateDashboardDialog } from '../../components/dialogs';
 import { useIsMobileSize } from '../../utils/browser-size';
 import { useDashboardCreateAllowedProjects } from '../../context/Authorization';
-import { useIsEphemeralDashboardEnabled } from '../../context/Config';
+import { useIsEphemeralDashboardEnabled, useHasImportantDashboards } from '../../context/Config';
 import { RecentDashboards } from './RecentDashboards';
 import { Projects } from './Projects';
 import { ImportantDashboards } from './ImportantDashboards';
@@ -30,10 +30,13 @@ function HomeView(): ReactElement {
   const isMobileSize = useIsMobileSize();
   const userProjects = useDashboardCreateAllowedProjects();
   const isEphemeralDashboardEnabled = useIsEphemeralDashboardEnabled();
+  const hasImportantDashboards = useHasImportantDashboards();
 
   const handleAddProjectDialogSubmit = (entity: ProjectResource): void => navigate(`/projects/${entity.metadata.name}`);
   const handleAddDashboardDialogSubmit = (dashboardSelector: DashboardSelector): void =>
-    navigate(`/projects/${dashboardSelector.project}/dashboard/new`, { state: { name: dashboardSelector.dashboard } });
+    navigate(`/projects/${dashboardSelector.project}/dashboard/new`, {
+      state: { name: dashboardSelector.dashboard, tags: dashboardSelector.tags },
+    });
 
   // Open/Close management for dialogs
   const [isAddProjectDialogOpen, setIsAddProjectDialogOpen] = useState(false);
@@ -80,9 +83,9 @@ function HomeView(): ReactElement {
           gap: 3,
         }}
       >
-        {/* Important Dashboards - Spans 2 columns */}
+        {/* Left section - Spans 2 columns: ImportantDashboards when configured, otherwise Projects */}
         <Box sx={{ gridColumn: { lg: 'span 2' } }}>
-          <ImportantDashboards />
+          {hasImportantDashboards ? <ImportantDashboards /> : <Projects />}
         </Box>
 
         {/* Recent Dashboards - 1 column */}
@@ -90,9 +93,11 @@ function HomeView(): ReactElement {
           <RecentDashboards />
         </Box>
       </Box>
-      <Box mt={3} mb={3}>
-        <Projects />
-      </Box>
+      {hasImportantDashboards && (
+        <Box mt={3} mb={3}>
+          <Projects />
+        </Box>
+      )}
     </Stack>
   );
 }
