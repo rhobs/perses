@@ -21,9 +21,9 @@ import (
 	"testing"
 
 	"github.com/perses/common/set"
-	"github.com/perses/perses/internal/api/plugin/migrate"
-	testUtils "github.com/perses/perses/internal/test"
-	"github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/internal/api/plugin/migrate"
+	testUtils "github.com/rhobs/perses/internal/test"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 )

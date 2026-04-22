@@ -18,7 +18,7 @@
 package dashboard
 
 import (
-	"github.com/perses/perses/cue/model/api/v1"
+	"github.com/rhobs/perses/cue/model/api/v1"
 	"github.com/perses/spec/cue/common"
 	"github.com/perses/spec/cue/dashboard"
 	"github.com/perses/spec/cue/datasource"

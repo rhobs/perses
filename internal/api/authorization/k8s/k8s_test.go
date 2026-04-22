@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 	authnv1 "k8s.io/api/authentication/v1"
 	authv1 "k8s.io/api/authorization/v1"

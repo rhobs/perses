@@ -13,7 +13,7 @@
 
 // DEPRECATED
 // Import statements like:
-// `import "github.com/perses/perses/cue/common/proxy"`
+// `import "github.com/rhobs/perses/cue/common/proxy"`
 // should be replaced by:
 // `import "github.com/perses/shared/cue/common/proxy"`
 

@@ -18,9 +18,9 @@ package api
 import (
 	"testing"
 
-	e2eframework "github.com/perses/perses/internal/api/e2e/framework"
-	"github.com/perses/perses/internal/api/utils"
-	"github.com/perses/perses/pkg/model/api"
+	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
+	"github.com/rhobs/perses/internal/api/utils"
+	"github.com/rhobs/perses/pkg/model/api"
 )
 
 func TestMainScenarioGlobalDatasource(t *testing.T) {

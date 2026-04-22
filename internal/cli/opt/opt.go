@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/perses/perses/internal/cli/config"
-	"github.com/perses/perses/internal/cli/output"
+	"github.com/rhobs/perses/internal/cli/config"
+	"github.com/rhobs/perses/internal/cli/output"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/perses/perses/internal/api/utils"
+	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/stretchr/testify/assert"
 )
 

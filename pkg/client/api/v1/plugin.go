@@ -16,9 +16,9 @@ package v1
 import (
 	"fmt"
 
-	"github.com/perses/perses/pkg/client/perseshttp"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	pluginModel "github.com/perses/perses/pkg/model/api/v1/plugin"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	pluginModel "github.com/rhobs/perses/pkg/model/api/v1/plugin"
 )
 
 const pluginResource = "plugins"

@@ -14,9 +14,9 @@
 package fakev1
 
 import (
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
-	pluginModel "github.com/perses/perses/pkg/model/api/v1/plugin"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	pluginModel "github.com/rhobs/perses/pkg/model/api/v1/plugin"
 )
 
 type plugin struct {

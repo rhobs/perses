@@ -14,8 +14,8 @@
 package panel
 
 import (
-	"github.com/perses/perses/go-sdk/link"
-	"github.com/perses/perses/go-sdk/query"
+	"github.com/rhobs/perses/go-sdk/link"
+	"github.com/rhobs/perses/go-sdk/query"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
 )

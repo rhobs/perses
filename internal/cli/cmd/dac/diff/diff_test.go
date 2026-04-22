@@ -16,9 +16,9 @@ package diff
 import (
 	"testing"
 
-	"github.com/perses/perses/internal/cli/config"
-	cmdTest "github.com/perses/perses/internal/cli/test"
-	fakeapi "github.com/perses/perses/pkg/client/fake/api"
+	"github.com/rhobs/perses/internal/cli/config"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
+	fakeapi "github.com/rhobs/perses/pkg/client/fake/api"
 )
 
 func TestDiffCMD(t *testing.T) {

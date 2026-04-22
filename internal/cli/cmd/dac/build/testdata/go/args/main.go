@@ -16,8 +16,8 @@ package main
 import (
 	"flag"
 
-	"github.com/perses/perses/go-sdk"
-	"github.com/perses/perses/go-sdk/dashboard"
+	"github.com/rhobs/perses/go-sdk"
+	"github.com/rhobs/perses/go-sdk/dashboard"
 )
 
 func main() {

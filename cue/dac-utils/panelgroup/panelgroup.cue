@@ -22,7 +22,7 @@ package panelgroup
 
 import (
 	"math"
-	"github.com/perses/perses/cue/model/api/v1"
+	"github.com/rhobs/perses/cue/model/api/v1"
 	"github.com/perses/spec/cue/dashboard"
 )
 

@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"reflect"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/v1/role"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 )
 
 type RoleInterface interface {

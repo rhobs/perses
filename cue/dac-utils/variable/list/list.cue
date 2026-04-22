@@ -16,7 +16,7 @@ package list
 import (
 	"github.com/perses/spec/cue/dashboard"
 	dashboardVariable "github.com/perses/spec/cue/dashboard/variable"
-	varBuilder "github.com/perses/perses/cue/dac-utils/variable"
+	varBuilder "github.com/rhobs/perses/cue/dac-utils/variable"
 )
 
 // include the definitions of varBuilder at the root
