@@ -18,6 +18,7 @@ import {
   EphemeralDashboardResource,
   getResourceDisplayName,
   ExternalVariableDefinition,
+  DashboardSpec,
 } from '@perses-dev/core';
 import { OnSaveDashboard, ViewDashboard } from '@perses-dev/dashboards';
 import { PluginRegistry, UsageMetricsProvider, ValidationProvider } from '@perses-dev/plugin-system';
@@ -35,7 +36,7 @@ import { PERSES_APP_CONFIG } from '../../../config';
 export interface GenericDashboardViewProps {
   dashboardResource: DashboardResource | EphemeralDashboardResource;
   onSave?: OnSaveDashboard;
-  onDiscard?: (entity: DashboardResource) => void;
+  onDiscard?: (name: string, spec: DashboardSpec) => void;
   isReadonly: boolean;
   isEditing: boolean;
   isCreating?: boolean;
