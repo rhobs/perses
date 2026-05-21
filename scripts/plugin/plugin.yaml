@@ -35,7 +35,7 @@
 - name: "Table"
   version: "0.11.2"
 - name: "Tempo"
-  version: "0.57.1"
+  version: "0.58.0-beta.0"
 - name: "TimeSeriesChart"
   version: "0.12.1"
 - name: "TimeSeriesTable"
