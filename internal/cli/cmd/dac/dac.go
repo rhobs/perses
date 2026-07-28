@@ -14,11 +14,11 @@
 package dac
 
 import (
-	"github.com/perses/perses/internal/cli/cmd/dac/build"
-	"github.com/perses/perses/internal/cli/cmd/dac/diff"
-	"github.com/perses/perses/internal/cli/cmd/dac/preview"
-	"github.com/perses/perses/internal/cli/cmd/dac/setup"
-	"github.com/perses/perses/internal/cli/config"
+	"github.com/rhobs/perses/internal/cli/cmd/dac/build"
+	"github.com/rhobs/perses/internal/cli/cmd/dac/diff"
+	"github.com/rhobs/perses/internal/cli/cmd/dac/preview"
+	"github.com/rhobs/perses/internal/cli/cmd/dac/setup"
+	"github.com/rhobs/perses/internal/cli/config"
 	"github.com/spf13/cobra"
 )
 

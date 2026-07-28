@@ -18,12 +18,12 @@
 package fakeapi
 
 import (
-	"github.com/perses/perses/pkg/client/api"
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	"github.com/perses/perses/pkg/client/config"
-	"github.com/perses/perses/pkg/client/fake/api/v1"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	apiConfig "github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/pkg/client/api"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	"github.com/rhobs/perses/pkg/client/config"
+	"github.com/rhobs/perses/pkg/client/fake/api/v1"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/perses/spec/go/common"
 )
 

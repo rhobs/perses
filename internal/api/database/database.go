@@ -20,12 +20,12 @@ import (
 	"time"
 
 	"github.com/go-sql-driver/mysql"
-	databaseFile "github.com/perses/perses/internal/api/database/file"
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	databaseSQL "github.com/perses/perses/internal/api/database/sql"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	"github.com/perses/perses/pkg/model/api/config"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	databaseFile "github.com/rhobs/perses/internal/api/database/file"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	databaseSQL "github.com/rhobs/perses/internal/api/database/sql"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 )

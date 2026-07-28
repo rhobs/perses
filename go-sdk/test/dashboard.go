@@ -18,9 +18,9 @@ import (
 
 	"dac-test/prometheus/query"
 
-	"github.com/perses/perses/go-sdk/common"
-	"github.com/perses/perses/go-sdk/panel"
-	panelgroup "github.com/perses/perses/go-sdk/panel-group"
+	"github.com/rhobs/perses/go-sdk/common"
+	"github.com/rhobs/perses/go-sdk/panel"
+	panelgroup "github.com/rhobs/perses/go-sdk/panel-group"
 	table "github.com/perses/plugins/table/sdk/go"
 	timeseries "github.com/perses/plugins/timeserieschart/sdk/go"
 )

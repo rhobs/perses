@@ -19,14 +19,14 @@ import (
 
 	"github.com/brunoga/deep"
 	"github.com/labstack/echo/v4"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/ephemeraldashboard"
-	"github.com/perses/perses/internal/api/interface/v1/globalvariable"
-	"github.com/perses/perses/internal/api/interface/v1/variable"
-	"github.com/perses/perses/internal/api/plugin/schema"
-	"github.com/perses/perses/internal/api/validate"
-	"github.com/perses/perses/pkg/model/api"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/ephemeraldashboard"
+	"github.com/rhobs/perses/internal/api/interface/v1/globalvariable"
+	"github.com/rhobs/perses/internal/api/interface/v1/variable"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	"github.com/rhobs/perses/internal/api/validate"
+	"github.com/rhobs/perses/pkg/model/api"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

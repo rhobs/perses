@@ -21,8 +21,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	secretModel "github.com/perses/perses/pkg/model/api/v1/secret"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
 	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

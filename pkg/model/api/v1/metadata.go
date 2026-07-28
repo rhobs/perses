@@ -21,7 +21,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/perses/common/set"
-	"github.com/perses/perses/pkg/model/api/v1/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/common"
 )
 
 func NewMetadata(name string) *Metadata {

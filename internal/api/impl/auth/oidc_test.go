@@ -24,7 +24,7 @@ import (
 
 	"github.com/go-jose/go-jose/v4"
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/zitadel/oidc/v3/pkg/client/rp"

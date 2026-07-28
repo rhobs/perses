@@ -21,9 +21,9 @@ import (
 	"os/exec"
 	"strings"
 
-	persesCMD "github.com/perses/perses/internal/cli/cmd"
-	"github.com/perses/perses/internal/cli/config"
-	"github.com/perses/perses/internal/cli/output"
+	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
+	"github.com/rhobs/perses/internal/cli/config"
+	"github.com/rhobs/perses/internal/cli/output"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"golang.org/x/mod/semver"
@@ -36,7 +36,7 @@ const (
 	minVersionForCue = "v0.51.0" // Release that brought the move to CUE's new modules
 	exampleCUEDac    = `package mydac
 
-import "github.com/perses/perses/cue/dac-utils/dashboard@v0"
+import "github.com/rhobs/perses/cue/dac-utils/dashboard@v0"
 
 dashboard & { #name: "myDashboardAsCode", #project: "myProject" }`
 	exampleGoDac = `package main
@@ -44,8 +44,8 @@ dashboard & { #name: "myDashboardAsCode", #project: "myProject" }`
 import (
 	"flag"
 
-	"github.com/perses/perses/go-sdk"
-	"github.com/perses/perses/go-sdk/dashboard"
+	"github.com/rhobs/perses/go-sdk"
+	"github.com/rhobs/perses/go-sdk/dashboard"
 )
 
 func main() {
@@ -219,11 +219,11 @@ func (o *option) Execute() error {
 		}
 		logrus.Debugf("main.go file created successfully")
 		// Resolve the sdk dependency
-		cmd := exec.Command("go", "get", fmt.Sprintf("github.com/perses/perses@%s", o.version)) // nolint: gosec
+		cmd := exec.Command("go", "get", fmt.Sprintf("github.com/rhobs/perses@%s", o.version)) // nolint: gosec
 		cmd.Stdout = o.writer
 		cmd.Stderr = o.errWriter
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("unable to get the go dependencies github.com/perses/perses@%s : %w", o.version, err)
+			return fmt.Errorf("unable to get the go dependencies github.com/rhobs/perses@%s : %w", o.version, err)
 		}
 	} else {
 		return fmt.Errorf("language %q is not supported", o.language)

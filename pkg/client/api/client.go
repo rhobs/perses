@@ -14,13 +14,13 @@
 package api
 
 import (
-	"github.com/perses/perses/pkg/client/api/auth"
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	"github.com/perses/perses/pkg/client/api/validate"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	"github.com/perses/perses/pkg/model/api"
-	apiConfig "github.com/perses/perses/pkg/model/api/config"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/client/api/auth"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	"github.com/rhobs/perses/pkg/client/api/validate"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	"github.com/rhobs/perses/pkg/model/api"
+	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type ClientInterface interface {

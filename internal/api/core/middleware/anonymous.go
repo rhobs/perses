@@ -15,7 +15,7 @@ package middleware
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/utils"
+	"github.com/rhobs/perses/internal/api/utils"
 )
 
 func HandleAnonymous(isAnonymous bool) echo.MiddlewareFunc {

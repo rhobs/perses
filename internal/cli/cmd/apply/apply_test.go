@@ -18,13 +18,13 @@ import (
 	"strings"
 	"testing"
 
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	cmdTest "github.com/perses/perses/internal/cli/test"
-	"github.com/perses/perses/pkg/client/api"
-	apiv1 "github.com/perses/perses/pkg/client/api/v1"
-	fakeapi "github.com/perses/perses/pkg/client/fake/api"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
+	"github.com/rhobs/perses/pkg/client/api"
+	apiv1 "github.com/rhobs/perses/pkg/client/api/v1"
+	fakeapi "github.com/rhobs/perses/pkg/client/fake/api"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 func TestApplyCMD(t *testing.T) {

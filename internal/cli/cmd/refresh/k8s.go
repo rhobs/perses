@@ -16,9 +16,9 @@ package refresh
 import (
 	"fmt"
 
-	"github.com/perses/perses/internal/cli/cmd/login"
-	"github.com/perses/perses/internal/cli/config"
-	"github.com/perses/perses/pkg/client/api"
+	"github.com/rhobs/perses/internal/cli/cmd/login"
+	"github.com/rhobs/perses/internal/cli/config"
+	"github.com/rhobs/perses/pkg/client/api"
 )
 
 type k8sRefresh struct {

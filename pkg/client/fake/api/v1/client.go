@@ -14,8 +14,8 @@
 package fakev1
 
 import (
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	"github.com/perses/perses/pkg/client/perseshttp"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
 )
 
 type client struct {

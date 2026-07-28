@@ -18,8 +18,8 @@ import (
 	"testing"
 
 	"github.com/goreleaser/goreleaser/v2/pkg/config"
-	"github.com/perses/perses/internal/cli/file"
-	"github.com/perses/perses/scripts/generate-goreleaser/dockerconfig"
+	"github.com/rhobs/perses/internal/cli/file"
+	"github.com/rhobs/perses/scripts/generate-goreleaser/dockerconfig"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -15,8 +15,8 @@ package utils
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/pkg/model/api"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 const (

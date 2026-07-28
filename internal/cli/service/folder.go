@@ -14,10 +14,10 @@
 package service
 
 import (
-	"github.com/perses/perses/internal/cli/output"
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/internal/cli/output"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type folder struct {

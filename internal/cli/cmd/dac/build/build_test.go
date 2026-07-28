@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/perses/perses/internal/cli/config"
-	cmdTest "github.com/perses/perses/internal/cli/test"
+	"github.com/rhobs/perses/internal/cli/config"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
 )
 
 func TestDacBuildCMD_GoExtraArgsAreSplit(t *testing.T) {
@@ -109,7 +109,7 @@ func TestDacBuildCMD(t *testing.T) {
 			ExpectedMessage: fmt.Sprintf("Successfully built %s at %s\n", filepath.Join("testdata", "go", "cmd", "main.go"), filepath.Join("built", "testdata", "go", "cmd", "main_output.yaml")),
 		},
 		{
-			// Regression test for https://github.com/perses/perses/issues/3819:
+			// Regression test for https://github.com/rhobs/perses/issues/3819:
 			// non-main Go files in sub-packages must be silently skipped; only
 			// files in package main are passed to `go run`.
 			Title:           "directory with non-main sub-packages skips them without error",

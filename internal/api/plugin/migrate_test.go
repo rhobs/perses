@@ -21,9 +21,9 @@ import (
 	"testing"
 
 	"github.com/perses/common/set"
-	"github.com/perses/perses/internal/api/plugin/migrate"
-	testUtils "github.com/perses/perses/internal/test"
-	"github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/internal/api/plugin/migrate"
+	testUtils "github.com/rhobs/perses/internal/test"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/perses/spec/go/dashboard"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -58,7 +58,7 @@ func TestNoRegMigration(t *testing.T) {
 	}{
 		{
 			// When moving from cue v0.16 to v0.17, cueValue.MarshalJSON did not work anymore, and somehow it happens when using the timeseriesChart.
-			// This test is ensuring the issue https://github.com/perses/perses/issues/4272 won't happen again.
+			// This test is ensuring the issue https://github.com/rhobs/perses/issues/4272 won't happen again.
 			title:                "Cue marshalling",
 			pluginPath:           filepath.Join("migrate", "testdata", "non-reg", "cue-marshal", "plugins"),
 			grafanaDashboardFile: filepath.Join("migrate", "testdata", "non-reg", "cue-marshal", "dashboards", "simple-grafana.json"),
