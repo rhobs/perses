@@ -1,0 +1,65 @@
+FROM registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.26-openshift-5.0 AS builder
+USER root
+
+RUN dnf install -y --setopt=tsflags=nodocs mailcap && \
+    dnf clean all && \
+    rm -rf /var/cache/dnf
+
+WORKDIR /app
+
+COPY . .
+
+ENV GOFLAGS="-mod=readonly"
+ENV CGO_ENABLED=1
+ENV GOEXPERIMENT=strictfipsruntime
+
+RUN go mod download
+
+RUN mkdir /plugins
+
+# Run generate steps (assets compression, plugin installation)
+RUN make generate
+
+# CGO required for FIPS/check-payload; upstream Makefile uses CGO_ENABLED=0 — build here instead
+RUN go build -tags strictfipsruntime -ldflags "-s -w" -o ./bin/perses ./cmd/perses
+RUN go build -tags strictfipsruntime -ldflags "-s -w" -o ./bin/percli ./cmd/percli
+
+FROM registry.ci.openshift.org/ocp/5.0:base-rhel9
+
+LABEL maintainer="Observability UI team <team-observability-ui@redhat.com>"
+
+COPY --from=builder  /app/bin/perses                         /bin/perses
+COPY --from=builder  /app/bin/percli                         /bin/percli
+COPY --from=builder  /app/docs/examples/config.docker.yaml   /etc/perses/config.yaml
+COPY --from=builder  /app/plugins-archive/                   /etc/perses/plugins-archive/
+COPY --from=builder  /app/LICENSE                            /LICENSE
+COPY --from=builder  /plugins                                /etc/perses/plugins
+COPY --from=builder  /etc/mime.types                         /etc/mime.types
+
+RUN chown -R 65534:0 /etc/perses && \
+    chmod -R g=u /etc/perses
+
+RUN mkdir -p /perses && \
+    chgrp -R 0 /perses && \
+    chmod -R g=u /perses
+
+WORKDIR /perses
+
+USER 65534
+
+EXPOSE     8080
+VOLUME     ["/perses"]
+ENTRYPOINT [ "/bin/perses" ]
+CMD        ["--config=/etc/perses/config.yaml", "--log.level=error"]
+
+ARG VERSION=v0.54.0
+LABEL version="${VERSION}" \
+    release="${VERSION}" \
+    vendor="Red Hat, Inc." \
+    url="https://github.com/rhobs/perses" \
+    summary="Perses for Cluster Observability Operator" \
+    io.openshift.tags="openshift,observability-ui,perses" \
+    io.k8s.display-name="Perses for Cluster Observability Operator" \
+    io.k8s.description="Perses for Cluster Observability Operator" \
+    maintainer="Observability UI Team <team-observability-ui@redhat.com>" \
+    description="Perses for Cluster Observability Operator"
