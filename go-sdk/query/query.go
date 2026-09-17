@@ -16,9 +16,9 @@ package query
 import (
 	"fmt"
 
-	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 )
 
 type Option struct {

@@ -19,6 +19,7 @@ import (
 	"io"
 	"regexp"
 
+	"github.com/perses/spec/go/dashboard"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
@@ -30,7 +31,6 @@ import (
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/dashboard"
 	"github.com/spf13/cobra"
 )
 

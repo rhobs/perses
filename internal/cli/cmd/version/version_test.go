@@ -16,9 +16,9 @@ package version
 import (
 	"testing"
 
+	"github.com/prometheus/common/version"
 	cmdTest "github.com/rhobs/perses/internal/cli/test"
 	fakeapi "github.com/rhobs/perses/pkg/client/fake/api"
-	"github.com/prometheus/common/version"
 )
 
 func TestVersionCMD(t *testing.T) {

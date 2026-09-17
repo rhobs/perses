@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"reflect"
 
-	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 
 type EphemeralDashboardSpecBase struct {

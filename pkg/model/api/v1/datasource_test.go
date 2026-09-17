@@ -17,11 +17,11 @@ import (
 	"encoding/json"
 	"testing"
 
+	commonSpec "github.com/perses/spec/go/common"
+	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	datasourceHTTP "github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
-	commonSpec "github.com/perses/spec/go/common"
-	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
 )

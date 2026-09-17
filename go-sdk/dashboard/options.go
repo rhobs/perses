@@ -17,13 +17,13 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/perses/spec/go/common"
+	"github.com/perses/spec/go/dashboard"
+	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/rhobs/perses/go-sdk/datasource"
 	panelgroup "github.com/rhobs/perses/go-sdk/panel-group"
 	"github.com/rhobs/perses/go-sdk/variable"
 	variablegroup "github.com/rhobs/perses/go-sdk/variable-group"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
-	datasourceSpec "github.com/perses/spec/go/datasource"
 )
 
 type GridItem struct {

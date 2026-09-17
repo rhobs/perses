@@ -19,9 +19,9 @@ import (
 	"regexp"
 
 	"cuelang.org/go/cue/build"
-	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/sirupsen/logrus"
 )
 
