@@ -25,11 +25,11 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/perses/spec/go/common"
 	plugin "github.com/rhobs/perses/internal/api/plugin"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/output"
 	apiv1 "github.com/rhobs/perses/pkg/model/api/v1/plugin"
-	"github.com/perses/spec/go/common"
 	"github.com/spf13/cobra"
 )
 

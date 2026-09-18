@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"reflect"
 
+	"github.com/perses/spec/go/datasource"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
-	"github.com/perses/spec/go/datasource"
 )
 
 func FilterDatasource[T DatasourceInterface](kind string, defaultDTS *bool, list []T) []T {

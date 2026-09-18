@@ -14,10 +14,10 @@
 package listvariable
 
 import (
-	"github.com/rhobs/perses/go-sdk/variable"
-	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/dashboard"
 	variableSpec "github.com/perses/spec/go/dashboard/variable"
+	"github.com/rhobs/perses/go-sdk/variable"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type Option func(listVariableSpec *Builder) error

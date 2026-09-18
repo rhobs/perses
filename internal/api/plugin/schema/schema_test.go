@@ -19,11 +19,11 @@ import (
 	"strings"
 	"testing"
 
-	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
 	"github.com/perses/spec/go/dashboard/variable"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/stretchr/testify/assert"
 )
 

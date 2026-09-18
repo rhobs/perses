@@ -21,9 +21,9 @@ import (
 	"time"
 
 	"github.com/perses/common/config"
+	"github.com/perses/spec/go/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/perses/spec/go/common"
 	"github.com/stretchr/testify/assert"
 )
 

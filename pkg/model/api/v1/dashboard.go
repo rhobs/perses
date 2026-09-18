@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"reflect"
 
+	commonSpec "github.com/perses/spec/go/common"
+	dashboardSpec "github.com/perses/spec/go/dashboard"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/dashboard"
-	commonSpec "github.com/perses/spec/go/common"
-	dashboardSpec "github.com/perses/spec/go/dashboard"
 )
 
 // Link

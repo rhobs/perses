@@ -21,9 +21,9 @@ import (
 	"slices"
 	"time"
 
+	commonSpec "github.com/perses/spec/go/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	commonSpec "github.com/perses/spec/go/common"
 )
 
 const (

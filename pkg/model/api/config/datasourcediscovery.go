@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/rhobs/perses/pkg/client/config"
 	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses/pkg/client/config"
 )
 
 const defaultRefreshInterval = common.Duration(time.Minute * 5)

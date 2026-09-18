@@ -14,8 +14,8 @@
 package tree
 
 import (
-	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/plugin"
 	"golang.org/x/mod/semver"
 )
 
