@@ -57,6 +57,14 @@ jobs:
         image: prom/prometheus
         ports:
           - "9090:9090"
+      postgres:
+        image: postgres:17
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: perses
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
     steps:
       - name: checkout
         uses: actions/checkout@v7
