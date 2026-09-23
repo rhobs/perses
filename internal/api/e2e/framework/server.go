@@ -222,6 +222,16 @@ func WithServerConfig(t *testing.T, config apiConfig.Config, testFunc func(*http
 	ClearAllKeys(t, dependencyManager.Persistence().GetPersesDAO(), entities...)
 }
 
+// WithServerConfigManager behaves like WithServerConfig but exposes the full dependency.Manager to the test.
+// This is required by tests that need access to the service layer (e.g. to refresh the RBAC cache after granting a role).
+func WithServerConfigManager(t *testing.T, config apiConfig.Config, testFunc func(*httptest.Server, *httpexpect.Expect, dependency.Manager) []modelAPI.Entity) {
+	server, expect, dependencyManager := CreateServer(t, config)
+	defer dependencyManager.Persistence().GetPersesDAO().Close()
+	defer server.Close()
+	entities := testFunc(server, expect, dependencyManager)
+	ClearAllKeys(t, dependencyManager.Persistence().GetPersesDAO(), entities...)
+}
+
 // NewOAuthProviderTestServer creates a new OAuth provider server that will be used to test the OAuth login.
 // It returns the HTTP test server and the configuration of the OAuth provider to request it.
 //

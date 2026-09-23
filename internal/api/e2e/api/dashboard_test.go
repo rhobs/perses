@@ -29,6 +29,7 @@ import (
 	"github.com/rhobs/perses/pkg/model/api"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -201,5 +202,144 @@ func TestAuthListDashboardInProject(t *testing.T) {
 
 		e2eframework.ClearAllKeys(t, manager.GetPersesDAO(), usrEntity)
 		return []api.Entity{firstProject, secondProject, thirdProject, firstDashboard, secondDashboard, thirdDashboard}
+	})
+}
+
+// addSecretToDashboardDatasource injects a secret reference into the proxy config of the first embedded datasource
+// of the given dashboard. The dashboard produced by e2eframework.NewDashboard already embeds a valid (secret-less)
+// datasource, so we only need to add the secret to turn it into a secret-referencing one.
+func addSecretToDashboardDatasource(t *testing.T, dashboard *modelV1.Dashboard, secretName string) {
+	for name, dts := range dashboard.Spec.Datasources {
+		pluginSpec, ok := dts.Plugin.Spec.(map[string]interface{})
+		if !ok {
+			t.Fatalf("unexpected datasource plugin spec type %T for datasource %q", dts.Plugin.Spec, name)
+		}
+		proxy, ok := pluginSpec["proxy"].(map[string]interface{})
+		if !ok {
+			t.Fatalf("unexpected datasource proxy type %T for datasource %q", pluginSpec["proxy"], name)
+		}
+		proxySpec, ok := proxy["spec"].(map[string]interface{})
+		if !ok {
+			t.Fatalf("unexpected datasource proxy spec type %T for datasource %q", proxy["spec"], name)
+		}
+		proxySpec["secret"] = secretName
+		return
+	}
+	t.Fatal("the dashboard does not embed any datasource")
+}
+
+// TestDashboardWithSecretDatasourceRequiresSecretReadPermission verifies that creating or updating a dashboard
+// that embeds a local datasource referencing a secret is forbidden unless the user is allowed to read secrets
+// in the project.
+func TestDashboardWithSecretDatasourceRequiresSecretReadPermission(t *testing.T) {
+	conf := e2eframework.DefaultAuthConfig()
+	// Guest permissions are restricted to dashboards only, so that nobody can read secrets by default.
+	conf.Security.Authorization.Provider.Native.GuestPermissions = []*role.Permission{
+		{
+			Actions: []role.Action{role.CreateAction, role.ReadAction, role.UpdateAction, role.DeleteAction},
+			Scopes:  []role.Scope{role.DashboardScope},
+		},
+	}
+	e2eframework.WithServerConfigManager(t, conf, func(_ *httptest.Server, expect *httpexpect.Expect, manager dependency.Manager) []api.Entity {
+		usrEntity := e2eframework.NewUser("bob", "password")
+		expect.POST(fmt.Sprintf("%s/%s", utils.APIV1Prefix, utils.PathUser)).
+			WithJSON(usrEntity).
+			Expect().
+			Status(http.StatusOK)
+
+		authEntity := modelAPI.Auth{
+			Login:    usrEntity.GetMetadata().GetName(),
+			Password: usrEntity.Spec.NativeProvider.Password,
+		}
+		authResponse := expect.POST(fmt.Sprintf("%s/%s/%s/%s", utils.APIPrefix, utils.PathAuthProviders, utils.AuthnKindNative, utils.PathLogin)).
+			WithJSON(authEntity).
+			Expect().
+			Status(http.StatusOK)
+		token := authResponse.JSON().Object().Value("access_token").String().Raw()
+		authHeaderKey, authHeaderValue := e2eframework.CreateAuthorizationHeader(token)
+
+		project := e2eframework.NewProject("perses")
+		e2eframework.CreateAndWaitUntilEntityExists(t, manager.Persistence(), project)
+
+		dashboardPath := fmt.Sprintf("%s/%s/%s/%s", utils.APIV1Prefix, utils.PathProject, project.Metadata.Name, utils.PathDashboard)
+
+		// A dashboard embedding a datasource that references a secret.
+		dashboardWithSecret := e2eframework.NewDashboard(t, project.Metadata.Name, "withSecret")
+		addSecretToDashboardDatasource(t, dashboardWithSecret, "mySecret")
+
+		// Creating a dashboard that references a secret without the secret read permission must be forbidden.
+		expect.POST(dashboardPath).
+			WithHeader(authHeaderKey, authHeaderValue).
+			WithJSON(dashboardWithSecret).
+			Expect().
+			Status(http.StatusForbidden)
+
+		// Creating a dashboard without any secret reference is still allowed.
+		dashboardWithoutSecret := e2eframework.NewDashboard(t, project.Metadata.Name, "withSecret")
+		dashboardWithoutSecret.Spec.Datasources = nil
+		expect.POST(dashboardPath).
+			WithHeader(authHeaderKey, authHeaderValue).
+			WithJSON(dashboardWithoutSecret).
+			Expect().
+			Status(http.StatusOK)
+
+		// Updating the dashboard to reference a secret without the secret read permission must be forbidden.
+		expect.PUT(fmt.Sprintf("%s/%s", dashboardPath, dashboardWithSecret.Metadata.Name)).
+			WithHeader(authHeaderKey, authHeaderValue).
+			WithJSON(dashboardWithSecret).
+			Expect().
+			Status(http.StatusForbidden)
+
+		// Grant the secret read permission to the user in the project.
+		secretReaderRole := &modelV1.Role{
+			Kind:     modelV1.KindRole,
+			Metadata: *modelV1.NewProjectMetadata(project.Metadata.Name, "secret-reader"),
+			Spec: modelV1.RoleSpec{
+				Permissions: []role.Permission{
+					{
+						Actions: []role.Action{role.ReadAction},
+						Scopes:  []role.Scope{role.SecretScope},
+					},
+				},
+			},
+		}
+		secretReaderRole.Metadata.CreateNow()
+		secretReaderRoleBinding := &modelV1.RoleBinding{
+			Kind:     modelV1.KindRoleBinding,
+			Metadata: *modelV1.NewProjectMetadata(project.Metadata.Name, "secret-reader"),
+			Spec: modelV1.RoleBindingSpec{
+				Role: secretReaderRole.Metadata.Name,
+				Subjects: []modelV1.Subject{
+					{
+						Kind: modelV1.KindUser,
+						Name: usrEntity.Metadata.Name,
+					},
+				},
+			},
+		}
+		secretReaderRoleBinding.Metadata.CreateNow()
+		e2eframework.CreateAndWaitUntilEntitiesExist(t, manager.Persistence(), secretReaderRole, secretReaderRoleBinding)
+		if err := manager.Service().GetAuthorization().RefreshPermissions(); err != nil {
+			t.Fatalf("failed to refresh permissions: %v", err)
+		}
+
+		// Now the update referencing a secret must be accepted.
+		expect.PUT(fmt.Sprintf("%s/%s", dashboardPath, dashboardWithSecret.Metadata.Name)).
+			WithHeader(authHeaderKey, authHeaderValue).
+			WithJSON(dashboardWithSecret).
+			Expect().
+			Status(http.StatusOK)
+
+		// And creating a new dashboard referencing a secret must be accepted as well.
+		otherDashboardWithSecret := e2eframework.NewDashboard(t, project.Metadata.Name, "otherWithSecret")
+		addSecretToDashboardDatasource(t, otherDashboardWithSecret, "mySecret")
+		expect.POST(dashboardPath).
+			WithHeader(authHeaderKey, authHeaderValue).
+			WithJSON(otherDashboardWithSecret).
+			Expect().
+			Status(http.StatusOK)
+
+		e2eframework.ClearAllKeys(t, manager.Persistence().GetPersesDAO(), usrEntity)
+		return []api.Entity{project, dashboardWithSecret, otherDashboardWithSecret, secretReaderRole, secretReaderRoleBinding}
 	})
 }
