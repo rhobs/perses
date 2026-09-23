@@ -24,6 +24,9 @@ import (
 	"testing"
 
 	"github.com/gavv/httpexpect/v2"
+	commonSpec "github.com/perses/spec/go/common"
+	"github.com/perses/spec/go/dashboard"
+	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"
@@ -34,9 +37,6 @@ import (
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	datasourceHTTP "github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
 	datasourceSQL "github.com/rhobs/perses/pkg/model/api/v1/datasource/sql"
-	commonSpec "github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
-	datasourceSpec "github.com/perses/spec/go/datasource"
 )
 
 func newHTTPDatasourceSpec(t *testing.T) datasourceSpec.Spec {

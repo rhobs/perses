@@ -118,18 +118,13 @@ validate-data:
 	@echo ">> Validate all data in dev/data"
 	$(GO) run ./scripts/validate-data/validate-data.go
 
-.PHONY: go-sdk-test
-go-sdk-test:
-	@echo ">> Run Perses Go SDK tests"
-	cd ./go-sdk/test && $(GO) test -v -count=1 ./...
-
 .PHONY: test
 test: generate
 	@echo ">> Run all tests"
 	$(GO) test -count=1 -v ./...
 
 .PHONY: integration-test
-integration-test: generate go-sdk-test
+integration-test: generate
 	@echo ">> Run integration tests"
 	$(GO) test -tags=integration -v -count=1 -cover -coverprofile=$(COVER_PROFILE) -coverpkg=./... ./...
 

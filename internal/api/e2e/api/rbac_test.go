@@ -102,7 +102,7 @@ func TestAnonymousEndpoints(t *testing.T) {
 }
 
 func TestUnauthorizedEndpoints(t *testing.T) {
-	e2eframework.WithServerConfig(t, e2eframework.DefaultAuthConfig(), func(_ *httptest.Server, expect *httpexpect.Expect, manager dependency.PersistenceManager) []modelAPI.Entity {
+	e2eframework.WithServerConfig(t, e2eframework.DefaultAuthConfig(), func(server *httptest.Server, expect *httpexpect.Expect, manager dependency.PersistenceManager) []modelAPI.Entity {
 		creator := "foo"
 		usrEntity := e2eframework.NewUser(creator, "password")
 		expect.POST(fmt.Sprintf("%s/%s", utils.APIV1Prefix, utils.PathUser)).
@@ -125,13 +125,18 @@ func TestUnauthorizedEndpoints(t *testing.T) {
 		glRole := e2eframework.NewGlobalRole("test")
 		expect.POST(fmt.Sprintf("%s/%s", utils.APIV1Prefix, utils.PathGlobalRole)).WithJSON(glRole).WithHeader("Authorization", fmt.Sprintf("Bearer %s", token)).Expect().Status(http.StatusForbidden)
 
-		// This test only works if the auth cookies are not present from a request to another one.
-		// During the execution of the e2e tests, cookies are persisted from a request to another one.
-		// The only way to avoid keeping the auth cookie is to set the cookie param 'secure' at true.
-		// As the connection is not secured, the cookies cannot be kept (secure means it works only with https).
-		// This is what is done in e2eframework.DefaultAuthConfig
+		// This test only works if the auth cookies from the login above are not sent with this request.
+		// The shared `expect` client persists cookies from one request to the next, so we use a dedicated
+		// client with its own (empty) cookie jar to guarantee only the bad bearer token is sent.
+		// Historically the test relied on the auth cookies being marked 'secure' (see e2eframework.DefaultAuthConfig)
+		// so they would be dropped over the insecure HTTP test connection. That no longer works: since Go 1.26,
+		// net/http/cookiejar treats localhost/loopback as a secure origin and sends secure cookies over HTTP too.
+		noSessionExpect := httpexpect.WithConfig(httpexpect.Config{
+			BaseURL:  server.URL,
+			Reporter: httpexpect.NewAssertReporter(t),
+		})
 		project2Entity := e2eframework.NewProject("mysuperproject2")
-		expect.POST(fmt.Sprintf("%s/%s", utils.APIV1Prefix, utils.PathProject)).WithJSON(project2Entity).WithHeader("Authorization", "Bearer <bad token>").Expect().Status(http.StatusUnauthorized)
+		noSessionExpect.POST(fmt.Sprintf("%s/%s", utils.APIV1Prefix, utils.PathProject)).WithJSON(project2Entity).WithHeader("Authorization", "Bearer <bad token>").Expect().Status(http.StatusUnauthorized)
 
 		e2eframework.ClearAllKeys(t, manager.GetPersesDAO(), usrEntity)
 		return []modelAPI.Entity{}

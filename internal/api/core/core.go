@@ -21,6 +21,7 @@ import (
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"github.com/perses/common/app"
+	"github.com/prometheus/client_golang/prometheus"
 	"github.com/rhobs/perses/internal/api/authorization"
 	"github.com/rhobs/perses/internal/api/core/middleware"
 	"github.com/rhobs/perses/internal/api/dashboard"
@@ -30,7 +31,6 @@ import (
 	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/rhobs/perses/ui"
-	"github.com/prometheus/client_golang/prometheus"
 	"github.com/sirupsen/logrus"
 )
 

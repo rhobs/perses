@@ -17,12 +17,12 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/perses/spec/go/datasource"
 	"github.com/rhobs/perses/internal/api/discovery/cuetils"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource/http"
-	"github.com/perses/spec/go/datasource"
 	"github.com/sirupsen/logrus"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

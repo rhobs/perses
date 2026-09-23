@@ -14,10 +14,10 @@
 package panel
 
 import (
-	"github.com/rhobs/perses/go-sdk/link"
-	"github.com/rhobs/perses/go-sdk/query"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses/go-sdk/link"
+	"github.com/rhobs/perses/go-sdk/query"
 )
 
 func Title(title string) Option {

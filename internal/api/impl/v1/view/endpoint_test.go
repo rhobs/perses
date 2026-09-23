@@ -28,11 +28,11 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
+	promclient "github.com/prometheus/client_model/go"
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/interface/v1/dashboard"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	promclient "github.com/prometheus/client_model/go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
