@@ -53,6 +53,9 @@ func HandleError(err error) error {
 	if databaseModel.IsKeyConflict(err) {
 		return echo.NewHTTPError(http.StatusConflict, ConflictError.message)
 	}
+	if databaseModel.IsKeyBadRequest(err) {
+		return echo.NewHTTPError(http.StatusBadRequest, BadRequestError.message)
+	}
 
 	if errors.Is(err, InternalError) {
 		return echo.NewHTTPError(http.StatusInternalServerError, err.Error())

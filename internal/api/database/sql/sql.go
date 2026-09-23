@@ -25,6 +25,7 @@ import (
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	commonV1 "github.com/rhobs/perses/pkg/model/api/v1/common"
 	"github.com/sirupsen/logrus"
 )
 
@@ -91,8 +92,17 @@ func getTableName(kind modelV1.Kind) (string, error) {
 func generateID(metadata modelAPI.Metadata) (string, error) {
 	switch m := metadata.(type) {
 	case *modelV1.ProjectMetadata:
+		if err := commonV1.ValidateID(m.Project); err != nil {
+			return "", &databaseModel.Error{Key: m.Project, Code: databaseModel.ErrorBadRequest}
+		}
+		if err := commonV1.ValidateID(m.Name); err != nil {
+			return "", &databaseModel.Error{Key: m.Name, Code: databaseModel.ErrorBadRequest}
+		}
 		return fmt.Sprintf("%s|%s", m.Project, m.Name), nil
 	case *modelV1.Metadata:
+		if err := commonV1.ValidateID(m.Name); err != nil {
+			return "", &databaseModel.Error{Key: m.Name, Code: databaseModel.ErrorBadRequest}
+		}
 		return m.Name, nil
 	}
 	return "", fmt.Errorf("metadata %T not managed", metadata)
