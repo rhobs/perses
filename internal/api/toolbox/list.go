@@ -16,10 +16,13 @@ package toolbox
 import (
 	"encoding/json"
 	"fmt"
+	"reflect"
+	"slices"
 	"strings"
 
 	"github.com/labstack/echo/v4"
 	"github.com/perses/common/async"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
@@ -99,9 +102,9 @@ func (t *toolbox[T, K, V]) listWhenPermissionIsActivated(ctx echo.Context, param
 		return t.metadataOrFullList(q)
 	}
 
-	// In case, there is one result; it can mean the user has global access to the resource across the project.
-	// Or it can mean he has access to only one project. If he has global access, then we should return the complete list.
-	if len(projects) == 1 && projects[0] == modelV1.WildcardProject {
+	// The wildcard means global access and must never be forwarded to the database as a literal project name.
+	// It can be returned alone or mixed with real projects (e.g. k8s lists authorized namespaces alongside it).
+	if slices.Contains(projects, modelV1.WildcardProject) {
 		return t.metadataOrFullList(q)
 	}
 
@@ -134,8 +137,8 @@ func (t *toolbox[T, K, V]) listWhenPermissionIsActivated(ctx echo.Context, param
 }
 
 func (t *toolbox[T, K, V]) listProjectWhenPermissionIsActivated(projects []string, query V) (any, error) {
-	// User has global access to all projects and should get the complete list.
-	if projects[0] == modelV1.WildcardProject {
+	// The wildcard means global access, whether alone or mixed with real projects, so return the complete list.
+	if slices.Contains(projects, modelV1.WildcardProject) {
 		return t.metadataOrFullList(query)
 	}
 
@@ -194,7 +197,25 @@ func (t *toolbox[T, K, V]) metadataOrFullList(query V) (any, error) {
 
 func (t *toolbox[T, K, V]) asyncMetadataOrFullList(project string, query V) func() (any, error) {
 	return func() (any, error) {
-		query.SetProjectQueryParam(project)
-		return t.metadataOrFullList(query)
+		// The query is a pointer shared by every project goroutine. Mutating it in
+		// place would race and let projects overwrite each other's project name
+		// (last write wins), so each goroutine works on its own copy.
+		queryCopy := copyQuery(query)
+		queryCopy.SetProjectQueryParam(project)
+		return t.metadataOrFullList(queryCopy)
 	}
+}
+
+// copyQuery returns a shallow copy of the query so concurrent goroutines don't
+// share the mutable project field. The query is always a pointer to a struct;
+// only value fields are set per project, so a shallow copy is enough to isolate
+// each goroutine.
+func copyQuery[V databaseModel.Query](query V) V {
+	original := reflect.ValueOf(query)
+	if original.Kind() != reflect.Ptr || original.IsNil() {
+		return query
+	}
+	clone := reflect.New(original.Elem().Type())
+	clone.Elem().Set(original.Elem())
+	return clone.Interface().(V)
 }
