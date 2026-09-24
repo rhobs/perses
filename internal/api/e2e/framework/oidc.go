@@ -133,28 +133,36 @@ func NewAccessToken(issuer, subject string, audience []string, expiration time.T
 
 // These variables always result in a valid token
 var (
-	ValidSubject    = "john.doeOIDC"
-	ValidAudience   = []string{"unit", "test", "clientID"}
-	ValidAuthTime   = time.Now().Add(-time.Minute)       // authtime is always 1 minute in the past
-	ValidExpiration = ValidAuthTime.Add(2 * time.Minute) // token is always 1 more minute available
-	ValidJWTID      = "9876"
-	ValidNonce      = ""
-	ValidACR        = "something"
-	ValidAMR        = []string{"foo", "bar"}
-	ValidClientID   = "clientID"
-	ValidSkew       = time.Second
+	ValidSubject  = "john.doeOIDC"
+	ValidAudience = []string{"unit", "test", "clientID"}
+	ValidJWTID    = "9876"
+	ValidNonce    = ""
+	ValidACR      = "something"
+	ValidAMR      = []string{"foo", "bar"}
+	ValidClientID = "clientID"
+	ValidSkew     = time.Second
 )
+
+// validAuthTime and validExpiration are computed at token-generation time (not package init)
+// so a token minted mid-suite is never already expired when a later, slower test verifies it.
+func validAuthTime() time.Time {
+	return time.Now().Add(-time.Minute) // authtime is always 1 minute in the past
+}
+
+func validExpiration() time.Time {
+	return time.Now().Add(time.Minute) // token is always 1 more minute available
+}
 
 // ValidIDToken returns a token and claims that are in the token.
 // It uses the Valid* global variables and the token will always
 // pass verification.
 func ValidIDToken(issuer string) (string, *oidc.IDTokenClaims) {
-	return NewIDToken(issuer, ValidSubject, ValidAudience, ValidExpiration, ValidAuthTime, ValidNonce, ValidACR, ValidAMR, ValidClientID, ValidSkew, "")
+	return NewIDToken(issuer, ValidSubject, ValidAudience, validExpiration(), validAuthTime(), ValidNonce, ValidACR, ValidAMR, ValidClientID, ValidSkew, "")
 }
 
 // ValidAccessToken returns a token and claims that are in the token.
 // It uses the Valid* global variables and the token always passes
 // verification within the same test run.
 func ValidAccessToken(issuer string) (string, *oidc.AccessTokenClaims) {
-	return NewAccessToken(issuer, ValidSubject, ValidAudience, ValidExpiration, ValidJWTID, ValidClientID, ValidSkew)
+	return NewAccessToken(issuer, ValidSubject, ValidAudience, validExpiration(), ValidJWTID, ValidClientID, ValidSkew)
 }
