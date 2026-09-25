@@ -52,6 +52,7 @@ const (
 	PathSecret             = "secrets"
 	PathUnsaved            = "unsaved"
 	PathUser               = "users"
+	PathPermissions        = "permissions"
 	PathCurrentUser        = "user"
 	PathVariable           = "variables"
 	PathView               = "view"

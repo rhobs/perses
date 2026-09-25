@@ -14,13 +14,30 @@
 package common
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/perses/spec/go/common"
 )
 
-// ValidateID checks for forbidden items in substring used inside id
-// DEPRECATED: this is replaced by the struct github.com/perses/spec/go/common.ValidateID
+// ValidateID checks for forbidden items in substring used inside id.
+//
+// It delegates to github.com/perses/spec/go/common.ValidateID and then adds
+// the path-traversal hardening that the pinned spec version (v0.1.2) does not
+// yet enforce: the "should not contain '..'" and "should not start or end with
+// '.'" checks. This mirrors the validation added in later spec releases and is
+// relied upon by the security fixes protecting file/DB paths against traversal.
 func ValidateID(name string) error {
-	return common.ValidateID(name)
+	if err := common.ValidateID(name); err != nil {
+		return err
+	}
+	if strings.Contains(name, "..") {
+		return fmt.Errorf("%q is not a correct name. It should not contain '..'", name)
+	}
+	if strings.HasPrefix(name, ".") || strings.HasSuffix(name, ".") {
+		return fmt.Errorf("%q is not a correct name. It should not start or end with '.'", name)
+	}
+	return nil
 }
 
 // ValidateDescription checks for forbidden items in substring used inside description

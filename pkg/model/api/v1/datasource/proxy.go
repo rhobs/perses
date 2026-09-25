@@ -37,6 +37,25 @@ func ValidateAndExtract(pluginSpec any) (any, string, error) {
 	return finder.config, finder.foundKind, finder.err
 }
 
+// HasSecret extracts the proxy config from the pluginSpec and returns true if it references a secret.
+func HasSecret(pluginSpec any) (bool, error) {
+	proxySpec, proxyKind, err := ValidateAndExtract(pluginSpec)
+	if err != nil {
+		return false, err
+	}
+	switch proxyKind {
+	case http.ProxyKindName:
+		if httpConfig, ok := proxySpec.(*http.Config); ok && len(httpConfig.Secret) > 0 {
+			return true, nil
+		}
+	case sql.ProxyKindName:
+		if sqlConfig, ok := proxySpec.(*sql.Config); ok && len(sqlConfig.Secret) > 0 {
+			return true, nil
+		}
+	}
+	return false, nil
+}
+
 type configFinder struct {
 	err       error
 	found     bool
