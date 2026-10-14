@@ -36,7 +36,7 @@ const (
 	minVersionForCue = "v0.51.0" // Release that brought the move to CUE's new modules
 	exampleCUEDac    = `package mydac
 
-import "github.com/rhobs/perses/cue/dac-utils/dashboard@v0"
+import "github.com/perses/perses/cue/dac-utils/dashboard@v0"
 
 dashboard & { #name: "myDashboardAsCode", #project: "myProject" }`
 	exampleGoDac = `package main
@@ -44,8 +44,8 @@ dashboard & { #name: "myDashboardAsCode", #project: "myProject" }`
 import (
 	"flag"
 
-	"github.com/rhobs/perses/go-sdk"
-	"github.com/rhobs/perses/go-sdk/dashboard"
+	"github.com/perses/perses/go-sdk"
+	"github.com/perses/perses/go-sdk/dashboard"
 )
 
 func main() {
