@@ -14,9 +14,9 @@
 package globaldatasource
 
 import (
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type Query struct {

@@ -18,8 +18,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/secret"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/secret"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -16,8 +16,8 @@ package user
 import (
 	"testing"
 
-	"github.com/perses/perses/internal/api/crypto"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/internal/api/crypto"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

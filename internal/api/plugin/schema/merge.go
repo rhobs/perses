@@ -22,7 +22,7 @@ import (
 	"cuelang.org/go/cue"
 	"cuelang.org/go/cue/ast"
 	"cuelang.org/go/cue/token"
-	apiCue "github.com/perses/perses/internal/api/cue"
+	apiCue "github.com/rhobs/perses/internal/api/cue"
 )
 
 // Function generates a disjunction (OR join) of a list of LoadSchemas

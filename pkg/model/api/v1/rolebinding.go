@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"slices"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 
 // maxSubjectsForLinearDeduplication is the maximum number of subjects of a role binding for which the duplicated

@@ -16,7 +16,7 @@ package login
 import (
 	"fmt"
 
-	"github.com/perses/perses/internal/cli/read"
+	"github.com/rhobs/perses/internal/cli/read"
 )
 
 // ensureInteractive returns an explicit error when an interactive prompt would be required

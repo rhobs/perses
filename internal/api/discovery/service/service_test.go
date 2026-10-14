@@ -18,12 +18,12 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/globaldatasource"
-	"github.com/perses/perses/pkg/model/api"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/datasource"
 	"github.com/perses/spec/go/plugin"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/globaldatasource"
+	"github.com/rhobs/perses/pkg/model/api"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

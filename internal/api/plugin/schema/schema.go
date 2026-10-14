@@ -25,12 +25,12 @@ import (
 	"cuelang.org/go/cue"
 	"cuelang.org/go/cue/build"
 	"cuelang.org/go/cue/cuecontext"
-	"github.com/perses/perses/internal/api/plugin/tree"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/dashboard"
 	"github.com/perses/spec/go/dashboard/variable"
 	"github.com/perses/spec/go/module"
 	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses/internal/api/plugin/tree"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

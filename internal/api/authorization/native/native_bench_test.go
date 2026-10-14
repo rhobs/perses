@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 )
 
 // This file contains benchmarks for the native authorization system, based on the datasets of fixtures_test.go.

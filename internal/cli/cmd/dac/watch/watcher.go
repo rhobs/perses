@@ -27,9 +27,9 @@ import (
 	cuemodfile "cuelang.org/go/mod/modfile"
 	"github.com/fsnotify/fsnotify"
 	"github.com/perses/common/async"
-	"github.com/perses/perses/internal/cli/cmd/dac/build"
-	"github.com/perses/perses/internal/cli/opt"
 	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses/internal/cli/cmd/dac/build"
+	"github.com/rhobs/perses/internal/cli/opt"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/mod/modfile"
 )

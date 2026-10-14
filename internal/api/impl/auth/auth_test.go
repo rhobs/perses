@@ -20,7 +20,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/perses/perses/internal/api/utils"
+	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/oauth2"

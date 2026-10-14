@@ -74,7 +74,7 @@ func TestParseCueImports(t *testing.T) {
 			name: "dashboard with multiple imports",
 			file: filepath.Join("testdata", "cue-simple", "dashboards", "dash1.cue"),
 			expected: []string{
-				"github.com/perses/perses/cue/dac-utils/dashboard",
+				"github.com/rhobs/perses/cue/dac-utils/dashboard",
 				"test-dac-cue.com/m/panels",
 			},
 		},

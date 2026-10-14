@@ -18,10 +18,10 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/perses/perses/internal/api/impl/proxy/http"
-	"github.com/perses/perses/internal/api/impl/proxy/proxytest"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	datasourceSpec "github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses/internal/api/impl/proxy/http"
+	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

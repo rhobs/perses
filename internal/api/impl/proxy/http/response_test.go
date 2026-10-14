@@ -21,9 +21,9 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/impl/proxy/proxytest"
 	"github.com/perses/spec/go/common"
 	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

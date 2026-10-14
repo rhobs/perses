@@ -17,7 +17,7 @@ import (
 	"testing"
 
 	"charm.land/huh/v2"
-	"github.com/perses/perses/internal/cli/read"
+	"github.com/rhobs/perses/internal/cli/read"
 	"github.com/stretchr/testify/require"
 )
 

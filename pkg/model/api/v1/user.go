@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 
 // WildcardProject is a special project name that can be used to refer to all projects.

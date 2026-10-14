@@ -17,13 +17,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/perses/internal/api/authorization"
-	"github.com/perses/perses/internal/api/impl/proxy/http"
-	"github.com/perses/perses/internal/api/impl/proxy/proxytest"
-	"github.com/perses/perses/pkg/model/api/config"
 	"github.com/perses/spec/go/common"
 	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses/internal/api/authorization"
+	"github.com/rhobs/perses/internal/api/impl/proxy/http"
+	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

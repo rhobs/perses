@@ -13,7 +13,7 @@
 
 package dependency
 
-import "github.com/perses/perses/pkg/model/api/config"
+import "github.com/rhobs/perses/pkg/model/api/config"
 
 type Manager interface {
 	Persistence() PersistenceManager

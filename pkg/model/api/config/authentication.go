@@ -21,8 +21,8 @@ import (
 	"slices"
 	"time"
 
-	"github.com/perses/perses/pkg/model/api/v1/secret"
 	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses/pkg/model/api/v1/secret"
 )
 
 const (

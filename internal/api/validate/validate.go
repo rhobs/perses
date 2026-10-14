@@ -17,14 +17,14 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/perses/perses/internal/api/plugin/schema"
-	"github.com/perses/perses/pkg/model/api/config"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/datasource"
-	"github.com/perses/perses/pkg/model/api/v1/utils"
 	"github.com/perses/spec/go/dashboard"
 	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
 	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
+	"github.com/rhobs/perses/pkg/model/api/v1/utils"
 )
 
 // We want to keep only variables that are not only a number.

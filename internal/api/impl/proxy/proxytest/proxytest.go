@@ -20,9 +20,9 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	apiinterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/netguard"
-	"github.com/perses/perses/pkg/model/api/config"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/netguard"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

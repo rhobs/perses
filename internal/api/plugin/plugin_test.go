@@ -16,9 +16,9 @@ package plugin
 import (
 	"testing"
 
-	v1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/module"
 	"github.com/perses/spec/go/plugin"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/stretchr/testify/assert"
 )
 

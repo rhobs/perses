@@ -14,10 +14,10 @@
 package fakev1
 
 import (
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/module"
 	"github.com/perses/spec/go/plugin"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type plg struct {

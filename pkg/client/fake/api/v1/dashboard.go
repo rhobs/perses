@@ -14,9 +14,9 @@
 package fakev1
 
 import (
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
 	dashboardSpec "github.com/perses/spec/go/dashboard"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 type dashboard struct {

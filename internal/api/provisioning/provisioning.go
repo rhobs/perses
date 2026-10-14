@@ -22,7 +22,7 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/perses/common/async"
-	"github.com/perses/perses/internal/api/dependency"
+	"github.com/rhobs/perses/internal/api/dependency"
 	"github.com/sirupsen/logrus"
 )
 
@@ -37,12 +37,12 @@ func New(serviceManager dependency.ServiceManager, folders []string, caseSensiti
 		caseSensitive:  caseSensitive,
 	}
 	return &provisioningTask{
-		folders: folders,
-		svc:     svc,
-	}, &provisioningWatcher{
-		folders: folders,
-		svc:     svc,
-	}
+			folders: folders,
+			svc:     svc,
+		}, &provisioningWatcher{
+			folders: folders,
+			svc:     svc,
+		}
 }
 
 type provisioningTask struct {
