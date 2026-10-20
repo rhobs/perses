@@ -21,13 +21,13 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/sirupsen/logrus"
 
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 	apiCue "github.com/rhobs/perses/internal/api/cue"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/schema"
 	"github.com/rhobs/perses/internal/api/route"
 	"github.com/rhobs/perses/internal/api/utils"
-	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 )
 
 const (

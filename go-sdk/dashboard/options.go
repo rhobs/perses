@@ -17,14 +17,14 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/rhobs/perses/go-sdk/annotation"
 	"github.com/rhobs/perses/go-sdk/datasource"
 	panelgroup "github.com/rhobs/perses/go-sdk/panel-group"
 	"github.com/rhobs/perses/go-sdk/variable"
 	variablegroup "github.com/rhobs/perses/go-sdk/variable-group"
-	"github.com/rhobs/perses-spec/go/common"
-	"github.com/rhobs/perses-spec/go/dashboard"
-	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 )
 
 // buildCollapsedSpec is building a grid layout collapse spec respecting the same default value as Cue SDK

@@ -19,10 +19,10 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	"github.com/rhobs/perses/pkg/model/api"
-	"github.com/rhobs/perses-spec/go/common"
 	"github.com/zitadel/oidc/v3/pkg/oidc"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"

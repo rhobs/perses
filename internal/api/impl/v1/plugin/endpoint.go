@@ -17,11 +17,11 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/rhobs/perses-spec/go/module"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/route"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/rhobs/perses-spec/go/module"
 	"github.com/sirupsen/logrus"
 )
 

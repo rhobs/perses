@@ -22,12 +22,12 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/rhobs/perses-spec/go/common"
-	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

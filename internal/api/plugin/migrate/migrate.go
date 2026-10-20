@@ -29,12 +29,12 @@ import (
 	"cuelang.org/go/cue/build"
 	"cuelang.org/go/cue/cuecontext"
 	"github.com/perses/common/set"
-	apiinterface "github.com/rhobs/perses/internal/api/interface"
-	"github.com/rhobs/perses/internal/api/plugin/schema"
-	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses-spec/go/dashboard"
 	"github.com/rhobs/perses-spec/go/plugin"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/sirupsen/logrus"
 )
 

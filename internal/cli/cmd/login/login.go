@@ -18,6 +18,7 @@ import (
 	"io"
 
 	"charm.land/huh/v2"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/utils"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/config"
@@ -26,7 +27,6 @@ import (
 	clientConfig "github.com/rhobs/perses/pkg/client/config"
 	backendConfig "github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/rhobs/perses-spec/go/common"
 	"github.com/spf13/cobra"
 	"golang.org/x/oauth2"
 )

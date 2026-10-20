@@ -22,6 +22,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard/variable"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/rhobs/perses/internal/api/dependency"
 	"github.com/rhobs/perses/internal/test"
 	"github.com/rhobs/perses/pkg/model/api"
@@ -29,11 +34,6 @@ import (
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/rhobs/perses-spec/go/common"
-	"github.com/rhobs/perses-spec/go/dashboard/variable"
-	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
-	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
-	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 type GetFunc func() (api.Entity, error)

@@ -17,8 +17,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/rhobs/perses-spec/go/common"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 
 type ProjectSpec struct {

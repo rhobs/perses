@@ -24,6 +24,12 @@ import (
 	"testing"
 
 	"github.com/gavv/httpexpect/v2"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"
@@ -32,12 +38,6 @@ import (
 	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
-	"github.com/rhobs/perses-spec/go/common"
-	"github.com/rhobs/perses-spec/go/dashboard"
-	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
-	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
-	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
-	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 func newHTTPDatasourceSpec(t *testing.T) datasourceSpec.Spec {

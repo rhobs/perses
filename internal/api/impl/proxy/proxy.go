@@ -22,6 +22,9 @@ import (
 	"strings"
 
 	"github.com/labstack/echo/v4"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/rhobs/perses/internal/api/authorization"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/internal/api/impl/proxy/common"
@@ -41,9 +44,6 @@ import (
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	datasourcev1 "github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
-	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
-	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/sirupsen/logrus"
 )
 

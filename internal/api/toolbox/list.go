@@ -22,11 +22,11 @@ import (
 	"github.com/brunoga/deep"
 	"github.com/labstack/echo/v4"
 	"github.com/perses/common/async"
+	"github.com/rhobs/perses-spec/go/common"
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	"github.com/rhobs/perses-spec/go/common"
 	"github.com/tidwall/gjson"
 )
 

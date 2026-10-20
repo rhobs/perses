@@ -20,6 +20,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/utils"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/config"
@@ -31,7 +32,6 @@ import (
 	"github.com/rhobs/perses/pkg/client/api"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -22,6 +22,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/rhobs/perses-spec/go/module"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	"github.com/rhobs/perses/internal/api/plugin/schema"
 	"github.com/rhobs/perses/internal/api/plugin/tree"
@@ -29,8 +31,6 @@ import (
 	"github.com/rhobs/perses/internal/test"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/rhobs/perses-spec/go/module"
-	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/mod/semver"
 )

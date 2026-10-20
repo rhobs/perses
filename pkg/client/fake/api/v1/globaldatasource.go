@@ -17,13 +17,13 @@ package fakev1
 import (
 	"strings"
 
-	v1 "github.com/rhobs/perses/pkg/client/api/v1"
-	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/rhobs/perses-spec/go/common"
 	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/rhobs/perses-spec/go/plugin"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 )
 
 func GlobalDatasourceList(prefix string) []*modelV1.GlobalDatasource {
