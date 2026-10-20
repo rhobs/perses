@@ -19,8 +19,8 @@ import (
 	"os/user"
 	"path/filepath"
 
-	"github.com/perses/perses/pkg/client/api"
-	"github.com/perses/perses/pkg/client/config"
+	"github.com/rhobs/perses/pkg/client/api"
+	"github.com/rhobs/perses/pkg/client/config"
 	"golang.org/x/oauth2"
 )
 

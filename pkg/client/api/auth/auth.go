@@ -19,9 +19,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/perses/perses/internal/api/utils"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	"github.com/perses/perses/pkg/model/api"
+	"github.com/rhobs/perses/internal/api/utils"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	"github.com/rhobs/perses/pkg/model/api"
 	"github.com/perses/spec/go/common"
 	"github.com/zitadel/oidc/v3/pkg/oidc"
 	"golang.org/x/oauth2"

@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"regexp"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/perses/spec/go/dashboard/variable"
 	"gopkg.in/yaml.v3"
 )

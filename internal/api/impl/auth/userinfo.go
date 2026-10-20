@@ -16,8 +16,8 @@ package auth
 import (
 	"strings"
 
-	"github.com/perses/perses/pkg/model/api/config"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 // externalUserInfoProfile is a subset of oidc.UserInfoProfile structure with only the interesting information.

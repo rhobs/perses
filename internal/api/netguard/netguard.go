@@ -44,9 +44,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/perses/perses/pkg/model/api/config"
-	datasourcev1 "github.com/perses/perses/pkg/model/api/v1/datasource"
-	secretModel "github.com/perses/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	datasourcev1 "github.com/rhobs/perses/pkg/model/api/v1/datasource"
+	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
 	datasourceSpec "github.com/perses/spec/go/datasource"
 	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
 	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"

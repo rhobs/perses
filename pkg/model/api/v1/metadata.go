@@ -203,8 +203,12 @@ func (m *PublicMetadata) UnmarshalYAML(unmarshal func(any) error) error {
 
 func NewProjectMetadata(project string, name string) *ProjectMetadata {
 	return &ProjectMetadata{
-		Name:    name,
-		Project: project,
+		ProjectMetadataWrapper: ProjectMetadataWrapper{
+			Project: project,
+		},
+		Metadata: Metadata{
+			Name: name,
+		},
 	}
 }
 

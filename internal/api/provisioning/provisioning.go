@@ -22,7 +22,7 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/perses/common/async"
-	"github.com/perses/perses/internal/api/dependency"
+	"github.com/rhobs/perses/internal/api/dependency"
 	"github.com/sirupsen/logrus"
 )
 

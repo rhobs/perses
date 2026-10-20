@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"reflect"
 
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	commonSpec "github.com/perses/spec/go/common"
 	dashboardSpec "github.com/perses/spec/go/dashboard"
 )

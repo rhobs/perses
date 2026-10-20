@@ -19,9 +19,9 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/interface/v1/user"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/internal/api/interface/v1/user"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

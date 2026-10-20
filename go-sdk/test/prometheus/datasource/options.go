@@ -14,7 +14,7 @@
 package datasource
 
 import (
-	"github.com/perses/perses/go-sdk/http"
+	"github.com/rhobs/perses/go-sdk/http"
 )
 
 func DirectURL(url string) Option {

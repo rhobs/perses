@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - release/*
+      - release-coo-*
       # Do not run e2e tests on snapshots because they can be used for testing
       # WIP changes and are never intended to be merged into `main` or released.
     tags:

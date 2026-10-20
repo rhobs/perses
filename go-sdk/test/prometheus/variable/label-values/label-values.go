@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/perses/perses/go-sdk/datasource"
-	list_variable "github.com/perses/perses/go-sdk/variable/list-variable"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/go-sdk/datasource"
+	list_variable "github.com/rhobs/perses/go-sdk/variable/list-variable"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 const PluginKind = "PrometheusLabelValuesVariable"

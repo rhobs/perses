@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	secretModel "github.com/perses/perses/pkg/model/api/v1/secret"
+	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
 	"github.com/sirupsen/logrus"
 )
 

@@ -14,8 +14,8 @@
 package promql
 
 import (
-	"github.com/perses/perses/go-sdk/datasource"
-	listvariable "github.com/perses/perses/go-sdk/variable/list-variable"
+	"github.com/rhobs/perses/go-sdk/datasource"
+	listvariable "github.com/rhobs/perses/go-sdk/variable/list-variable"
 )
 
 const PluginKind = "PrometheusPromQLVariable"

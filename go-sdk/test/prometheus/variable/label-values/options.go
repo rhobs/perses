@@ -17,7 +17,7 @@ import (
 	"strings"
 
 	promDatasource "dac-test/prometheus/datasource"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 func LabelName(labelName string) Option {

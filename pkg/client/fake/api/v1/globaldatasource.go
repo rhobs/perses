@@ -17,9 +17,9 @@ package fakev1
 import (
 	"strings"
 
-	v1 "github.com/perses/perses/pkg/client/api/v1"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/datasource"
+	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/perses/spec/go/common"
 	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/perses/spec/go/datasource/proxy/http"

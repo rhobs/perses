@@ -22,9 +22,9 @@ import (
 	"strconv"
 	"testing"
 
-	cmdTest "github.com/perses/perses/internal/cli/test"
-	"github.com/perses/perses/pkg/client/api"
-	clientConfig "github.com/perses/perses/pkg/client/config"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
+	"github.com/rhobs/perses/pkg/client/api"
+	clientConfig "github.com/rhobs/perses/pkg/client/config"
 	"github.com/perses/spec/go/common"
 	"github.com/stretchr/testify/require"
 	"k8s.io/client-go/tools/clientcmd"

@@ -14,8 +14,8 @@
 package query
 
 import (
-	"github.com/perses/perses/go-sdk/datasource"
-	"github.com/perses/perses/go-sdk/query"
+	"github.com/rhobs/perses/go-sdk/datasource"
+	"github.com/rhobs/perses/go-sdk/query"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/plugin"
 )

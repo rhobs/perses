@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/goreleaser/goreleaser/v2/pkg/config"
-	"github.com/perses/perses/scripts/pkg/git"
+	"github.com/rhobs/perses/scripts/pkg/git"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )

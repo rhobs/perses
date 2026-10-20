@@ -25,9 +25,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/perses/perses/internal/api/plugin"
-	persesCMD "github.com/perses/perses/internal/cli/cmd"
-	"github.com/perses/perses/internal/cli/output"
+	"github.com/rhobs/perses/internal/api/plugin"
+	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
+	"github.com/rhobs/perses/internal/cli/output"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/module"
 	pluginSpec "github.com/perses/spec/go/plugin"

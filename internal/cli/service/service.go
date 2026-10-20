@@ -17,11 +17,11 @@ import (
 	"errors"
 	"fmt"
 
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/pkg/client/api"
-	"github.com/perses/perses/pkg/client/perseshttp"
-	modelAPI "github.com/perses/perses/pkg/model/api"
-	modelV1 "github.com/perses/perses/pkg/model/api/v1"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/pkg/client/api"
+	"github.com/rhobs/perses/pkg/client/perseshttp"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 const (

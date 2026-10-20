@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/perses/perses/go-sdk/datasource"
+	"github.com/rhobs/perses/go-sdk/datasource"
 	"github.com/perses/spec/go/common"
 	"github.com/perses/spec/go/datasource/proxy/http"
 )

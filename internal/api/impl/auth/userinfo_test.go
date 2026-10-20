@@ -16,7 +16,7 @@ package auth
 import (
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/config"
+	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/stretchr/testify/assert"
 )
 

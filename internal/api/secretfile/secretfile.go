@@ -23,7 +23,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 
 // Validator checks that the file paths used in a secret are allowed.

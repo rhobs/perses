@@ -18,7 +18,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/perses/perses/pkg/model/api"
+	"github.com/rhobs/perses/pkg/model/api"
 )
 
 // MatchingInterval represents the start and the end position of the continuous characters that is matching the pattern.

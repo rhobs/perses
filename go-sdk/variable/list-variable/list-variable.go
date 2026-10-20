@@ -14,8 +14,8 @@
 package listvariable
 
 import (
-	"github.com/perses/perses/go-sdk/variable"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/go-sdk/variable"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/perses/spec/go/dashboard"
 	variableSpec "github.com/perses/spec/go/dashboard/variable"
 )

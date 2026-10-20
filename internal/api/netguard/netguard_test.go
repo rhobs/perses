@@ -25,8 +25,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/perses/perses/pkg/model/api/config"
-	secretModel "github.com/perses/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
 	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

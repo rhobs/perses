@@ -18,10 +18,10 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/perses/internal/api/authorization"
-	"github.com/perses/perses/pkg/model/api/config"
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	"github.com/perses/perses/pkg/model/api/v1/role"
+	"github.com/rhobs/perses/internal/api/authorization"
+	"github.com/rhobs/perses/pkg/model/api/config"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -16,8 +16,8 @@ package conf
 import (
 	"testing"
 
-	cmdTest "github.com/perses/perses/internal/cli/test"
-	fakeapi "github.com/perses/perses/pkg/client/fake/api"
+	cmdTest "github.com/rhobs/perses/internal/cli/test"
+	fakeapi "github.com/rhobs/perses/pkg/client/fake/api"
 )
 
 func TestConfigCMD(t *testing.T) {

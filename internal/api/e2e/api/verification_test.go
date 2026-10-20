@@ -23,10 +23,10 @@ import (
 	"time"
 
 	"github.com/gavv/httpexpect/v2"
-	"github.com/perses/perses/internal/api/dependency"
-	e2eframework "github.com/perses/perses/internal/api/e2e/framework"
-	"github.com/perses/perses/internal/api/utils"
-	modelAPI "github.com/perses/perses/pkg/model/api"
+	"github.com/rhobs/perses/internal/api/dependency"
+	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
+	"github.com/rhobs/perses/internal/api/utils"
+	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/stretchr/testify/assert"
 )
 

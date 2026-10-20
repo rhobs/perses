@@ -21,12 +21,12 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/sirupsen/logrus"
 
-	apiCue "github.com/perses/perses/internal/api/cue"
-	apiinterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/plugin"
-	"github.com/perses/perses/internal/api/plugin/schema"
-	"github.com/perses/perses/internal/api/route"
-	"github.com/perses/perses/internal/api/utils"
+	apiCue "github.com/rhobs/perses/internal/api/cue"
+	apiinterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/plugin"
+	"github.com/rhobs/perses/internal/api/plugin/schema"
+	"github.com/rhobs/perses/internal/api/route"
+	"github.com/rhobs/perses/internal/api/utils"
 	specPlugin "github.com/perses/spec/go/plugin"
 )
 

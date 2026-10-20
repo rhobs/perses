@@ -24,10 +24,10 @@ import (
 	"strings"
 
 	"github.com/labstack/echo/v4"
-	databaseModel "github.com/perses/perses/internal/api/database/model"
-	apiInterface "github.com/perses/perses/internal/api/interface"
-	"github.com/perses/perses/internal/api/interface/v1/project"
-	"github.com/perses/perses/internal/api/utils"
+	databaseModel "github.com/rhobs/perses/internal/api/database/model"
+	apiInterface "github.com/rhobs/perses/internal/api/interface"
+	"github.com/rhobs/perses/internal/api/interface/v1/project"
+	"github.com/rhobs/perses/internal/api/utils"
 	"github.com/perses/spec/go/common"
 )
 

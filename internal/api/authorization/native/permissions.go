@@ -14,8 +14,8 @@
 package native
 
 import (
-	v1 "github.com/perses/perses/pkg/model/api/v1"
-	v1Role "github.com/perses/perses/pkg/model/api/v1/role"
+	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	v1Role "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/sirupsen/logrus"
 )
 
