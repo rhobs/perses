@@ -19,7 +19,7 @@ import (
 	"reflect"
 
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
-	"github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/datasource"
 )
 
 func FilterDatasource[T DatasourceInterface](kind string, defaultDTS *bool, list []T) []T {

@@ -513,6 +513,8 @@ github.com/prometheus/promu v0.20.0 h1:wK0bfINDgqEYtXP1fVn/4Vpb/11+a4oe5uUfp1ReA
 github.com/prometheus/promu v0.20.0/go.mod h1:CiZLq3WhD98VhlysbiNZaSqCeQaZ3RpEqYsKk55B7Oc=
 github.com/protocolbuffers/txtpbfmt v0.0.0-20260420112717-c39628bde8b5 h1:Mckui8l+Wqz2Ve7XQvsE8SbHNmDWu8NA7Xce5NFJ/kM=
 github.com/protocolbuffers/txtpbfmt v0.0.0-20260420112717-c39628bde8b5/go.mod h1:JSbkp0BviKovYYt9XunS95M3mLPibE9bGg+Y95DsEEY=
+github.com/rhobs/perses-spec v0.0.0-20261020104126-c7666210297f h1:uWq+2katZHjylD/oT3eG/Bos6QSXbkY6gq+zPTr5wtg=
+github.com/rhobs/perses-spec v0.0.0-20261020104126-c7666210297f/go.mod h1:hNYgXkXvkHMFRyVU7qux2yjO8SVmFGYzosFEE+C2gZ8=
 github.com/rivo/uniseg v0.4.7 h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ=
 github.com/rivo/uniseg v0.4.7/go.mod h1:FN3SvrM+Zdj16jyLfmOkMNblXMcoc8DfTHruCPUcx88=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=

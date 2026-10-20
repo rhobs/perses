@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/rhobs/perses/pkg/client/config"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 const defaultRefreshInterval = common.Duration(time.Minute * 5)

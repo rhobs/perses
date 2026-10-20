@@ -40,8 +40,8 @@ import (
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/netguard"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/sirupsen/logrus"
 )
 

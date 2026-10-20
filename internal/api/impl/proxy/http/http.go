@@ -34,7 +34,7 @@ import (
 	"github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"

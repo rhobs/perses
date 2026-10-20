@@ -31,7 +31,7 @@ import (
 	"github.com/rhobs/perses/pkg/client/api"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -17,7 +17,7 @@ import (
 	"time"
 
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 )
 

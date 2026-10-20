@@ -32,7 +32,7 @@ import (
 	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 	roleV1 "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/zitadel/oidc/v3/pkg/oidc"
 	"golang.org/x/oauth2"

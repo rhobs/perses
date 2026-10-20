@@ -21,7 +21,7 @@ import (
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/route"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/module"
+	"github.com/rhobs/perses-spec/go/module"
 	"github.com/sirupsen/logrus"
 )
 

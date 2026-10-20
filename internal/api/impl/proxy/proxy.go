@@ -41,9 +41,9 @@ import (
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	datasourcev1 "github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	datasourceSpec "github.com/perses/spec/go/datasource"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/sirupsen/logrus"
 )
 

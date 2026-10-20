@@ -18,7 +18,7 @@ import (
 	"time"
 
 	promDatasource "dac-test/prometheus/datasource"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 func Expr(expr string) Option {

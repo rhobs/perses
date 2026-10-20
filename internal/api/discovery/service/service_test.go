@@ -22,8 +22,8 @@ import (
 	"github.com/rhobs/perses/internal/api/interface/v1/globaldatasource"
 	"github.com/rhobs/perses/pkg/model/api"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/datasource"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

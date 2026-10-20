@@ -26,7 +26,7 @@ import (
 	clientConfig "github.com/rhobs/perses/pkg/client/config"
 	backendConfig "github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/spf13/cobra"
 	"golang.org/x/oauth2"
 )

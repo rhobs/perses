@@ -17,8 +17,8 @@ import (
 	"fmt"
 
 	"cuelang.org/go/cue"
-	"github.com/perses/spec/go/datasource/proxy/http"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 // NewFromSchema is generating a tree representing the schema passed in parameter.

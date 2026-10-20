@@ -23,9 +23,9 @@ import (
 
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/common"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/dashboard/variable"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard/variable"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 // Not similar to variable validation regex (\w*?[^0-9]\w*), because some PromQL expression may need variable name with only number

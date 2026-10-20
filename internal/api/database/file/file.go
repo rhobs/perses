@@ -26,7 +26,7 @@ import (
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )

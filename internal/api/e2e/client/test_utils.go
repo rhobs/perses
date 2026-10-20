@@ -24,7 +24,7 @@ import (
 	"github.com/rhobs/perses/pkg/client/api/v1"
 	"github.com/rhobs/perses/pkg/client/config"
 	"github.com/rhobs/perses/pkg/model/api"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 func withClient(t *testing.T, testFunc func(v1.ClientInterface, dependency.PersistenceManager) []api.Entity) {

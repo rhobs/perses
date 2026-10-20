@@ -33,7 +33,6 @@ require (
 	github.com/nexucis/lamenv v0.5.2
 	github.com/olekukonko/tablewriter v1.1.5
 	github.com/perses/common v0.31.2
-	github.com/perses/spec v0.3.0-rc.1
 	github.com/prometheus/client_golang v1.24.1
 	github.com/prometheus/client_model v0.6.3
 	github.com/prometheus/common v0.72.0
@@ -195,6 +194,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/procfs v0.21.1 // indirect
 	github.com/protocolbuffers/txtpbfmt v0.0.0-20260420112717-c39628bde8b5 // indirect
+	github.com/rhobs/perses-spec v0.0.0-20261020104126-c7666210297f // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/rogpeppe/go-internal v1.15.0 // indirect
 	github.com/sanity-io/litter v1.5.5 // indirect

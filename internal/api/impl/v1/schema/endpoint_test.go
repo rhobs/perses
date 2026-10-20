@@ -27,8 +27,8 @@ import (
 	pluginmigrate "github.com/rhobs/perses/internal/api/plugin/migrate"
 	pluginschema "github.com/rhobs/perses/internal/api/plugin/schema"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/module"
-	specPlugin "github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/module"
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

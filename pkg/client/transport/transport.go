@@ -20,7 +20,7 @@ import (
 	"github.com/rhobs/perses/pkg/client/api/auth"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"golang.org/x/oauth2"
 )
 

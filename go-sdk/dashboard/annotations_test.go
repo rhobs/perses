@@ -18,7 +18,7 @@ import (
 
 	"github.com/rhobs/perses/go-sdk/annotation"
 	"github.com/rhobs/perses/go-sdk/dashboard"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

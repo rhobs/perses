@@ -22,9 +22,9 @@ import (
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
 	"github.com/rhobs/perses/pkg/model/api/v1/utils"
-	"github.com/perses/spec/go/dashboard"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 // We want to keep only variables that are not only a number.

@@ -16,8 +16,8 @@ package query
 import (
 	"github.com/rhobs/perses/go-sdk/datasource"
 	"github.com/rhobs/perses/go-sdk/query"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 const PluginKind = "PrometheusTimeSeriesQuery"

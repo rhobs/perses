@@ -22,6 +22,7 @@ import (
 	"testing"
 
 	"github.com/gavv/httpexpect/v2"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"
@@ -30,7 +31,6 @@ import (
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	datasourceSpec "github.com/perses/spec/go/datasource"
 	"github.com/stretchr/testify/assert"
 )
 

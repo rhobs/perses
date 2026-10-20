@@ -21,9 +21,9 @@ import (
 	"github.com/rhobs/perses/internal/api/impl/proxy/http"
 	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	"github.com/rhobs/perses/pkg/model/api/config"
-	"github.com/perses/spec/go/common"
-	datasourceSpec "github.com/perses/spec/go/datasource"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

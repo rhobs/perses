@@ -23,7 +23,7 @@ import (
 	"cuelang.org/go/cue/cuecontext"
 	"cuelang.org/go/cue/errors"
 	"cuelang.org/go/cue/load"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 )
 

@@ -25,8 +25,8 @@ import (
 
 	apiCue "github.com/rhobs/perses/internal/api/cue"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/dashboard"
-	specPlugin "github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 )
 

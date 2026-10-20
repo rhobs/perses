@@ -28,7 +28,7 @@ import (
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/interface/v1/project"
 	"github.com/rhobs/perses/internal/api/utils"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 // usernameRegexp is common.ValidateID's ID regexp plus ':' and '@', for delegated auth usernames

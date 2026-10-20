@@ -19,8 +19,8 @@ import (
 	"testing"
 
 	"cuelang.org/go/cue/build"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

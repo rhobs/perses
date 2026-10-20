@@ -24,7 +24,7 @@ import (
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/zitadel/oidc/v3/pkg/client/rp"

@@ -31,7 +31,7 @@ import (
 	"github.com/rhobs/perses/internal/cli/cmd/plugin/config"
 	"github.com/rhobs/perses/internal/cli/output"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	pluginSpec "github.com/perses/spec/go/plugin"
+	pluginSpec "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -33,7 +33,7 @@ import (
 	listVar "github.com/rhobs/perses/go-sdk/variable/list-variable"
 	txtVar "github.com/rhobs/perses/go-sdk/variable/text-variable"
 	staticlist "github.com/perses/plugins/staticlistvariable/sdk/go"
-	dashboardSpec "github.com/perses/spec/go/dashboard"
+	dashboardSpec "github.com/rhobs/perses-spec/go/dashboard"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

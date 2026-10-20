@@ -24,7 +24,7 @@ import (
 	"github.com/rhobs/perses/pkg/client/fake/api/v1"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 type client struct {

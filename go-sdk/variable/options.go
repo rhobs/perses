@@ -15,7 +15,7 @@ package variable
 
 import (
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 func Name(name string) Option {

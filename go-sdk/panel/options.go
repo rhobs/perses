@@ -17,8 +17,8 @@ import (
 	"github.com/rhobs/perses/go-sdk/annotation"
 	"github.com/rhobs/perses/go-sdk/link"
 	"github.com/rhobs/perses/go-sdk/query"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 func Title(title string) Option {

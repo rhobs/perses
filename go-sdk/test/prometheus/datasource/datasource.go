@@ -18,8 +18,8 @@ import (
 	"fmt"
 
 	"github.com/rhobs/perses/go-sdk/datasource"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
 )
 
 const (

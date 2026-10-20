@@ -27,7 +27,7 @@ import (
 	"github.com/rhobs/perses/internal/api/plugin/schema"
 	"github.com/rhobs/perses/internal/api/route"
 	"github.com/rhobs/perses/internal/api/utils"
-	specPlugin "github.com/perses/spec/go/plugin"
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 )
 
 const (

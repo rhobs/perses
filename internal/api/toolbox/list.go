@@ -26,7 +26,7 @@ import (
 	"github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/tidwall/gjson"
 )
 

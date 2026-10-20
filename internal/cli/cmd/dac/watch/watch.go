@@ -27,7 +27,7 @@ import (
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/config"
 	"github.com/rhobs/perses/internal/cli/opt"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -22,7 +22,7 @@ import (
 	"github.com/rhobs/perses/internal/api/interface/v1/ephemeraldashboard"
 	"github.com/rhobs/perses/pkg/model/api"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -19,7 +19,7 @@ import (
 
 	"github.com/rhobs/perses/internal/cli/file"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 const (

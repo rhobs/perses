@@ -27,7 +27,7 @@ import (
 
 	"github.com/rhobs/perses/pkg/model/api/config"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
-	datasourceSpec "github.com/perses/spec/go/datasource"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -20,9 +20,9 @@ import (
 	"cuelang.org/go/cue/cuecontext"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/test"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/datasource/proxy/http"
-	specPlugin "github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 )
 

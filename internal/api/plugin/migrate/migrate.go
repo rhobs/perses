@@ -32,9 +32,9 @@ import (
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/plugin/schema"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 )
 

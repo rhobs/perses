@@ -18,10 +18,10 @@ import (
 	"testing"
 
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
-	"github.com/perses/spec/go/common"
-	datasourceSpec "github.com/perses/spec/go/datasource"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
 )

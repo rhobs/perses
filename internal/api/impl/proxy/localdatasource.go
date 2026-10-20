@@ -22,7 +22,7 @@ import (
 	"github.com/rhobs/perses/internal/api/utils"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/role"
-	"github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/datasource"
 	"github.com/sirupsen/logrus"
 )
 

@@ -28,7 +28,7 @@ import (
 	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

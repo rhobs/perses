@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

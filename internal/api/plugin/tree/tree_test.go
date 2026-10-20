@@ -16,8 +16,8 @@ package tree
 import (
 	"testing"
 
-	"github.com/perses/spec/go/module"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/module"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 )
 

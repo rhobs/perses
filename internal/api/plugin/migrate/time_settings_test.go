@@ -18,7 +18,7 @@ import (
 	// So that the timezone cases also pass on a host without a timezone database.
 	_ "time/tzdata"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 )
 

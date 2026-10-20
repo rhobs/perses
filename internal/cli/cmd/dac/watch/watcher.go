@@ -29,7 +29,7 @@ import (
 	"github.com/perses/common/async"
 	"github.com/rhobs/perses/internal/cli/cmd/dac/build"
 	"github.com/rhobs/perses/internal/cli/opt"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/mod/modfile"
 )
