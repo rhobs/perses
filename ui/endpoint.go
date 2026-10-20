@@ -36,7 +36,7 @@ import (
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
-	pluginModel "github.com/perses/spec/go/plugin"
+	pluginModel "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/prometheus/common/assets"
 	"github.com/sirupsen/logrus"
 )

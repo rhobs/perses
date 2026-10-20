@@ -20,8 +20,8 @@ import (
 	"strings"
 
 	"cuelang.org/go/cue/build"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 )
 

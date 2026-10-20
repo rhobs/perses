@@ -14,7 +14,7 @@
 package link
 
 import (
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard"
 )
 
 type Option func(link *Builder) error

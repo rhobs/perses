@@ -27,7 +27,6 @@ import (
 	"sync"
 
 	"github.com/labstack/echo/v4"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/internal/api/impl/proxy/common"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
@@ -35,6 +34,7 @@ import (
 	"github.com/rhobs/perses/pkg/model/api/config"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"

@@ -14,7 +14,7 @@
 package panel
 
 import (
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard"
 )
 
 type Option func(panel *Builder) error

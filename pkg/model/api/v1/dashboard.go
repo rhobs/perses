@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"reflect"
 
-	commonSpec "github.com/perses/spec/go/common"
-	dashboardSpec "github.com/perses/spec/go/dashboard"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
+	commonSpec "github.com/rhobs/perses-spec/go/common"
+	dashboardSpec "github.com/rhobs/perses-spec/go/dashboard"
 )
 
 type Dashboard struct {

@@ -20,7 +20,7 @@ import (
 	"time"
 	_ "time/tzdata"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 )
 

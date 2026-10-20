@@ -18,8 +18,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/perses/spec/go/common"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 )
 

@@ -24,7 +24,6 @@ import (
 	"cuelang.org/go/cue/cuecontext"
 	"github.com/fatih/color"
 	"github.com/kylelemons/godebug/diff"
-	pluginSpec "github.com/perses/spec/go/plugin"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	"github.com/rhobs/perses/internal/api/plugin/schema"
@@ -32,6 +31,7 @@ import (
 	"github.com/rhobs/perses/internal/cli/cmd/plugin/config"
 	"github.com/rhobs/perses/internal/cli/output"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	pluginSpec "github.com/rhobs/perses-spec/go/plugin"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

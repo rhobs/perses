@@ -36,12 +36,12 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/stdlib"
 	"github.com/labstack/echo/v4"
-	"github.com/perses/spec/go/common"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
 	proxyCommon "github.com/rhobs/perses/internal/api/impl/proxy/common"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/netguard"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/sirupsen/logrus"
 )
 

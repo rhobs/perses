@@ -19,8 +19,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/perses/spec/go/common"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 )
 

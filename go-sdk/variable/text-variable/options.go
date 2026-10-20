@@ -14,7 +14,7 @@
 package textvariable
 
 import (
-	"github.com/perses/spec/go/dashboard/variable"
+	"github.com/rhobs/perses-spec/go/dashboard/variable"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )
 

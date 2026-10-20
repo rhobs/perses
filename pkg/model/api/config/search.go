@@ -13,7 +13,7 @@
 
 package config
 
-import "github.com/perses/spec/go/common"
+import "github.com/rhobs/perses-spec/go/common"
 
 type IndexKeys struct {
 	Dashboard []string `json:"dashboard,omitempty" yaml:"dashboard,omitempty"`

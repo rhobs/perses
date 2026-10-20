@@ -21,8 +21,8 @@ import (
 	"strings"
 
 	"cuelang.org/go/cue"
-	"github.com/perses/spec/go/datasource/proxy/http"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/sirupsen/logrus"
 )
 

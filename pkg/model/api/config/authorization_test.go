@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 )
 

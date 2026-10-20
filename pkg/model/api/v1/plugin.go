@@ -17,8 +17,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/module"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/module"
 )
 
 const PluginModuleKind = "PluginModule"

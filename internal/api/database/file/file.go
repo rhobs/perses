@@ -22,11 +22,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/perses/spec/go/common"
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )

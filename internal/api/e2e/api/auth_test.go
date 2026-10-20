@@ -23,7 +23,6 @@ import (
 	"time"
 
 	"github.com/gavv/httpexpect/v2"
-	"github.com/perses/spec/go/common"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"
@@ -33,6 +32,7 @@ import (
 	apiConfig "github.com/rhobs/perses/pkg/model/api/config"
 	roleV1 "github.com/rhobs/perses/pkg/model/api/v1/role"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/zitadel/oidc/v3/pkg/oidc"
 	"golang.org/x/oauth2"

@@ -23,11 +23,11 @@ import (
 	"time"
 
 	"github.com/go-sql-driver/mysql"
-	"github.com/perses/spec/go/common"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
 	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 	secretModel "github.com/rhobs/perses/pkg/model/api/v1/secret"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

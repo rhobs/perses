@@ -16,9 +16,9 @@ package plugin
 import (
 	"fmt"
 
-	"github.com/perses/spec/go/module"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses-spec/go/module"
 	"github.com/sirupsen/logrus"
 )
 

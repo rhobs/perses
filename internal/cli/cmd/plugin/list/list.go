@@ -17,12 +17,12 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/perses/spec/go/module"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/config"
 	"github.com/rhobs/perses/internal/cli/opt"
 	"github.com/rhobs/perses/internal/cli/output"
 	v1 "github.com/rhobs/perses/pkg/client/api/v1"
+	"github.com/rhobs/perses-spec/go/module"
 	"github.com/spf13/cobra"
 )
 

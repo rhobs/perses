@@ -13,7 +13,7 @@
 
 package datasource
 
-import "github.com/perses/spec/go/plugin"
+import "github.com/rhobs/perses-spec/go/plugin"
 
 func Name(name string) Option {
 	return func(datasource *Builder) error {

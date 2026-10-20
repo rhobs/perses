@@ -22,10 +22,10 @@ import (
 	"time"
 
 	"github.com/huandu/go-sqlbuilder"
-	"github.com/perses/spec/go/common"
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 )
 

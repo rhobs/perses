@@ -21,7 +21,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/perses/common/set"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 func NewMetadata(name string) *Metadata {
@@ -203,8 +203,12 @@ func (m *PublicMetadata) UnmarshalYAML(unmarshal func(any) error) error {
 
 func NewProjectMetadata(project string, name string) *ProjectMetadata {
 	return &ProjectMetadata{
-		Name:    name,
-		Project: project,
+		ProjectMetadataWrapper: ProjectMetadataWrapper{
+			Project: project,
+		},
+		Metadata: Metadata{
+			Name: name,
+		},
 	}
 }
 
