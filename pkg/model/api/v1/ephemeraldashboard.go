@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 

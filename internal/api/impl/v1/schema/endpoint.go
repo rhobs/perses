@@ -21,7 +21,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/sirupsen/logrus"
 
-	specPlugin "github.com/perses/spec/go/plugin"
+	specPlugin "github.com/rhobs/perses-spec/go/plugin"
 	apiCue "github.com/rhobs/perses/internal/api/cue"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/plugin"

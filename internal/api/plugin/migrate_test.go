@@ -21,8 +21,8 @@ import (
 	"testing"
 
 	"github.com/perses/common/set"
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	testUtils "github.com/rhobs/perses/internal/test"
 	"github.com/rhobs/perses/pkg/model/api/config"

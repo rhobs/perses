@@ -16,7 +16,7 @@ package annotation
 import (
 	"errors"
 
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/plugin"
 )
 
 // Name sets the annotation display name.

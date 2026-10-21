@@ -1,6 +1,6 @@
 module github.com/rhobs/perses
 
-go 1.27.1
+go 1.26.10
 
 // This directive help to improve the performance of golangci-lint by ignoring the node_modules directory of the ui module
 // golangci-lint is using the go build system to determine which files to lint, and the node_modules directory contains a lot of files that are not relevant for the linting process, and can cause performance issues.
@@ -22,7 +22,7 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/google/cel-go v0.31.0
 	github.com/google/uuid v1.6.0
-	github.com/goreleaser/goreleaser/v2 v2.18.2
+	github.com/goreleaser/goreleaser/v2 v2.17.1
 	github.com/gorilla/securecookie v1.1.2
 	github.com/huandu/go-sqlbuilder v1.43.0
 	github.com/jackc/pgx/v5 v5.11.0
@@ -33,12 +33,12 @@ require (
 	github.com/nexucis/lamenv v0.5.2
 	github.com/olekukonko/tablewriter v1.1.5
 	github.com/perses/common v0.31.2
-	github.com/perses/spec v0.3.0-rc.0
 	github.com/prometheus/client_golang v1.24.1
 	github.com/prometheus/client_model v0.6.3
 	github.com/prometheus/common v0.72.0
 	github.com/prometheus/common/assets v0.2.0
 	github.com/prometheus/promu v0.20.0
+	github.com/rhobs/perses-spec v0.0.0-20261020104126-c7666210297f
 	github.com/sirupsen/logrus v1.10.2
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.12.1

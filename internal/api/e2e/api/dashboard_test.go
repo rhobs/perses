@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/gavv/httpexpect/v2"
-	datasourceSpec "github.com/perses/spec/go/datasource"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"

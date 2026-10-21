@@ -14,7 +14,7 @@
 package config
 
 import (
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 type ProvisioningConfig struct {

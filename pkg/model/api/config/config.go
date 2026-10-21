@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/perses/common/config"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/sirupsen/logrus"
 )
 

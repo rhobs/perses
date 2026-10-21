@@ -17,7 +17,7 @@ package annotation
 import (
 	"errors"
 
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard"
 )
 
 // Option configures an annotation builder.

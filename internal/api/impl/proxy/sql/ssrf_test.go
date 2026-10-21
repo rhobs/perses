@@ -18,7 +18,7 @@ import (
 	"net"
 	"testing"
 
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/rhobs/perses/internal/api/impl/proxy/proxytest"
 	"github.com/rhobs/perses/internal/api/netguard"
 	"github.com/rhobs/perses/pkg/model/api/config"

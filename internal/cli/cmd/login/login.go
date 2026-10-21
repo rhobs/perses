@@ -18,7 +18,7 @@ import (
 	"io"
 
 	"charm.land/huh/v2"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/utils"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"
 	"github.com/rhobs/perses/internal/cli/config"

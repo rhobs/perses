@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	cmdTest "github.com/rhobs/perses/internal/cli/test"
 	"github.com/rhobs/perses/pkg/client/api"
 	clientConfig "github.com/rhobs/perses/pkg/client/config"

@@ -21,8 +21,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/module"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/module"
 )
 
 const (

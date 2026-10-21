@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/pkg/model/api/config"
 	"github.com/rhobs/perses/pkg/model/api/v1/secret"

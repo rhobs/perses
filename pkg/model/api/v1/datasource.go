@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/datasource"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 

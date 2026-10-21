@@ -19,7 +19,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	"github.com/rhobs/perses/internal/api/interface/v1/dashboard"
 	"github.com/rhobs/perses/internal/api/interface/v1/datasource"

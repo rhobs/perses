@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
-	"github.com/perses/spec/go/dashboard/variable"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard/variable"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -17,10 +17,10 @@ package fakev1
 import (
 	"strings"
 
-	"github.com/perses/spec/go/common"
-	datasourceSpec "github.com/perses/spec/go/datasource"
-	"github.com/perses/spec/go/datasource/proxy/http"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/common"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/plugin"
 	v1 "github.com/rhobs/perses/pkg/client/api/v1"
 	modelV1 "github.com/rhobs/perses/pkg/model/api/v1"
 	"github.com/rhobs/perses/pkg/model/api/v1/datasource"

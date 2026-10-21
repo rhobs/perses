@@ -17,7 +17,7 @@ import (
 	"fmt"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/datasource"
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/utils"

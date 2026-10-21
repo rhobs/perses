@@ -19,7 +19,7 @@ import (
 	"io"
 	"regexp"
 
-	"github.com/perses/spec/go/dashboard"
+	"github.com/rhobs/perses-spec/go/dashboard"
 	"github.com/rhobs/perses/internal/api/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	persesCMD "github.com/rhobs/perses/internal/cli/cmd"

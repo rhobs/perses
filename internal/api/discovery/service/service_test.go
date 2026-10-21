@@ -18,8 +18,8 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/spec/go/datasource"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/plugin"
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/interface/v1/globaldatasource"
 	"github.com/rhobs/perses/pkg/model/api"

@@ -16,7 +16,7 @@ package v1
 import (
 	"fmt"
 
-	"github.com/perses/spec/go/module"
+	"github.com/rhobs/perses-spec/go/module"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	v1 "github.com/rhobs/perses/pkg/model/api/v1"
 )

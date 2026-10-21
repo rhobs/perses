@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/gavv/httpexpect/v2"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/internal/api/utils"

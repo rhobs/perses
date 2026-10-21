@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	"github.com/labstack/echo/v4"
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	databaseModel "github.com/rhobs/perses/internal/api/database/model"
 	apiInterface "github.com/rhobs/perses/internal/api/interface"
 	"github.com/rhobs/perses/internal/api/interface/v1/project"

@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/pkg/client/perseshttp"
 	"github.com/rhobs/perses/pkg/client/transport"
 	"github.com/rhobs/perses/pkg/model/api"

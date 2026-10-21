@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	modelAPI "github.com/rhobs/perses/pkg/model/api"
 )
 

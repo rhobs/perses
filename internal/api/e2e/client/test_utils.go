@@ -19,7 +19,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 	"github.com/rhobs/perses/internal/api/dependency"
 	e2eframework "github.com/rhobs/perses/internal/api/e2e/framework"
 	"github.com/rhobs/perses/pkg/client/api/v1"

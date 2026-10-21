@@ -27,7 +27,7 @@ import (
 	"sync"
 
 	"github.com/labstack/echo/v4"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/internal/api/impl/proxy/common"
 	apiinterface "github.com/rhobs/perses/internal/api/interface"

@@ -14,7 +14,7 @@
 package http
 
 import (
-	"github.com/perses/spec/go/datasource/proxy/http"
+	"github.com/rhobs/perses-spec/go/datasource/proxy/http"
 )
 
 type Option func(proxy *Builder) error

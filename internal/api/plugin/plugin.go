@@ -22,8 +22,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/perses/spec/go/module"
-	"github.com/perses/spec/go/plugin"
+	"github.com/rhobs/perses-spec/go/module"
+	"github.com/rhobs/perses-spec/go/plugin"
 	"github.com/rhobs/perses/internal/api/plugin/migrate"
 	"github.com/rhobs/perses/internal/api/plugin/schema"
 	"github.com/rhobs/perses/internal/api/plugin/tree"

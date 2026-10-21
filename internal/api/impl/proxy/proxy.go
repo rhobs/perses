@@ -22,9 +22,9 @@ import (
 	"strings"
 
 	"github.com/labstack/echo/v4"
-	datasourceSpec "github.com/perses/spec/go/datasource"
-	datasourceHTTP "github.com/perses/spec/go/datasource/proxy/http"
-	datasourceSQL "github.com/perses/spec/go/datasource/proxy/sql"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
+	datasourceHTTP "github.com/rhobs/perses-spec/go/datasource/proxy/http"
+	datasourceSQL "github.com/rhobs/perses-spec/go/datasource/proxy/sql"
 	"github.com/rhobs/perses/internal/api/authorization"
 	"github.com/rhobs/perses/internal/api/crypto"
 	"github.com/rhobs/perses/internal/api/impl/proxy/common"

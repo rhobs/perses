@@ -23,7 +23,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/perses/spec/go/common"
+	"github.com/rhobs/perses-spec/go/common"
 )
 
 const (

@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/perses/spec/go/common"
-	"github.com/perses/spec/go/dashboard"
-	datasourceSpec "github.com/perses/spec/go/datasource"
+	"github.com/rhobs/perses-spec/go/common"
+	"github.com/rhobs/perses-spec/go/dashboard"
+	datasourceSpec "github.com/rhobs/perses-spec/go/datasource"
 	"github.com/rhobs/perses/go-sdk/annotation"
 	"github.com/rhobs/perses/go-sdk/datasource"
 	panelgroup "github.com/rhobs/perses/go-sdk/panel-group"

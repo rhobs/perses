@@ -131,7 +131,7 @@ test: generate
 	$(GO) test -count=1 -v ./...
 
 .PHONY: integration-test
-integration-test: generate go-sdk-test
+integration-test: generate
 	@echo ">> Run integration tests"
 	$(GO) test -tags=integration -v -count=1 -cover -coverprofile=$(COVER_PROFILE) -coverpkg=./... ./...
 
